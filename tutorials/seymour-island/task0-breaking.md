@@ -26,3 +26,7 @@ agent.destroy(FORWARD)
 ```ghost
 agent.move(LEFT)
 ```
+
+```package
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
+```

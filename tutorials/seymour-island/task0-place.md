@@ -35,3 +35,8 @@ agent.place(LEFT)
 
 
 ```
+
+
+```package
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
+```
