@@ -34,3 +34,7 @@ When you are ready to run your code, click the **play** button in the bottom rig
 ```blocks
     agent.move(LEFT, 2)
 ```
+
+```package
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
+```
