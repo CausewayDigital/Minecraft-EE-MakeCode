@@ -6,11 +6,6 @@
 
 ## Step 1
 
-```template
-player.onItemInteracted(BLAZE_ROD, function () {
-})
-```
-
 In this task, you must use your agent to mine **only** the iron ore!   
 You need to be careful, if you mine out the other stone around it, there is a chance the mine might collapse...   
 
@@ -26,11 +21,9 @@ Within this if statement, add an ``||agent:agent destroy down||``.
 Now try your code. You can reset the task at any point using the buttons on the right.   
 
 ```blocks
-player.onItemInteracted(BLAZE_ROD, function () {
 if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
             agent.destroy(DOWN)
         }
-})
 ```
 
 ## Step 3
@@ -41,18 +34,16 @@ Don't forget to bring the agent back down again.
 Now try your code. You can reset the task at any point using the buttons on the right.  
 
 ```blocks
-player.onItemInteracted(BLAZE_ROD, function () {
-        if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
-            agent.destroy(DOWN)
+    if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
+        agent.destroy(DOWN)
+    }
+    for (let index = 0; index < 3; index++) {
+        if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
+            agent.destroy(RIGHT)
         }
-        for (let index = 0; index < 3; index++) {
-            if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
-                agent.destroy(RIGHT)
-            }
-            agent.move(UP, 1)
-        }
-        agent.move(DOWN, 2)
-})
+        agent.move(UP, 1)
+    }
+    agent.move(DOWN, 2)
 
 ```
 
@@ -65,24 +56,22 @@ You are on your own for this last bit, good luck!
 
 
 ```ghost
-player.onItemInteracted(BLAZE_ROD, function () {
-    for (let index = 0; index < 8; index++) {
-        if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
-            agent.destroy(DOWN)
-        }
-        for (let index = 0; index < 3; index++) {
-            if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
-                agent.destroy(RIGHT)
-            }
-            agent.move(UP, 1)
-        }
-        agent.move(DOWN, 2)
-        agent.move(FORWARD, 1)
+for (let index = 0; index < 8; index++) {
+    if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
+        agent.destroy(DOWN)
     }
-})
+    for (let index = 0; index < 3; index++) {
+        if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
+            agent.destroy(RIGHT)
+        }
+        agent.move(UP, 1)
+    }
+    agent.move(DOWN, 2)
+    agent.move(FORWARD, 1)
+}
 
 ```
 
 ```package
-seymour=github:gbaman/minecraft-ee-seymour-island
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
 ```
