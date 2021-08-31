@@ -6,11 +6,6 @@
 
 ## Step 1
 
-```template
-player.onItemInteracted(BLAZE_ROD, function () {
-})
-```
-
 In this task, you must use your agent to mine **only** the ores!   
 You need to be careful, if you mine out the other stone around it, there is a chance the mine might collapse...   
 
@@ -29,10 +24,6 @@ Beyond this, the rest of the task is up to you. The final program will be simila
 
 ```ghost
 let bob = 0
-player.onItemInteracted(BLAZE_ROD, function () {
-if (false || false) {
-    	
-    }
 bob = 2
     for (let index = 0; index < 8; index++) {
         for (let index = 0; index < 3; index++) {
@@ -44,10 +35,9 @@ bob = 2
         agent.move(DOWN, 2)
         agent.move(FORWARD, 1)
     }
-})
 
 ```
 
 ```package
-seymour=github:gbaman/minecraft-ee-seymour-island
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
 ```

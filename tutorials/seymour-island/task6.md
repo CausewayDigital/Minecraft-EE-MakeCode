@@ -3,12 +3,6 @@
 
 # Multiplayer circuits
 
-```template
-player.onItemInteracted(BLAZE_ROD, function () {
-
-})
-```
-
 ## Step 1
 
 Before you get started, it is important you have a friend in the room beside you to 
@@ -22,7 +16,7 @@ Once you are ready to proceed, hit the next button.
 This task involves repairing some circuits together, on a large scale.   
 Look down into the circuit area. There are 4 quadrants, 2 of which you have to fix
 and 2 that your friend has to fix. They feed into each other across the centre line.
-The redstone current travels through the centre gold blocks. 
+The redstone current travels through the centre purple blocks. 
 Note you can only place redstone on the **Green Emerald** blocks.  
 
 
@@ -44,12 +38,10 @@ In the first slot of this, use an ``||agent: agent inspect block down||`` to det
 Then on the right hand side, compare it against an Emerald Block.
 
 ```blocks
-player.onItemInteracted(BLAZE_ROD, function () {
     agent.move(LEFT, 1)
     if (agent.inspect(AgentInspection.Block, DOWN) == EMERALD_BLOCK) {
 
     }
-})
 ```
 
 ## Step 5
@@ -58,13 +50,11 @@ Within this if statement, if it does correctly detect emerald, then lets place s
 We also want to move forward after our if statement is complete by 1, using ``||agent:agent move forward by 1||``.
 
 ```blocks
-player.onItemInteracted(BLAZE_ROD, function () {
     agent.move(LEFT, 1)
     if (agent.inspect(AgentInspection.Block, DOWN) == EMERALD_BLOCK) {
         agent.place(DOWN)
     }
     agent.move(FORWARD, 1)
-})
 ```
 
 ## Step 6
@@ -75,7 +65,6 @@ Good luck!
 
 
 ```ghost
-player.onItemInteracted(BLAZE_ROD, function () {
     agent.move(LEFT, 1)
     for (let index = 0; index < 4; index++) {
         for (let index = 0; index < 5; index++) {
@@ -87,11 +76,10 @@ player.onItemInteracted(BLAZE_ROD, function () {
         agent.move(BACK, 5)
         agent.move(RIGHT, 1)
     }
-})
 ```
 
 
 
 ```package
-seymour=github:gbaman/minecraft-ee-seymour-island
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
 ```

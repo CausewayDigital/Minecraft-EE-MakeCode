@@ -13,7 +13,7 @@ When you and your partner are ready, hit Next.
 
 ## Step 2
 To move your agent, you can use the ``||agent:agent move FORWARD||`` command.   
-You are also able to use the ``||agent:agent turn LEFT||`` command if you wish.    
+You are also able to use the ``||agent:agent turn LEFT||`` command if you wish. 
 
 Place your code within the ``||player: on start||`` section, then click
 the play button in the bottom right corner to run your code.
