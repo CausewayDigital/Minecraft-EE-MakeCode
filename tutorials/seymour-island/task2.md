@@ -9,7 +9,7 @@
 
 Let's use the agent to dig a mine shaft ahead. First, why not try breaking
 the block ahead of the Agent, using ``||agent:agent destroy forward||``.
-Place your code within the ``||player: on item used||`` section, then click the **play** button in the bottom right.
+Place your code within the ``||player: on start||`` section, then click the **play** button in the bottom right.
 
 ```blocks
 agent.destroy(FORWARD)
