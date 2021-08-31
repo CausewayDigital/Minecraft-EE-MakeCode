@@ -18,7 +18,7 @@ Start by adding a ``||logic:if then||``, with a ``||logic:0 = 0||`` block within
 In the first slot of this, use an ``||agent: agent inspect block down||`` to detect which block is below.   
 Then on the right hand side, compare it against an Iron Ore Block.   
 Within this if statement, add an ``||agent:agent destroy down||``.   
-Now try your code. You can reset the task at any point using the buttons on the right.   
+Now try your code. You can reset the task at any point by using your phone.   
 
 ```blocks
 if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
@@ -31,7 +31,7 @@ if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
 Using the code you built for the previous exercise, can you check and destroy to the right now as well?  
 Place this section within a ``||loops:repeat 3 times||`` command and and move the agent up 1 each time.   
 Don't forget to bring the agent back down again.   
-Now try your code. You can reset the task at any point using the buttons on the right.  
+Now try your code. You can reset the task at any point by using your phone. 
 
 ```blocks
     if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
@@ -52,7 +52,7 @@ Now try your code. You can reset the task at any point using the buttons on the 
 Finally, encase the entire code within a further ``||loops:repeat X times||`` command. You will have to count how many blocks you need it to go forward.    
 You are on your own for this last bit, good luck!
 
-(remember though, you can hit the Reset Agent button in the world at any time to try again)
+(remember though, you can hit the Reset Agent button in your phone at any time to move the agent back and try again)
 
 
 ```ghost
