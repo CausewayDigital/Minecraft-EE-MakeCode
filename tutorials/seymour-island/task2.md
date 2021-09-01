@@ -4,7 +4,7 @@
 # Auto Miner level 1
 
 
-## Step 1
+## Step 1 @unplugged
 
 ![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.jpg)
 Let's use the agent to dig a mine shaft ahead. First, why not try breaking
