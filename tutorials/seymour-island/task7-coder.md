@@ -5,7 +5,7 @@
 
 
 ## Step 1
-
+![Overhead task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_7.jpg)
 In this task, you need to get your Agent to the golden pressure pad. Seems easy, right?...   
 The catch... You can't see the obstacles in its way! For that, you will require a friend
 to take the position above, with the added benefit of invisible block visibility. They will guide you.    
