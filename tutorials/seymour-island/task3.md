@@ -5,7 +5,7 @@
 
 
 ## Step 1 @unplugged
-![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_3.jpg)
+![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_3.png)
 In this task, you must use your agent to mine **only** the iron ore!   
 You need to be careful, if you mine out the other stone around it, there is a chance the mine might collapse...   
 

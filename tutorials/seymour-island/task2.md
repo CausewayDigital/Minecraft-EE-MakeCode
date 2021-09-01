@@ -6,7 +6,7 @@
 
 ## Step 1 @unplugged
 
-![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.jpg)
+![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.png)
 Let's use the agent to dig a mine shaft ahead. First, why not try breaking
 the block ahead of the Agent, using ``||agent:agent destroy forward||``.
 Place your code within the ``||player: on start||`` section, then click the **play** button in the bottom right.
