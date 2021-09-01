@@ -7,6 +7,7 @@
 ## Step 1 @unplugged
 
 ![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.png)
+The mine ahead is too dangerous for a miner to go in. Do you think your Agent is up for the task?
 Let's use the agent to dig a mine shaft ahead. First, why not try breaking
 the block ahead of the Agent, using ``||agent:agent destroy forward||``.
 Place your code within the ``||player: on start||`` section, then click the **play** button in the bottom right.
@@ -18,7 +19,7 @@ agent.destroy(FORWARD)
 ## Step 2
 Lets now combine that with an ``||agent:agent move up||`` command, followed by another
 ``||agent:agent destroy forward||``.
-Can you try getting your Agent to break the first column of 3 stone blocks?
+Can you try getting your Agent to break the first column of **3** stone blocks?
 
 ```blocks
 agent.destroy(FORWARD)
@@ -46,8 +47,6 @@ for (let index = 0; index < 3; index++) {
 }
 
 ```
-
-
 
 
 ## Step 4
