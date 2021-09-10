@@ -70,7 +70,7 @@ Good luck!
 
 ```ghost
     agent.move(LEFT, 1)
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 9; index++) {
         for (let index = 0; index < 5; index++) {
             if (agent.inspect(AgentInspection.Block, DOWN) == EMERALD_BLOCK) {
                 agent.place(DOWN)

@@ -27,11 +27,15 @@ Beyond this, the rest of the task is up to you. The final program will be simila
 
 
 ```ghost
-let bob = 0
-bob = 2
     for (let index = 0; index < 8; index++) {
         for (let index = 0; index < 3; index++) {
             if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
+                agent.destroy(RIGHT)
+            } else if (agent.inspect(AgentInspection.Block, RIGHT) == REDSTONE_ORE) {
+                agent.destroy(RIGHT)
+            } else if (agent.inspect(AgentInspection.Block, RIGHT) == GOLD_ORE) {
+                agent.destroy(RIGHT)
+            } else if (agent.inspect(AgentInspection.Block, RIGHT) == DIAMOND_ORE) {
                 agent.destroy(RIGHT)
             }
             agent.move(UP, 1)
@@ -39,7 +43,7 @@ bob = 2
         agent.move(DOWN, 2)
         agent.move(FORWARD, 1)
     }
-
+    
 ```
 
 ```package

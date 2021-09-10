@@ -58,6 +58,17 @@ Finally, using what you have learnt so far, can you use another ``||loops:Repeat
 the golden block at the end?
 
 
+```ghost
+    for (let index = 0; index < 7; index++) {
+        for (let index = 0; index < 3; index++) {
+            agent.destroy(FORWARD)
+            agent.move(UP, 1)
+        }
+        agent.move(DOWN, 3)
+        agent.move(FORWARD, 1)
+    }
+```
+
 ```package
 seymour=github:CausewayDigital/Minecraft-EE-MakeCode
 ```

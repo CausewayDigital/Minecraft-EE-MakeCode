@@ -22,7 +22,6 @@ above one of the green blocks.
 ```
 
 ```block
-//
 agent.move(FORWARD, 1)
 agent.turn(LEFT_TURN)
 agent.move(FORWARD, 2)
@@ -40,6 +39,22 @@ agent.place(DOWN)
 ## Step 4
 Now you know what you are doing, code your agent to place redstone on the other 2 green blocks.
 If you find yourself stuck or want to start again, use your phone to reset the task.
+
+```ghost
+    agent.move(FORWARD, 1)
+    agent.turn(RIGHT_TURN)
+    agent.move(FORWARD, 1)
+    agent.place(DOWN)
+    agent.turn(LEFT_TURN)
+    agent.move(FORWARD, 1)
+    agent.turn(RIGHT_TURN)
+    agent.move(FORWARD, 1)
+    agent.place(DOWN)
+    agent.turn(RIGHT_TURN)
+    agent.turn(RIGHT_TURN)
+    agent.move(FORWARD, 1)
+    agent.place(DOWN)
+```
 
 ```package
 seymour=github:CausewayDigital/Minecraft-EE-MakeCode

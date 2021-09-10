@@ -29,7 +29,33 @@ agent.move(FORWARD, 1)
 ```
 
 ```ghost
-agent.turn(LEFT)
+    agent.move(LEFT, 4)
+    agent.move(FORWARD, 2)
+    agent.move(RIGHT, 2)
+    agent.move(LEFT, 2)
+    agent.move(BACK, 2)
+    agent.move(RIGHT, 8)
+    agent.move(FORWARD, 6)
+    agent.move(LEFT, 2)
+    agent.move(RIGHT, 2)
+    agent.move(BACK, 6)
+    agent.move(LEFT, 4)
+    agent.move(FORWARD, 5)
+    agent.move(LEFT, 1)
+    agent.move(FORWARD, 1)
+    agent.move(BACK, 1)
+    agent.move(RIGHT, 1)
+    agent.move(BACK, 5)
+    agent.move(LEFT, 4)
+    agent.move(FORWARD, 3)
+    agent.move(RIGHT, 1)
+    agent.move(FORWARD, 7)
+    agent.move(RIGHT, 4)
+    agent.move(BACK, 1)
+    agent.move(RIGHT, 3)
+    agent.move(FORWARD, 3)
+    agent.move(LEFT, 4)
+
 ```
 
 ```package

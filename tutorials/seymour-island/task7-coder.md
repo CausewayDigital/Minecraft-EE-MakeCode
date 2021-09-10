@@ -29,6 +29,19 @@ agent.move(FORWARD, 1)
 ```
 
 ```ghost
+    agent.move(LEFT, 2)
+    agent.move(FORWARD, 2)
+    agent.move(LEFT, 2)
+    agent.move(FORWARD, 2)
+    agent.move(RIGHT, 3)
+    agent.move(BACK, 1)
+    agent.move(RIGHT, 1)
+    agent.move(BACK, 1)
+    agent.move(RIGHT, 1)
+    agent.move(BACK, 1)
+    agent.move(RIGHT, 1)
+    agent.move(FORWARD, 7)
+    agent.move(LEFT, 4)
 
 ```
 

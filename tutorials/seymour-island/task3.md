@@ -60,19 +60,19 @@ You are on your own for this last bit, good luck!
 
 
 ```ghost
-for (let index = 0; index < 8; index++) {
-    if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
-        agent.destroy(DOWN)
-    }
-    for (let index = 0; index < 3; index++) {
-        if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
-            agent.destroy(RIGHT)
+    for (let index = 0; index < 8; index++) {
+        if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
+            agent.destroy(DOWN)
         }
-        agent.move(UP, 1)
+        for (let index = 0; index < 3; index++) {
+            if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
+                agent.destroy(RIGHT)
+            }
+            agent.move(UP, 1)
+        }
+        agent.move(DOWN, 2)
+        agent.move(FORWARD, 1)
     }
-    agent.move(DOWN, 2)
-    agent.move(FORWARD, 1)
-}
 
 ```
 
