@@ -11,6 +11,10 @@ You need to be careful, if you mine out the other stone around it, there is a ch
 
 When you are ready to get started, hit next.   
 
+```template
+//
+```
+
 ## Step 2
 
 The first step will be detecting the iron ore. We can start with checking the block below the agent.   

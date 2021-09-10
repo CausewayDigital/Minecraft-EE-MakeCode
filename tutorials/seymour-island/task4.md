@@ -11,7 +11,11 @@ You need to be careful, if you mine out the other stone around it, there is a ch
 
 This task is an **advanced** task, it is highly recommended you have completed Auto Miner 1 and 2 first!
 
-WARNING - This task includes a 50 second timer, that resets your agent back to the start after 50 seconds.      
+WARNING - This task includes a 50 second timer, that resets your agent back to the start after 50 seconds.   
+
+```template
+//
+```
 
 ## Step 2
 

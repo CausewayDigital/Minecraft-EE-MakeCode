@@ -11,6 +11,10 @@ The catch... You can't see the obstacles in its way! For that, you will require 
 to take the position above, with the added benefit of invisible block visibility. They will guide you.    
 When you and your partner are ready, hit Next.   
 
+```template
+//
+```
+
 ## Step 2
 To move your agent, you can use the ``||agent:agent move FORWARD||`` command.   
 You are also able to use the ``||agent:agent turn LEFT||`` command if you wish. 

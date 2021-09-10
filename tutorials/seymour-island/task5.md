@@ -7,8 +7,7 @@
 ## Step 1
 
 ```template
-player.onItemInteracted(BLAZE_ROD, function () {
-})
+//
 ```
 
 In this task, we need to move clownfish and pufferfish from the ship, over onto the pier. First though, lets go collect some fish. Use the ``||agent:agent move forward 2||`` command to position your Agent over a fish collection point. 

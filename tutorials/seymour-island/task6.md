@@ -11,6 +11,10 @@ It is also recommended that you have completed the fixing circuits single player
 task before attempting this one.   
 Once you are ready to proceed, hit the next button.   
 
+```template
+//
+```
+
 ## Step 2
 
 This task involves repairing some circuits together, on a large scale.   

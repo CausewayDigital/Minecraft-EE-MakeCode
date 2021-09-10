@@ -17,7 +17,12 @@ First, we need to get our agent to the sections that have been damaged (marked w
 Try using the ``||agent:agent move forward||`` and ``||agent:agent turn left/right||`` commands to position your agent
 above one of the green blocks.
 
-```blocks
+```template
+//
+```
+
+```block
+//
 agent.move(FORWARD, 1)
 agent.turn(LEFT_TURN)
 agent.move(FORWARD, 2)
