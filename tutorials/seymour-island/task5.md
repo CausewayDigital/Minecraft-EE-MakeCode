@@ -38,10 +38,10 @@ for (let index = 0; index < 3; index++) {
 ```
 
 ## Step 3
-With all your clownfish now collected, next write a program to take your Agent over to the correct drop off point on the pier and use the ``||agent:agent drop all down||`` command to drop all the fish into the bucket.
+With all your clownfish now collected, next write a program to take your Agent over to the correct drop off point on the pier and use the ``||agent:agent drop items one at a time||`` command to drop all the fish into the bucket.
 
 ```ghost
-agent.dropAll(FORWARD)
+agent.dropItemsIndividually(FORWARD, 0, 0)
 ```
 
 ## Step 4
@@ -51,5 +51,5 @@ Try putting all this within a ``||loops:Repeat times loop||`` to keep picking up
 Finally, replicate the same process to handle pufferfish. It is recommended to do this separately.
 
 ```package
-seymour=github:gbaman/minecraft-ee-seymour-island
+causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension
 ```
