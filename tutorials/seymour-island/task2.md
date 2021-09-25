@@ -6,7 +6,7 @@
 
 ## Step 1 @unplugged
 
-![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.png)
+![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_2.jpg)
 The mine ahead is too dangerous for a miner to go in. Do you think your Agent is up for the task?
 Let's use the agent to dig a mine shaft ahead. First, why not try breaking
 the block ahead of the Agent, using ``||agent:agent destroy forward||``.

@@ -4,7 +4,7 @@
 # Multiplayer circuits
 
 ## Step 1 @unplugged
-![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_6.png)
+![Side task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/seymour-island/images/seymour_task_6.jpg)
 Before you get started, it is important you have a friend in the room beside you to 
 help with this task, as it requires 2 players!
 It is also recommended that you have completed the fixing circuits single player 
