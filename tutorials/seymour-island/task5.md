@@ -16,7 +16,7 @@ Place your code within the ``||on start||`` section, then click the run button t
 
 ```blocks
 agent.move(LEFT, 1)
-agent.move(FORWARD, 2)a
+agent.move(FORWARD, 2)
 agent.collect(CLOWNFISH)
 
 ```
