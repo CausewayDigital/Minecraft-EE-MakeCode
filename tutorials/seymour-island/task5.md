@@ -37,7 +37,7 @@ for (let index = 0; index < 3; index++) {
 With all your clownfish now collected, next write a program to take your Agent over to the correct drop off point on the pier and use the ``||agent:agent drop items one at a time||`` command to drop all the fish into the bucket.
 
 ```ghost
-agent.dropItemsIndividually(FORWARD, 0, 0)
+agent.dropAllItemsIndividually(FORWARD)
 
 ```
 
