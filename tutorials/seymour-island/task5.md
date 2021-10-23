@@ -15,7 +15,6 @@ Then use the ``||agent:agent collect CLOWNFISH||`` command to pick up only clown
 Place your code within the ``||on start||`` section, then click the run button to run your code.
 
 ```blocks
-agent.move(LEFT, 1)
 agent.move(FORWARD, 2)
 agent.collect(CLOWNFISH)
 
@@ -25,7 +24,6 @@ agent.collect(CLOWNFISH)
 With some clownfish now collected, let's also collect clownfish from the rest of the pickup points. Why not try and put your code in a ``||loops:Repeat 3 times loop||`` (or ``||loops:for loop||`` in Python).
 
 ```blocks
-agent.move(LEFT, 1)
 for (let index = 0; index < 3; index++) {
     agent.move(FORWARD, 2)
     agent.collect(CLOWNFISH)
