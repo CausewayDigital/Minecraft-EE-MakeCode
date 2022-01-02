@@ -6,6 +6,7 @@
         "builder": "*"
     },
     "files": [
+      "tutorials/no_coding.md",
       "tutorials/seymour-island/blank.md",
       "tutorials/seymour-island/task0-breaking.md",
       "tutorials/seymour-island/task0-captain.md",
