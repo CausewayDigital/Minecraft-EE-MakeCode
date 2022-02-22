@@ -42,6 +42,7 @@ agent.move(FORWARD, 1)
     agent.move(RIGHT, 2)
     agent.move(FORWARD, 7)
     agent.move(LEFT, 4)
+    agent.turn(LEFT)
 
 ```
 
