@@ -20,3 +20,7 @@ Please close this window to return to the world.
 ```ghost
 loops.onStart()
 ```
+
+```package
+seymour=github:CausewayDigital/Minecraft-EE-MakeCode
+```
