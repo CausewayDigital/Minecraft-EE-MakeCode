@@ -20,7 +20,7 @@ When you are ready to get started, hit next.
 The first step will be detecting the iron ore. We can start with checking the block below the agent.   
 Start by adding a ``||logic:if then||``, with a ``||logic:0 = 0||`` block within it.   
 In the first slot of this, use an ``||agent: agent inspect block down||`` to detect which block is below.   
-Then on the right hand side, compare it against an Iron Ore Block.   
+Then on the right hand side of the comparison block, compare it against an Iron Ore Block.   
 Within this if statement, add an ``||agent:agent destroy down||``.   
 Now try your code. You can reset the task at any point by using your phone.   
 
@@ -32,7 +32,7 @@ if (agent.inspect(AgentInspection.Block, DOWN) == IRON_ORE) {
 
 ## Step 3
 
-Using the code you built for the previous exercise, can you check and destroy to the right now as well?  
+Using the code you built for the previous exercise, can you check and destroy the rest of the wall as well?  
 Place this section within a ``||loops:repeat 3 times||`` command and and move the agent up 1 each time.   
 Don't forget to bring the agent back down again.   
 Now try your code. You can reset the task at any point by using your phone. 
