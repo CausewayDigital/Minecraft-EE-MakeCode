@@ -40,7 +40,7 @@ agent.dropAllItemsIndividually(FORWARD)
 ```
 
 ## Clownfish Diagram @unplugged
-![Clownfish Diagram](https://github.com/CausewayDigital/Minecraft-EE-MakeCode/blob/master/tutorials/seymour-island/images/task_5_map_clownfish.jpg)
+![Clownfish Diagram](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/master/tutorials/seymour-island/images/task_5_map_clownfish.jpg)
 Use the diagram above to measure the distance the agent will need to travel to drop off the fish!
 
 ## Step 4
