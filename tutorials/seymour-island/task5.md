@@ -50,7 +50,7 @@ Try putting all this within a ``||loops:Repeat times loop||`` to keep picking up
 Finally, replicate the same process to handle pufferfish. It is recommended to do this separately.
 
 ## Pufferfish Diagram @unplugged
-![Pufferfish Diagram](https://github.com/CausewayDigital/Minecraft-EE-MakeCode/blob/master/tutorials/seymour-island/images/task_5_map_pufferfish.jpg)
+![Pufferfish Diagram](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/master/tutorials/seymour-island/images/task_5_map_pufferfish.jpg)
 Use the diagram above to measure the distance the agent will need to travel to drop off the fish!
 
 ```package
