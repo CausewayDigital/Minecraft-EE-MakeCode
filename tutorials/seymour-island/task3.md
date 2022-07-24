@@ -20,7 +20,7 @@ When you are ready to get started, hit next.
 The first step will be detecting the iron ore. We can start with checking the block below the agent.   
 Start by adding a ``||logic:if then||``, with a ``||logic:0 = 0||`` block within it.   
 In the first slot of this, use an ``||agent: agent inspect block down||`` to detect which block is below.   
-Then on the right hand side of the comparison block, compare it against an Iron Ore Block.   
+Then on the right-hand side of the comparison block, compare it against an Iron Ore Block.   
 Within this if statement, add an ``||agent:agent destroy down||``.   
 Now try your code. You can reset the task at any point by using your phone.   
 
@@ -42,8 +42,8 @@ Now try your code. You can reset the task at any point by using your phone.
         agent.destroy(DOWN)
     }
     for (let index = 0; index < 3; index++) {
-        if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
-            agent.destroy(RIGHT)
+        if (agent.inspect(AgentInspection.Block, LEFT) == IRON_ORE) {
+            agent.destroy(LEFT)
         }
         agent.move(UP, 1)
     }
@@ -65,8 +65,8 @@ You are on your own for this last bit, good luck!
             agent.destroy(DOWN)
         }
         for (let index = 0; index < 3; index++) {
-            if (agent.inspect(AgentInspection.Block, RIGHT) == IRON_ORE) {
-                agent.destroy(RIGHT)
+            if (agent.inspect(AgentInspection.Block, LEFT) == IRON_ORE) {
+                agent.destroy(LEFT)
             }
             agent.move(UP, 1)
         }
