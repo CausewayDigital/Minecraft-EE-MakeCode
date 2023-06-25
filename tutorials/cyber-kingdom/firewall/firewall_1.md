@@ -3,6 +3,11 @@
 
 # Allowing everything
 
+## What's a Firewall? @unplugged
+A Firewall is a filtering system for traffic entering (and sometimes exiting) a network or location.    
+It is based on created allow or deny rules to allow or deny different types of traffic.   
+In this task, you will be building up a series of rules to allow or deny different characters into the castle.
+
 ## Villagers @unplugged
 It looks like there are a group of villagers on their way. Let's start by creating a firewall that allows all.   
 ## Step 1
