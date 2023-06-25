@@ -1,7 +1,7 @@
 ### @explicitHints 1
 ### @flyoutOnly true
 
-# First filters
+# Combining rules
 
 ```ghost
 cyber.setupFirewall(function () {
@@ -9,24 +9,24 @@ cyber.setupFirewall(function () {
     cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
     cyber.addDenyFirewallRule(cyber.requireHoldingItem(HoldingItem.NoItem))
     cyber.addDenyFirewallRule(cyber.requireLegs(Legs.TwoLegs))
+    cyber.addDenyFirewallRule(cyber.ruleAnd(cyber.requireLegs(Legs.OverFourLegs), cyber.requireHoldingItem(HoldingItem.NoItem)))
 })
 
 ```
 
-## Virus @showdialog
-It's a Worm!   
-We need to create a rule to stop it coming in the castle!   
+## More villagers @showdialog
+It looks like there's a large group of villagers on their way.   
+Are they all going to be allowed through the firewall? 
 
 
-## Deny rule
-We need to come up with a rule to block access to the worm, but still allow villagers in.   
-Add a ``||cyber:Add deny firewall rule||`` block to your rules. It allows you to tell the guards to deny access to anyone that satisfies the rule.  
+## More villagers
+You may need to make rules using an **and** statement. This means you can combine 2 rules together.   
 
-### Distinguishing Features
-Can you see anything that might help us distinguish between a villager and a virus?
+
 ```template
 cyber.setupFirewall(function () {
 cyber.allowAll()
+cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
 })
 ```
 
@@ -35,6 +35,7 @@ cyber.allowAll()
 cyber.setupFirewall(function () {
     cyber.allowAll()
     cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
+    cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
 })
 
 ```
