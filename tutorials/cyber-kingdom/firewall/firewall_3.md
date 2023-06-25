@@ -15,6 +15,7 @@ cyber.setupFirewall(function () {
 
 ## Virus @showdialog
 It's a Virus!   
+![Virus](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_3.jpg)
 
 
 ## Stop the virus
