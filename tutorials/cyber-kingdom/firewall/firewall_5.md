@@ -10,6 +10,7 @@ cyber.setupFirewall(function () {
     cyber.addDenyFirewallRule(cyber.requireHoldingItem(HoldingItem.NoItem))
     cyber.addDenyFirewallRule(cyber.requireLegs(Legs.TwoLegs))
     cyber.addDenyFirewallRule(cyber.ruleAnd(cyber.requireLegs(Legs.OverFourLegs), cyber.requireHoldingItem(HoldingItem.NoItem)))
+    cyber.addDenyFirewallRule(cyber.requireEyewear(WearingEyeware.WearingEyeware))
 })
 
 ```
