@@ -1,7 +1,7 @@
 ### @explicitHints 1
 ### @flyoutOnly true
 
-# TUTORIAL 5
+# Spies
 
 ```ghost
 cyber.setupFirewall(function () {
@@ -14,32 +14,25 @@ cyber.setupFirewall(function () {
 
 ```
 
-## More villagers @showdialog
-It looks like there's a large group of villagers on their way.   
-Are they all going to be allowed through the firewall? 
+## Spies @showdialog
+Be careful, the rival kingdom has been known to try and send spies through our gates.  
 
 
-## More villagers
-You may need to make rules using an **and** statement. This means you can combine 2 rules together.   
+## Spies!
+Make sure not to let the spies in, they try to use a disguise so they won't be recognised.   
+I wonder how we could differentiate them from normal villagers?   
 
 
 ```template
 cyber.setupFirewall(function () {
 cyber.allowAll()
 cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
-cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
+cyber.addDenyFirewallRule(cyber.ruleAnd(cyber.requireHat(WearingHat.NoHat), cyber.requireHoldingItem(HoldingItem.NoItem)))
 })
 ```
 
 ### ~ tutorialhint
-```blocks
-cyber.setupFirewall(function () {
-    cyber.allowAll()
-    cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
-    cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
-})
-
-```
+What do spies always wear when they want to conceal their identity?
 
 ```package
 causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension#cyber-kingdom

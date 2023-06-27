@@ -31,14 +31,8 @@ cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
 ```
 
 ### ~ tutorialhint
-```blocks
-cyber.setupFirewall(function () {
-    cyber.allowAll()
-    cyber.addDenyFirewallRule(cyber.requireLegs(Legs.OverFourLegs))
-    cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
-})
+Are those villagers wearing hats?
 
-```
 
 ```package
 causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension#cyber-kingdom
