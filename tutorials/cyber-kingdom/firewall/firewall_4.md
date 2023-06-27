@@ -17,6 +17,7 @@ cyber.setupFirewall(function () {
 ## More villagers @showdialog
 It looks like there's a large group of villagers on their way.   
 Are they all going to be allowed through the firewall? 
+![Villagers](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_4.jpg)
 
 
 ## More villagers

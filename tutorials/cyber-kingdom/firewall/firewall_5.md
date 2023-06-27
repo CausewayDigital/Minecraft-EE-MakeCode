@@ -15,7 +15,8 @@ cyber.setupFirewall(function () {
 ```
 
 ## Spies @showdialog
-Be careful, the rival kingdom has been known to try and send spies through our gates.  
+Be careful, the rival kingdom has been known to try and send spies through our gates.
+![Spies](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_5.jpg)  
 
 
 ## Spies!

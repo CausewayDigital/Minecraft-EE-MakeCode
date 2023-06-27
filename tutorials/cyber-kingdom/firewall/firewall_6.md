@@ -16,6 +16,7 @@ cyber.setupFirewall(function () {
 
 ## Soldiers @showdialog
 The rival kingdom it seems didn't take kindly to us blocking access to their spies and have sent soldiers!
+![Soldiers](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_6.jpg)
 
 
 ## Spies!
