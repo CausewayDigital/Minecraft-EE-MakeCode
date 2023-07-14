@@ -14,7 +14,7 @@ cyber.setupFirewall(function () {
 ```
 
 ## Worm @showdialog
-It's a Worm!   
+It's a Virus! This virus seems to be a worm that is trying to enter...
 We need to create a rule to stop it coming in the castle!   
 ![Worm](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_2.jpg)
 
