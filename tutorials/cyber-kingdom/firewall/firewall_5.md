@@ -21,7 +21,7 @@ Be careful, the rival kingdom has been known to try and send spies through our g
 
 
 ## Spies!
-Make sure not to let the spies in, they try to use a disguise so they won't be recognised.   
+Make sure not to let the spies in, they try to use a disguise so they won't be recognized.   
 I wonder how we could differentiate them from normal villagers?   
 
 
