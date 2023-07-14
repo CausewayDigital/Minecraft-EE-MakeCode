@@ -11,6 +11,13 @@ cyber.setupFirewall(function () {
     cyber.addDenyFirewallRule(cyber.requireLegs(Legs.TwoLegs))
     cyber.addDenyFirewallRule(cyber.ruleAnd(cyber.requireLegs(Legs.OverFourLegs), cyber.requireHoldingItem(HoldingItem.NoItem)))
     cyber.addDenyFirewallRule(cyber.requireEyewear(WearingEyeware.WearingEyeware))
+    cyber.addDenyFirewallRule(cyber.requireCrest(cyber.createGridString(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)))
 })
 
 ```
@@ -20,9 +27,9 @@ The rival kingdom it seems didn't take kindly to us blocking access to their spi
 ![Soldiers](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_6.jpg)
 
 
-## Spies!
+## Soldiers!
 Quickly, create some rules to block these solders, we can't have them getting through the castle walls! 
-I wonder how we could differentiate them from normal villagers?   
+We could use their royal crest on the shields to help differentiate them. Our soldiers have a **golden** and **purple** crest, they must be allowed back in.   
 
 
 ```template
