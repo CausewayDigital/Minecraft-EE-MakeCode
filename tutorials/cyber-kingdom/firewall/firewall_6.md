@@ -28,7 +28,7 @@ The rival kingdom it seems didn't take kindly to us blocking access to their spi
 
 
 ## Soldiers!
-Quickly, create some rules to block these solders, we can't have them getting through the castle walls! 
+Quickly, create some rules to block these solders, we can't have them getting through the castle walls!   
 We could use their royal crest on the shields to help differentiate them. Our soldiers have a **golden** and **purple** crest, they must be allowed back in.   
 
 
