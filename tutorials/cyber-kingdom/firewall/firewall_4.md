@@ -22,7 +22,7 @@ Are they all going to be allowed through the firewall?
 
 ## More villagers
 You may need to make rules using an **and** statement. This means you can combine 2 rules together.   
-Watch out, some of these villages don't have hats, but they are carrying items like a pickaxe or map.   
+Watch out, some of these villages don't have hats, but they are carrying items like a pickaxe or map. This means we can't just block anything not wearing a hat.  
 
 
 ```template
@@ -34,7 +34,7 @@ cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
 ```
 
 ### ~ tutorialhint
-The virus has 2 legs and doesn't seem to be holding anything.
+The virus doesn't seem to be wearing a hat and doesn't seem to be holding anything.
 
 ```package
 causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension#cyber-kingdom

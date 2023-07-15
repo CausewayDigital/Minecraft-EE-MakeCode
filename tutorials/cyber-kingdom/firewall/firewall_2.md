@@ -14,17 +14,17 @@ cyber.setupFirewall(function () {
 ```
 
 ## Worm @showdialog
-It's a Virus! This virus seems to be a worm that is trying to enter...
+It's some malware! This malware seems to be a worm that is trying to enter the castle...
 We need to create a rule to stop it coming in the castle!   
 ![Worm](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_2.jpg)
 
 
 ## Deny rule
 We need to come up with a rule to block access to the worm, but still allow villagers in.   
-Add a ``||cyber:Add deny firewall rule||`` block to your rules. It allows you to tell the guards to deny access to anyone that satisfies the rule.  
+Add a ``||cyber:Add deny firewall rule||`` block to your rules. It allows you to tell the guards to deny access to anything that satisfies the rule.  
 
 ### Distinguishing Features
-Can you see anything that might help us distinguish between a villager and a virus?   
+Can you see anything that might help us distinguish between a villager and a worm?   
 Press the < (back) button to check the lookout view for what is coming if you aren't sure.
 ```template
 cyber.setupFirewall(function () {

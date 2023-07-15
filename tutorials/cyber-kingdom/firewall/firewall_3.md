@@ -19,7 +19,7 @@ It's a Virus!
 
 
 ## Stop the virus
-Add another rule to stop the virus. 
+A different type of malware is coming! Add another rule to stop the virus. 
 Can you see anything that might help us distinguish between a villager and a virus?   
 Remember, you can press the < (back) button to check the lookout view again.
 
