@@ -41,6 +41,11 @@ cyber.addDenyFirewallRule(cyber.requireEyewear(WearingEyeware.WearingEyeware))
 })
 ```
 
+### ~ tutorialhint
+Pay special attention to the soldiers shields, could we filter by those? Be careful not to block our soldiers though!
+![Soldiers Shields](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_6_shields.jpg)
+
+
 
 ```package
 causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension#cyber-kingdom
