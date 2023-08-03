@@ -14,13 +14,13 @@ cyber.setupFirewall(function () {
 ```
 
 ## Virus @showdialog
-It's a Virus!   
+It's another anomaly!   
 ![Virus](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_3.jpg)
 
 
 ## Stop the virus
-This is a different anomaly called a virus! Add another rule to stop this anomaly. 
-Can you see anything that might help us distinguish between a villager and a virus?   
+This is a different anomaly! Add another rule to stop this particular anomaly. 
+Can you see anything that might help us distinguish between a villager and the anomaly?   
 Remember, you can press the < (back) button to check the lookout view again.
 
 

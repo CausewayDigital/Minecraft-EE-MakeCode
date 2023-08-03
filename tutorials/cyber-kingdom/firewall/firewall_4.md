@@ -34,7 +34,7 @@ cyber.addDenyFirewallRule(cyber.requireHat(WearingHat.NoHat))
 ```
 
 ### ~ tutorialhint
-The virus doesn't seem to be wearing a hat and doesn't seem to be holding anything.
+The anomaly doesn't seem to be wearing a hat and doesn't seem to be holding anything.
 
 ```package
 causeway-digital-makecode-extension=github:causewaydigital/pxt-causeway-digital-extension#cyber-kingdom
