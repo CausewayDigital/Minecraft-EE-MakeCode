@@ -1,7 +1,7 @@
 ### @explicitHints 1
 ### @flyoutOnly true
 
-# Virus
+# Anomaly 2
 
 ```ghost
 cyber.setupFirewall(function () {
@@ -13,12 +13,12 @@ cyber.setupFirewall(function () {
 
 ```
 
-## Virus @showdialog
+## Anomaly 2 @showdialog
 It's another anomaly!   
-![Virus](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_3.jpg)
+![Anomaly](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_3.jpg)
 
 
-## Stop the virus
+## Stop the anomaly
 This is a different anomaly! Add another rule to stop this particular anomaly. 
 Can you see anything that might help us distinguish between a villager and the anomaly?   
 Remember, you can press the < (back) button to check the lookout view again.

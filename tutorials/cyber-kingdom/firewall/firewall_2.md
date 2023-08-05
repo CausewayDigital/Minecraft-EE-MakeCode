@@ -1,7 +1,7 @@
 ### @explicitHints 1
 ### @flyoutOnly true
 
-# Worm
+# Anomaly 1
 
 ```ghost
 cyber.setupFirewall(function () {
@@ -13,10 +13,10 @@ cyber.setupFirewall(function () {
 
 ```
 
-## Worm @showdialog
-It's some anomalies! This anomaly seems to have lots of legs and is trying to enter the castle...
+## Anomaly 1 @showdialog
+It's some anomalies! This anomaly seems to have a lot of legs and is trying to enter the castle...
 We need to create a rule to stop it coming in the castle!   
-![Worm](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_2.jpg)
+![Anomaly](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/main/tutorials/cyber-kingdom/firewall/images/level_2.jpg)
 
 
 ## Deny rule
