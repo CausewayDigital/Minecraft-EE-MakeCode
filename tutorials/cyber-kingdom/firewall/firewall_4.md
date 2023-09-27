@@ -22,7 +22,7 @@ Are they all going to be allowed through the firewall?
 
 ## More villagers
 You may need to make rules using an **and** statement. This means you can combine 2 rules together.   
-Watch out, some of these villages don't have hats, but they are carrying items like a pickaxe or map. This means we can't just block anything not wearing a hat.  
+Watch out, some of these villagers don't have hats, but they are carrying items like a pickaxe or map. This means we can't just block anything not wearing a hat.  
 
 
 ```template
