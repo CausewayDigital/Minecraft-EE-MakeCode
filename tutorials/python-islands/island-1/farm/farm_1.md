@@ -1,0 +1,60 @@
+### @flyoutOnly true
+### @diffs true
+### @hideDone true
+### @codeStart players set @s codeExecution 1
+### @codeStop players set @s codeExecution 0
+
+
+# Python Islands 1 - Farming
+
+```template
+// Add your code below
+agent
+```
+
+## Introduction to farming @showdialog
+Using our agent, let's help the farmer till the ground and plant some seeds. The farmer has already placed the seeds in the agent inventory, ready to go!   
+
+![Farming](farm.jpg)
+
+## Moving the agent into place
+The farmer has added 3 markers over the field to show you where to till the soil.
+Use `||agent:agent.move(DIRECTION)||` to move your agent to one of the markers.
+
+```python
+agent.move(LEFT)
+agent.move(LEFT)
+agent.move(LEFT)
+```
+
+
+## Tilling the required spots 
+Tilling prepares normal dirt so you can grow seeds. Once you have your agent directly on top of a dirt block (using `||agent:agent.move(FORWARD)||`), you should till it.
+To till dirt using your agent, use `||agent:agent.till(DIRECTION)||`. 
+
+
+```python
+agent.move(LEFT)
+agent.move(LEFT)
+agent.move(LEFT)
+agent.till(DOWN)
+```
+
+## Planting seeds
+Now that the ground has been tilled, you should see the marker change to a white colour.  
+Next, you need to plant the seeds using `||agent:agent.place()||`.
+
+
+```python
+agent.move(LEFT)
+agent.move(LEFT) 
+
+agent.move(LEFT)
+agent.till(DOWN)
+agent.place(DOWN)
+```
+
+## Plant the rest of the seeds
+Now you have planted a seed it's time to finish the job by planting the other 2 seeds. 
+Take a look for the markers placed by the farmer.  
+
