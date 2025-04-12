@@ -19,12 +19,10 @@ Using our agent, let's help the farmer till the ground and plant some seeds. The
 
 ## Moving the agent into place
 The farmer has added 3 markers over the field to show you where to till the soil.
-Use `||agent:agent.move(DIRECTION)||` to move your agent to one of the markers.
-
+Use `||agent:agent.move(DIRECTION, 1)||` to move your agent to one of the markers.   
+Remember to change the `1` above to the number of blocks you want to move.
 ```python
-agent.move(LEFT)
-agent.move(LEFT)
-agent.move(LEFT)
+agent.move(LEFT, 3)
 ```
 
 
@@ -34,9 +32,7 @@ To till dirt using your agent, use `||agent:agent.till(DIRECTION)||`.
 
 
 ```python
-agent.move(LEFT)
-agent.move(LEFT)
-agent.move(LEFT)
+agent.move(LEFT, 3)
 agent.till(DOWN)
 ```
 
@@ -46,10 +42,7 @@ Next, you need to plant the seeds using `||agent:agent.place()||`.
 
 
 ```python
-agent.move(LEFT)
-agent.move(LEFT) 
-
-agent.move(LEFT)
+agent.move(LEFT, 3)
 agent.till(DOWN)
 agent.place(DOWN)
 ```
