@@ -15,7 +15,7 @@ agent
 ## Introduction to farming @showdialog
 Using our agent, let's help the farmer till the ground and plant some seeds. The farmer has already placed the seeds in the agent inventory, ready to go!   
 
-![Farming](farm.jpg)
+![Farming](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/farm/farm.jpg)
 
 ## Moving the agent into place
 The farmer has added 3 markers over the field to show you where to till the soil.
