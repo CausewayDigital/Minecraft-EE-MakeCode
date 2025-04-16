@@ -15,10 +15,10 @@ Using our agent, let's rebuild the broken ladder to investigate the smoke coming
 
 Marcus has already loaded your agent with some ladders.   
 
-![Cover Image](cover.png)
+![Cover Image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/forest/cover.png)
 
-## Get to the Ladder
-First you need to get to the ladder using `||agent:agent.move(DIRECTION, BLOCKS)||`
+## Get Agent to the Ladder
+First you need to get your agent to the ladder using `||agent:agent.move(DIRECTION, BLOCKS)||`
 ```python
 agent.move(FORWARD, 1)
 ```
