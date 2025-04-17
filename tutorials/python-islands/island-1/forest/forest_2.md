@@ -17,7 +17,7 @@ Go down the ladder and find your agent, then when you're ready to let's go and p
 
 ## Get to an Apple
 To pick the apples, you need to position your agent in front of them. Remember your agent can go UP, DOWN, LEFT, RIGHT, FORWARD and BACK.
-Move your agent using `agent.move` (and your whistle) to the first apple you want to pick!
+Move your agent using `||agent:agent.move||` (and your whistle) to the first apple you want to pick!
 
 
 ```python
@@ -30,7 +30,7 @@ agent.move(DIRECTION, BLOCKS)
 Make sure your agent is next to an apple. (Similar to the image above)
 
 ## Picking up an Apple
-With your agent in front of an apple, you can use the `agent.destroy` command to break a block in a certain direction.
+With your agent in front of an apple, you can use the `||agent:agent.destroy||` command to break a block in a certain direction.
 ```python
 
 agent.destroy(DIRECTION)
