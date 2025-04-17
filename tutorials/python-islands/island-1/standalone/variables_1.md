@@ -50,7 +50,7 @@ my_amazing_variable = "World"
 ```
 
 ## Try Overwriting a Variable
-Try changing `my_amazing_variable` between where you create it and where you use the command "`player.say`".
+Try changing `my_amazing_variable` between where you create it and where you use the command `||player:player.say(STRING)||`.
 
 ```python
 
@@ -88,4 +88,3 @@ my_amazing_variable = "Task complete"
 
 player.say(my_amazing_variable)
 ```
-
