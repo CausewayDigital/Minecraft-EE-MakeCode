@@ -23,6 +23,8 @@ It is up in the tree.
 Using `||agent:agent.move(DIRECTION, BLOCKS)||`, move your agent to the Golden block in the tree.
 
 ```python
-agent.move(FORWARD, 3)
-agent.move(RIGHT, 4)
+agent.move(LEFT, 7)
+agent.move(BACK, 1)
+agent.move(DOWN, 1)
+agent.move(LEFT, 1)
 ```
