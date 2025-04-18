@@ -62,6 +62,8 @@ TJ has asked if you and your agent could harvest some wood from the trees. You c
 
 You need to be **extremely** careful though, not to disturb the birds, that are nesting in the trees!
 
+![Cover image of forest](ForestCover.png)
+
 ## Introduction @showdialog
 
 TJ has given your agent a few special functions for your agent to use in this forest task:
