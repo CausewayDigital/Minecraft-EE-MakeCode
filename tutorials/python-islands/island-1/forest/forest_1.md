@@ -26,7 +26,7 @@ agent.move(FORWARD, 1)
 ## Fixing the Ladder
 Now you're ready to start fixing the ladder up the tree.
 To place blocks, you can use `||agent:agent.place(DIRECTION)||`. 
-Add an `agent.place`, to place a ladder in front (`FORWARD`) of your agent.
+Add an `||agent:agent.place||`, to place a ladder in front (`FORWARD`) of your agent.
 ```python
 agent.move(FORWARD, 1)
 agent.place(FORWARD)
@@ -34,7 +34,7 @@ agent.place(FORWARD)
 
 ## Fix the Rest
 With the first ladder replaced, there seems to be another missing ladder above...
-Complete the path by replacing the second ladder (using `agent.move` and `agent.place`).
+Complete the path by replacing the second ladder (using `||agent:agent.move||` and `||agent:agent.place||`).
 
 ## All Done
 Now climb up the ladder and investigate the smoke!
