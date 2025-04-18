@@ -6,6 +6,46 @@
 
 # Forest
 
+```customts
+namespace agent {
+    /**
+     * Harvest block infront of the agent
+    */
+    //% block Harvest block
+    export function harvest(): void {
+        let inspect = agent.inspect(AgentInspection.Block, FORWARD);
+        if (inspect === STONE) {
+            agent.destroy(FORWARD)
+            agent.drop(FORWARD, 2, 1)
+        } else if (inspect === 18) {  // Leaves
+            agent.destroy(FORWARD)
+            agent.drop(FORWARD, 1, 1)
+        }
+    }
+
+    /**
+    * Checks if the block infront of agent is a nest, returns True is there is, else False.
+    */
+    //% block Check if block is nest
+    export function is_nest(): boolean {
+        let inspect = agent.inspect(AgentInspection.Block, FORWARD)
+        if (inspect === STONE) {
+            return true
+        }
+        return false
+    }
+
+    /**
+    * Moves agent to the next location
+    */
+    //% block Move to next location
+    export function next(): void {
+        // 21 is a Snow Golem
+        mobs.spawn(21, world(166, 153, 220))
+    }
+}
+```
+
 ```ghost
 player.say(agent.is_nest())
 if (agent.is_nest()){
