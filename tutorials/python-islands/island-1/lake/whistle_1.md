@@ -3,6 +3,8 @@
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
+### @hideToolbox true
+### @preferredEditor asset
 
 # Python Islands 1 - Whistle
 
