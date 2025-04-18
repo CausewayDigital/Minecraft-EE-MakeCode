@@ -30,7 +30,7 @@ namespace agent {
     * Moves agent to the next location
     */
     //% block Move to next location
-    export function next(): void {
+    export function next_location(): void {
         // 21 is a Snow Golem
         mobs.spawn(21, world(166, 153, 220))
     }

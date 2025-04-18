@@ -39,7 +39,7 @@ namespace agent {
     * Moves agent to the next location
     */
     //% block Move to next location
-    export function next(): void {
+    export function next_location(): void {
         // 21 is a Snow Golem
         mobs.spawn(21, world(166, 153, 220))
     }
@@ -51,7 +51,7 @@ player.say(agent.is_nest())
 if (agent.is_nest()){
     agent.harvest()
 }
-agent.next()
+agent.next_location()
 ```
 
 
@@ -73,7 +73,7 @@ TJ has given your agent a few special functions for your agent to use in this fo
 
 - ``||agent:agent.harvest()||``: Carefully harvests the wood in front of your agent and then drops it to the ground.
 
-- ``||agent:agent.next()||``: TJ will move your agent for you, to the next branch.
+- ``||agent:agent.agent.next_location()||``: TJ will move your agent for you, to the next branch.
 
 ## Step 1
 
@@ -94,10 +94,10 @@ Now that you know how to use ``||agent:agent.is_nest()||``, we can use it with a
 If there is a nest, we want to leave it alone and run ``||agent:agent.next()||`` to go to the next area.
 
 **Create an ``||logic:if||`` statment that moves to the next area is ``||agent:agent.is_nest()||`` returns `True`**
-
+§
 ```spy
 if(agent.is_next()){
-    agent.next()
+    agent.next_location()
 }
 ```
 
@@ -105,16 +105,17 @@ if(agent.is_next()){
 
 Next, we want to add an ``||logic:else||``, to let us harvest other blocks and then go to the next area.
 
-**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statment you created.**
+**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statment you created. Rember to go to the next area after harvesting**
 ```diffspy
 if(agent.is_nest()){
-    agent.next()
+    agent.next_location()
 }
 --------------------
 if(agent.is_nest()){
-    agent.next()
+    agent.next_location()
 } else {
     agent.harvest()
+    agent.next_location()
 }
 ```
 
