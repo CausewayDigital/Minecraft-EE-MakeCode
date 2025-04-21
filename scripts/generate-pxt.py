@@ -24,7 +24,7 @@ for root, dirs, files in os.walk(script_path.parent/"tutorials"):
 
 tutorial_files.sort()
 tutorial_files = [t for t in tutorial_files if t not in ignored_files["ignoredFiles"]]
-pxt["files"] = tutorial_files
+pxt["files"] = pxt["files"] + tutorial_files
 
 with open(save_path, "w+", encoding="utf-8") as save_file:
     json.dump(pxt, save_file, indent=4)
