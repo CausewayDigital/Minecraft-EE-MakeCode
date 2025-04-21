@@ -1,0 +1,14 @@
+{
+    "name": "Minecraft-EE-MakeCode",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "builder": "*"
+    },
+    "files": [],
+    "testFiles": [
+    ],
+    "supportedTargets": [
+        "minecraft"
+    ]
+}
