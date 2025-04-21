@@ -1,4 +1,4 @@
-name: Update pxt.json file
+name: Update pxt.json & Release
 
 on:
   push:
@@ -12,6 +12,7 @@ on:
 jobs:
     update-pxt:
         runs-on: ubuntu-latest
+        name: Update pxt.json file
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
@@ -45,6 +46,7 @@ jobs:
 
     release:
         runs-on: ubuntu-latest
+        name: Create Relase
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
