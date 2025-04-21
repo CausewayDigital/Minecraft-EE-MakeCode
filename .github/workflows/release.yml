@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - "**.md"
+      - "!README.md"
       - "pxt.json"
   workflow_dispatch:
 
