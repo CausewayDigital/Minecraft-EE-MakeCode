@@ -12,10 +12,9 @@ tutorial_files: List[str] = []
 with open(script_path/"config"/"base-pxt.json", "r") as base_file:
     pxt = json.load(base_file)
 
-# Load base PXT JSON file
+# Load ignored file
 with open(script_path/"config"/"ignore.json", "r") as base_file:
     ignored_files = json.load(base_file)
-
 
 for root, dirs, files in os.walk(script_path.parent/"tutorials"):
     for file in files:
