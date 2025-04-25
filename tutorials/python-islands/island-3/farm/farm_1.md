@@ -6,11 +6,14 @@
 
 # Farm
 
-```ghostpython
-agent.move(FORWARD)
-agent.place(FORWARD)
-agent.destory(FORWARD)
-agent.inspect(AgentInspection.Block, DOWN)
+```ghost
+agent.place(DOWN)
+agent.destroy(FORWARD)
+agent.move(FORWARD, 1)
+const block = agent.inspect(AgentInspection.Block, DOWN)
+if (block == WHEAT) {
+    player.say("Wheat!")
+}
 ```
 
 ```template
@@ -91,9 +94,9 @@ if(block == WHEAT){
 
 ## Step 6
 
-Great! Now with all that together, let's add our for loop to repeat it all, more than once.
+Great! Now with all that together, let's add our for loop to repeat it all, more than once, and along with that we should make sure we add a ``||agent:agent.move()||`` so our agent moves forward each time.
 
-**Create a ``||loops: for loop||`` to run the code you already have for the range of `0` to `8`.**
+**Create a ``||loops: for loop||`` to run the code you already have for the range of `0` to `8`. As well make sure the agent moves `FORWARD` with ``||agent:agent.move()||``**
 
 ```diffpython
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
@@ -106,6 +109,7 @@ block = agent.inspect(AgentInspection.BLOCK, DOWN)
         player.say("Air!")
 ----------------------
 for count in range(0, 8):
+    agent.move(FORWARD, 1)
     block = agent.inspect(AgentInspection.BLOCK, DOWN)
     if block == WHEAT:
         agent.destory(DOWN)
