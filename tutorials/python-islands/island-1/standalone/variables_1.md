@@ -10,81 +10,66 @@
 
 ```template
 // Edit the text (String) below to add your own message
-my_amazing_variable = "Test" 
+my_variable = "Test" 
 
 // This line below outputs the contents of your variable to game chat
-player.say(my_amazing_variable)
+player.say(my_variable)
 ```
 
 
-## What are Variables? @showdialog
-In this activity, you will be exploring the use of `Variables` within Python and how they work.   
-
+## What are Variables?
 In programming, `Variables` are temporary places to store information. They allow data to be saved and accessed later. Each `Variable` has a name, that you give it.   
 
 To create a variable, have a look at the code below:
 
-```python
-
-my_amazing_variable = "Hello world"
-
-```
+`||variables:my_variable = "Hello world"||`
 
 
-## Try it Youself
 Run the program and see what happens. Perhaps try tweaking the text sections within the " ".
 
 
-## Overwriting a Variable @showdialog
+## Overwriting a Variable
 
 You can also change the contents of a `Variable` you have already created, with the same process, for example:
 
-```python
+`||variables:my_variable = "Hello"||`
 
-my_amazing_variable = "Hello"
+The line below will overwrite "Hello" with "World" instead
 
-# This line below will overwrite "Hello" with "World" instead
+`||variables:my_variable = "World"||`
 
-my_amazing_variable = "World"
-
-```
-
-## Try Overwriting a Variable
-Try changing `my_amazing_variable` between where you create it and where you use the command `||player:player.say(STRING)||`.
+Try changing `||my_variable||` between where you create it and where you use the command `||player:player.say(STRING)||`.
 
 ```python
 
-my_amazing_variable = "Hello"
+my_variable = "Hello"
 
 // This line below will overwrite "Hello" with "World" instead
 
-my_amazing_variable = "World"
+my_variable = "World"
 
 ```
 
-## Variable Conclusion @showdialog
+## Variable Conclusion
 Variables are extremely powerful and are used everywhere in coding!   
 
 In Python, they can store any data (including Strings, Integers, Floats or Booleans) and can be accessed easily elsewhere within your program.   
 
 Remember, they always use the following format: 
-```python
-variable_name = data_being_stored
-```
+`||variables:variable_name = data_being_stored||`
+
 For example:
-```python
-name = "bob"
-age = 5
-```
 
-Once you have finished, change your code so it outputs "Task complete".
+`||variables:name = "bob"||`
 
-## All Done
+`||variables:age = 5||`
+
+
 Once you have finished, change your code so it outputs "Task complete" to complete the task.
 
 ```python
-my_amazing_variable = "Test"
-my_amazing_variable = "Task complete"
+my_variable = "Test"
+my_variable = "Task complete"
 
-player.say(my_amazing_variable)
+player.say(my_variable)
 ```
