@@ -28,7 +28,7 @@ namespace agent {
 // Start of user code
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
 player.say(block)
-if ( block ==  ) {
+if ( block == ) {
     // Fill in the condition above
     agent.accept() 
 }
@@ -36,7 +36,7 @@ if ( block ==  ) {
 
 ## If Statement Reminder @showdialog
 
-From our last step, the agent outputted the seed that is detected, which was `wheat`. Now we want to make some code that will choose what to do when your agent finds wheat. For this, we will use an `if` statement. 
+From our last step, the agent outputted the seed that is detected, which was `WHEAT`. Now we want to make some code that will choose what to do when your agent finds wheat. For this, we will use an `if` statement. 
 Here's a reminder of what it looks like:
 
 ```python
@@ -55,10 +55,11 @@ if (name == "bob"):
 ```
 
 ## Using Inspect with If
-Complete the `||logic:if||` to check if the block is *equal to* `"wheat"` which has a block id of 295.
+Complete the `||logic:if||` to check if the block is *equal to* `WHEAT`.
 
 ```python
-if ( block == "wheat" ) { }
+if block == WHEAT:
+    agent.accept()
 ```
 
 
@@ -85,22 +86,18 @@ else:
 ## Add an Else Statement
 Add an else statement to your code that runs the deny function.
 
-FUNCTION DEFS FOR accept and deny 
+```python
+if block == WHEAT:
+    agent.accept()
+else:
+    agent.deny()
+```
+
+## Repeat for the Rest
+Now you have added the else statement, move your agent forward 3 blocks foward and run the same check.
+
+Now run your code a few times to get your agent to the end of the field. Then when you have checked all four spots, Peter will want to have a chat with you.
 
 ```python
-# Start of user code
-# Move your agent to the next batch of seeds
-agent.move(FORWARD)
-agent.move(FORWARD)
-agent.move(FORWARD)
-
-# Check the seeds
-block = agent.inspect(DOWN)
-say(block)
-if(block == "wheat"){
-    accept() 
-}
-# Add your else below!
+agent.move(DIRECTION, BLOCKS)
 ```
-When you have finished, run your code a few times to get your agent to the end of the field. Then when you have checked all four spots, Peter will want to have a chat with you.
-
