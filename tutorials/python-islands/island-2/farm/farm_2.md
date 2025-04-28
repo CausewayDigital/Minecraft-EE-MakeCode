@@ -1,18 +1,36 @@
 ### @flyoutOnly true
-### @diffs true
+### @diffs false
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
 
 # Farm
 
+```customts
+/**
+* Funcitons accept and deny
+*/
+namespace agent {
+    export function accept(): void {
+        agent.set_slot(1)
+        agent.place(UP)
+    }
+
+    export function deny(): void {
+        agent.set_slot(2)
+        agent.place(UP)
+    }
+    
+}
+```
+
 ```template
 // Start of user code
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
-say(block)
-if (  ==  "" ) {
+player.say(block)
+if ( block ==  ) {
     // Fill in the condition above
-    accept() 
+    agent.accept() 
 }
 ```
 
@@ -37,7 +55,7 @@ if (name == "bob"):
 ```
 
 ## Using Inspect with If
-Complete the `||logic:if||` to check if the block is *equal to* `"wheat"`
+Complete the `||logic:if||` to check if the block is *equal to* `"wheat"` which has a block id of 295.
 
 ```python
 if ( block == "wheat" ) { }
