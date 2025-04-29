@@ -11,11 +11,13 @@
 * Funcitons accept and deny
 */
 namespace agent {
+    //% block
     export function accept(): void {
         agent.set_slot(1)
         agent.place(UP)
     }
 
+    //% block
     export function deny(): void {
         agent.set_slot(2)
         agent.place(UP)
@@ -55,6 +57,11 @@ if (name == "bob"):
 ```
 
 ## Using Inspect with If
+Add the code that you want to run bellow the if statement indented once to the right.
+
+`||logic:if (condition):||`
+        # Do something
+
 Complete the `||logic:if||` to check if the block is *equal to* `WHEAT`.
 
 ```python
@@ -84,7 +91,12 @@ else:
 ```
 
 ## Add an Else Statement
-Add an else statement to your code that runs the deny function.
+`||logic:if (condition):||`
+        # Do something
+`||logic:else:||`
+        # Do something else
+
+Add an else statement to your code that runs the `||agent:deny||` function.
 
 ```python
 if block == WHEAT:
@@ -94,7 +106,7 @@ else:
 ```
 
 ## Repeat for the Rest
-Now you have added the else statement, move your agent forward 3 blocks foward and run the same check.
+Now you have added the `||logic:else||` statement, move your agent forward 3 blocks foward and run the same check.
 
 Now run your code a few times to get your agent to the end of the field. Then when you have checked all four spots, Peter will want to have a chat with you.
 
