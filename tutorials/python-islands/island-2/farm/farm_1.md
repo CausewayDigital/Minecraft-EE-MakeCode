@@ -11,16 +11,17 @@
 * Funcitons accept and deny
 */
 namespace agent {
+    //% block
     export function accept(): void {
         agent.set_slot(1)
         agent.place(UP)
     }
-
+    
+    //% block
     export function deny(): void {
         agent.set_slot(2)
         agent.place(UP)
     }
-    
 }
 ```
 
@@ -48,12 +49,6 @@ agent.move(DIRECTION, BLOCKS)
 
 ## Inspect Blocks With Your Agent
 Now that your agent is above some seeds. Let's inspect what seeds they are! Your agent can inspect blocks using `||agent:agent.inspect||`:
-
-Here's how it works...
-
-`||agent:agent.inspect(AgentInspection.BLOCK, DIRECTION)||`
-
-- `DIRECTION`: The direction you want your agent to inspect. The directions are UP, DOWN, LEFT, RIGHT, FORWARD and BACK.
 
 Make the agent inspect down, and say the value stored in `block`!
 
