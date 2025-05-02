@@ -15,7 +15,7 @@
 
 ## Book Found! @showdialog
 
-![Librarian with book](library_found.jpg)
+![Librarian with book](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/library/library_found.jpg)
 
 "*Here is the spellbook I think you were looking for.*" - Librarian
 

@@ -63,7 +63,7 @@ TJ has asked if you and your agent could harvest some wood from the trees. You c
 
 You need to be **extremely** careful though, not to disturb the birds, that are nesting in the trees!
 
-![Cover image of forest](ForestCover.png)
+![Cover image of forest](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/forest/ForestCover.png)
 
 ## Introduction @showdialog
 

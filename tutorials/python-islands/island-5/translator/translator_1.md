@@ -73,7 +73,7 @@ telescope.decode_signals()
 
 **Jolene**- "*Welcome to the Centre for Computer Research. We have created an advanced computer program, to calculate the angle the telescope should be pointing to receive messages from space. Would you mind giving us a hand with decoding the data it outputs?*"
 
-![Computer terminal](cover.jpg)
+![Computer terminal](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/translator/cover.jpg)
 
 ## Step 1
 

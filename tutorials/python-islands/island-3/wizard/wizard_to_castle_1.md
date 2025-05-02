@@ -15,7 +15,7 @@
 
 ## Bring the Crown and Robe to the king @showdialog
 
-![Castle](castle.jpg)
+![Castle](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/wizard/castle.jpg)
 
 Head to the castle to bring the king his new crown and robe.
 

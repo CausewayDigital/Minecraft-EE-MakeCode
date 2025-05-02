@@ -17,7 +17,7 @@
 
 
 
-![Forest](forest.jpg)
+![Forest](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/mine/forest.jpg)
 
 To get the gold needed for the crown, you must first help finish the construction of the Mine. Collect some wood from the Forest, then bring it to the Mine.
 

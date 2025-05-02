@@ -16,7 +16,7 @@ Finally, can you move your agent over to the second golden block, to your left?
 
 It is up in the tree.
 
-![Target 2](target_2.jpg)
+![Target 2](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/target_2.jpg)
 
 ## Target 2
 

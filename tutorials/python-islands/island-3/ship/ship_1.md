@@ -36,7 +36,7 @@ The above code will run the `player.say("hello")` command 5 times.
 
 ## Covering the hatches @showdialog
 
-![Captain](captain.jpg)
+![Captain](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/ship/captain.jpg)
 
 **Captain Pappert** - *We are just coming into dock now, but first, you wouldn't mind helping me cover over the hatches? They are down on the main deck of the ship.*
 
@@ -58,7 +58,7 @@ To proceed to the next step, you must have completed the previous task!
 
 ## Building the gang plank
 
-![Gangplank location](gangplank.jpg)
+![Gangplank location](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/ship/gangplank.jpg)
 
 Now the hatches are covered. The captain has brought the airship in as close as he can to the dock.
 

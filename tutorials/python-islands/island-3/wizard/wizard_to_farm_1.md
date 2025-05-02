@@ -15,7 +15,7 @@
 
 ## Get some wool from the farm @showdialog
 
-![Farm](farm.jpg)
+![Farm](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/wizard/farm.jpg)
 
 Head to the farm and get some wool for the wizard to make the robe for the king.
 ```spy

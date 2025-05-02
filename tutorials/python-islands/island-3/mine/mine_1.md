@@ -13,7 +13,7 @@
 
 Recently the island has come across a few stray blocks of gold which they can use to help advance their technology! Michael has asked if you're willing to help mine some gold ore, with the Agent, in the areas that would not be safe for people to go down.
 
-![Picture of Mine expert and mine](cover.png)
+![Picture of Mine expert and mine](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/mine/cover.png)
 
 ## Step 1
 

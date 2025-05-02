@@ -22,7 +22,7 @@ Help the Tree Experts take down the rotting tree! As your agent can fly up and d
 
 Don't worry though, supports and scaffolding have been put in place to hold the top part up while you work, so it will not collapse.
 
-![Cover image of tree](cover.png)
+![Cover image of tree](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/forest/cover.png)
 
 ## Step 1
 

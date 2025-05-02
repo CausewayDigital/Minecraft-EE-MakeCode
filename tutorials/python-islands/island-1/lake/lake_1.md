@@ -14,7 +14,7 @@ agent
 
 In this task, it's time to learn how to move your Agent around!
 
-![Image of Agent on a starting diamond block with their target in shot](lake.jpg)
+![Image of Agent on a starting diamond block with their target in shot](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/lake.jpg)
 
 ## Python Programs recap
 
@@ -42,7 +42,7 @@ agent.move(FORWARD, 1)
 
 Now you know how to move your agent up, down, left, right, forward and back, you can now move onto something a little more difficult!
 
-![Target 1](target_1.jpg)
+![Target 1](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/target_1.jpg)
 
 ## Get to Target 1
 Can you move your agent, using `||agent:agent.move(DIRECTION, BLOCKS)||`, to stand on the pressure pad on the golden block?

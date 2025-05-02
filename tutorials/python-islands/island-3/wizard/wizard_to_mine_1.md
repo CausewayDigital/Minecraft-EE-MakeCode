@@ -15,7 +15,7 @@
 
 ## Get some Gold from the Mine @showdialog
 
-![Mine](mine.jpg)
+![Mine](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/wizard/mine.jpg)
 
 Now that you have the wood, bring it to the Mine and collect some gold for the Crown.
 

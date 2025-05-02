@@ -11,7 +11,7 @@
 ## Task Complete @showdialog
 ### Agent Licence
 
-![NPC](npc_small.jpg)
+![NPC](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/npc_small.jpg)
 
 Great job! I am happy to award an **Agent Licence** to you.
 
@@ -19,7 +19,7 @@ You might find this useful if you want to help out other folks on the island, as
 
 ## Whistle @showdialog
 
-![Whistle](whistle_small.jpg)   
+![Whistle](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/whistle_small.jpg)
 
 You have also now been given a **Whistle**.
 

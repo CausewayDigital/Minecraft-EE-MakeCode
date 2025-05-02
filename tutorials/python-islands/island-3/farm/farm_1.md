@@ -24,7 +24,7 @@ agent.
 
 Now that you can use ``||loops:for||`` loops. Let's test your skills by having your agent automatically harvest and replant a farm plot!
 
-![Cover image](cover.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/farm/cover.png)
 
 ## Step 1
 

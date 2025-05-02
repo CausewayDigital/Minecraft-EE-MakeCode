@@ -60,7 +60,7 @@ if (agent.found_book(FORWARD) === ){
 
 Locate the spellbook in the library that is needed by the Wizard.
 
-![Bookshelves](shelves.jpg)
+![Bookshelves](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/library/shelves.jpg)
 
 ## Scanning shelves
 The library has lots of shelves of books. They all look the same... However, will we find the right book?
