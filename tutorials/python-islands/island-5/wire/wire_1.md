@@ -40,7 +40,7 @@ As the wire is fragile, you will use your agent to do this.
 
 Could you program your Agent to follow you along the bridge and place down the wire as it does?
 
-![Picture of Power station](cover.jpg)
+![Picture of Power station](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/wire/cover.jpg)
 
 ## Step 1
 
@@ -106,7 +106,7 @@ def on_travelled_walk():
 ## Step 5
 The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This this two prameters the mode of travel which is `WALK` for us to lay the wire, and the second being the name of the function we want to trigger.
 
-**At the end of your code add in ``||player:player.on_travelled()||`` with the prameters of `WALK` and the name of our function `on_travelled_walk` that we made**
+**At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the prameters of `WALK` and the name of our function `on_travelled_walk` that we made**
 
 ```python
 def on_travelled_walk():
