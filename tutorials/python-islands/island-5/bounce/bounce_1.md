@@ -32,7 +32,7 @@ The new telescope has been put up, but they need to attach the final beacon to c
 
 To help you jump a little higher, you will learn how to "levitate" to give you a bit of an extra boost, each time you bounce!
 
-![Image of telescope build](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/bunce/cover.jpg)
+![Image of telescope build](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/bounce/cover.jpg)
 
 ## Step 1
 
@@ -137,6 +137,6 @@ Nice! Now that you have the code complete. Test it out and see if you can get on
 
 *Note - You can modify the duratiob and amplifier for the `LEVITATION` effect if you are finding the jumping is a little difficult.*
 
-![Bounce path](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/bunce/bounce_path.jpg)
+![Bounce path](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/bounce/bounce_path.jpg)
 
 *Above is the recommended bouncing path.*
