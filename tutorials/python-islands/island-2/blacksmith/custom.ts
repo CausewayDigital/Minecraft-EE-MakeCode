@@ -5,11 +5,13 @@
 namespace blacksmith {
     /**
     * Get purity of ore
+    * @param direction Direction to got agent to check in
     */
-    //% block"Purity %direction"
-    //% direction.defl=FORWARD
-    export function purity(direction: SixDirection): number {
-        block = agent.inspect(AgentInspection.Block, direction)
+    //% blockId=blacksmithPurity
+    //% block="purity %direction"
+    //% direction.shadow=minecraftAgentSixDirection
+    export function purity(direction: number): number {
+        const block = agent.inspect(AgentInspection.Block, direction)
         switch(block){
             case IRON_ORE:
                 return 4
@@ -26,20 +28,20 @@ namespace blacksmith {
     }
 
     /**
-    * Accept the ore.
+    * Deny the ore.
     */
-    //% block"Accept Ore"
-    export function accept(): void {
-        agent.setSlot(1)
+    //% block="deny ore"
+    export function deny():void {
+        agent.setSlot(2)
         agent.place(UP)
     }
 
     /**
-    * Deny the ore.
+    * Accept the ore.
     */
-    //% block"Deny Ore"
-    export function deny(): void {
-        agent.setSlot(2)
+    //% block="accept ore"
+    export function accept():void {
+        agent.setSlot(1)
         agent.place(UP)
     }
 }
