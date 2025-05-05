@@ -1,3 +1,9 @@
+### @flyoutOnly true
+### @diffs false
+### @hideDone true
+### @codeStart players set @s codeExecution 1
+### @codeStop players set @s codeExecution 0
+
 # Factory
 Repair the airship
 
@@ -25,127 +31,65 @@ Now with the agent in place, we'll need to move the agent down to the bottom of 
 
 To do this, we will use a while loop that moves the agent down, only running as long as there is air below it.   
 
+**Change your code, using a `||loops:while||` loop and `||agent:agent.inspect||` in the DOWN direction, to make your agent go down until the block is not `AIR`.**
 
-
-**Complete the while loop below, to run the move line, when `agent.inspect` in the DOWN direction is equal to `"air"`!**
-### *User Code* 
-```Python
-while agent.    (    ).id ==            :
-    # Finish the while loop above 
-    agent.move(DOWN)
+```python
+while agent.inspect(AgentInspection.BLOCK, DOWN) == AIR:
+    agent.move(DOWN, 1)
 ```
-When you're ready, move to the next section.
+
+
 ## Step 3
-
-
-
 As the agent is at the bottom of the dock, it can collect the blocks that have broken and fallen down. You can see where these blocks are by using the viewing gallery below the airship.
+To collect blocks, use the `||agent:agent.collect_all()||` function.
 
-
-
-To collect blocks, use the `agent.collect` function.
-
-
-
-Here's how to use it:
+**Change your code to collect all the items near your agent.**
 
 ```python
-
 agent.collect_all()
-
 ```
 
 
-
-**Write an `agent.collect` line, to collect the fallen blocks, in the code block below.**
-### *User Code* 
-```Python
-
-
-# Write your code above
-```
-## Step 4
-
-
-
+## Getting Your Agents Position @showdialog
 With the agent now holding onto the block to repair the airship with, we need to move it back to the correct position, to replace the block.
-
-
-
 The Factory worker told you that the `y` coordinate to repair is at `157`.
+To get the coordinates of the agent use:
+```python
+agent.get_position()
+```
+To get the `y` coordinate from this position use:
+```python
+agent.get_position().get_value(Axis.Y)
+```
 
+## Step 4
+Use a `||loops:while||` loop, `||agent:agent.get_position()||` and `||positions:.get_value(AXIS.Y)||` to loop, running  `||agent:agent.move(UP)||`, until the agents `y` coordinate is `157`.
 
-
-To get the y position of the agent, use:
 
 ```python
-
-agent.position.y
-
+while agent.get_position().get_value(Axis.Y) != 157:
+    agent.move(UP, 1)
 ```
 
+## Placing Blocks @showdialog
+Now that the agent is at the correct y (altitude) coordinate, you can place the block that your agent just collected, using the `||agent:agent.set_slot||` and `||agent:agent.place||` functions.
 
+Here's a reminder on how to use those functions...
 
-**Complete the code below, to loop the code when the agent's y coordinate is not equal to `157`. Note != means "is not equal".**
-### *User Code* 
-```Python
-while(            !=    ):
-    agent.move(UP)
+```python
+agent.set_slot(SLOT_NUMBER)
+agent.place(DIRECTION)
 ```
-Once you have finished this section, move on to the last section!
+
+- `SLOT_NUMBER`: The slot the agent should select (to place blocks from).
+
+- `DIRECTION`: The direction that your agent will try to place a block. The directions you can use are: FORWARD, BACK, LEFT, RIGHT, UP, DOWN.
+
 ## Step 5
+Use `||agent:agent.set_slot||` and `||agent:agent.place||` functions to place a block from slot number `1` in the `DOWN` direction.
 
-
-
-Now that the agent is at the correct y (altitude) coordinate, you can place the block that your agent just collected, using the `agent.place` function.
-
-
-
-Here's a reminder on how to use the function...
 
 ```python
-
-agent.place(direction, slot_number)
-
+agent.set_slot(1)
+agent.place(DOWN)
 ```
-
-
-
-**In the code block below, write the line to place the block from slot number `1`, in the `DOWN` direction.**
-### *User Code* 
-```Python
-
-
-# Add your `agent.place` code above
-```
-## Step 6
-
-
-
-Great, now that you have successfully guided your agent through fixing one block, let's put all of the previous code together into one big `while` loop to automate fixing the rest of the airship.
-
-
-
-**Complete the while loop below, so that the outer while loop runs while agent `inspect` FORWARD direction is equal to `"air"`.**
-### *User Code* 
-```Python
-while agent.    (    ).id ==      :
-    # Complete the while loop above
-    # Step 1
-    agent.move(FORWARD)
-    
-    # Step 2
-    while agent.inspect(DOWN).id == "air":
-        agent.move(DOWN)
-
-    # Step 3
-    agent.collect_all()
-
-    # Step 4
-    while agent.position.y != 157:
-        agent.move(UP)
-
-    # Step 5
-    agent.place(DOWN,1)
-```
-Great! Run your code and have your agent finish repairing the airship.
