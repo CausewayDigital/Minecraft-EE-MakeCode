@@ -27,7 +27,7 @@ namespace agent {
     */    
     //% block
     export function accept(): void {
-        agent.set_active(1);
+        agent.set_slot(1);
         agent.place(BACK);
     }
 
@@ -36,7 +36,7 @@ namespace agent {
     */   
     //% block
     export function deny(): void {
-        agent.set_active(2);
+        agent.set_slot(2);
         agent.place(BACK);
     }
 }
