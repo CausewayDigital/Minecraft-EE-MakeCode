@@ -12,8 +12,8 @@ namespace agent {
     * Returns the flower in the specified direction.
     */
     //% block
-    export function check_flower(direction: SixDirection): number {
-        block = agent.inspect(AgentInspection.BLOCK, FORWARD);
+    export function check_flower(direction: SixDirection): Block {
+        let block = agent.inspect(AgentInspection.Block, direction);
         if (block == POINTED_DRIPSTONE) {
             return POPPY;
         } else {
@@ -24,7 +24,7 @@ namespace agent {
 ```
 
 ```template
-while(agent.get_item_count(1) < 4) {
+while(agent.getItemCount(1) < 4) {
     player.say("I need more poppies!");
 }
 ```
@@ -101,4 +101,3 @@ agent.turn(turn_direction)
 ```
 - direction: The direction we want the agent to move. The directions you can use are: FORWARD, BACK, LEFT, RIGHT, UP, DOWN.
 - turn_direction: The direction your agent should turn. The directions you can use are: LEFT, RIGHT.
-
