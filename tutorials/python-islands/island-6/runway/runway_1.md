@@ -1,0 +1,165 @@
+### @flyoutOnly true
+### @diffs true
+### @hideDone true
+### @codeStart players set @s codeExecution 1
+### @codeStop players set @s codeExecution 0
+
+
+# Runway
+
+```customts
+namespace agent {
+    /**
+    * Moves your agent back to the left-hand side of the runway.
+    */
+    //% block
+    export function return_agent(): void {
+        let position = agent.getPosition();
+
+        let y = position.getValue(Axis.Y);
+        let z = position.getValue(Axis.Z);
+
+        let orientation = agent.getOrientation();
+        
+        agent.teleport(pos(948, y, z), orientation);
+    }
+
+    //*
+    * Gets a list containing the runway design
+    */
+    //% block
+    export function get_runway_design(): int8[][] {
+        return [[9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
+        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
+        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
+        [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
+        [9, 9, 1, 1, 1, 9, 1, 1, 1, 9, 9],
+        [9, 9, 9, 1, 9, 9, 1, 9, 1, 9, 9],
+        [9, 9, 9, 1, 9, 9, 1, 1, 1, 9, 9],
+        [9, 9, 9, 1, 9, 9, 1, 9, 1, 9, 9],
+        [9, 9, 1, 1, 9, 9, 1, 1, 1, 9, 9]];
+    }
+}
+
+namespace player {
+    /**
+    * Same as player.say command, with a few extra features.
+    */
+    //% block
+    export function output(input: string): void {
+        let main = "";
+
+        for (let i = 0; i < input.length; i++) {
+            main += input.charAt(i) + ",";
+        }
+
+        main = main.slice(0, -1);
+        player.say(main)
+    }
+}
+```
+
+
+## Runway Designing @showdialog
+Build the launch area for the rocket
+
+The airport runway are nearly complete. The final step is finishing painting the runway markings, so planes know at which angle to land.   
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-6/runway/cover.png)
+## Working with Lists @showdialog
+
+Malinda, the Airport Manger has given your Agent the locations that she wants marked on the runway, in the form of a list. Before we get started, let's look at an example.
+
+Here is a list containing smaller lists inside...
+
+```python
+large_list = [ [1,2,3], [4,5,6], [7,8,9] ]
+```
+
+For us to access the small lists, we can use a `for` loop. Rather than using `range` we ask for each `small_list` in `large_list`.
+```python
+for small_list in large_list:
+    player.output(smaller_list)
+```
+
+## Task 1
+Using a for loop:
+`||loops:for row in agent.get_runway_design()||`:
+and
+`||player:player.output(row)||`
+
+**Write a `||loops:for||` loop that would get, and output, every `row` in `runway_design`.**
+
+```python
+for row in agent.get_runway_design():
+    player.output(row)
+```
+
+## Step 2
+Now that you can see the individual rows, let's get each block in each row.
+
+For this, we will repeat what we had done before, but instead of getting every `row` in `runway_design`, we can get every `block` in each `row`.
+
+
+**Write another `||loops:for||` loop, inside the for loop you have already writen, to get each `block` in each `row`.**
+
+```python
+for row in agent.get_runway_design():
+    for block in row:
+        player.output(block)
+```
+
+## Step 3
+
+With your code being able to get every block individually in each row, we can now program your Agent to move and place blocks.
+
+**Add an `||agent:agent.place||` to place `block` in the `DOWN` direction within the inner loop.**
+
+```python
+for row in agent.get_runway_design():
+    for block in row:
+        player.output(block)
+```
+
+## Step 4 @showdialog
+
+Now that you have the Agent getting and placing blocks from the list, we can code the Agent to move across the runway.
+
+
+
+As we have two loops, we will need to add two `||agent:agent.move||` commands. 
+
+- The first, to move the Agent after each block is placed, to the next block.
+
+- The second at the end of every row, to move the agent forward to the next row.
+
+You can also use the `||agent:agent.return_agent||` function to move your agent back to the left-hand side of the runway once each row is done.
+
+## Step 4
+
+
+
+**Add two `agent.move` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished**
+
+```python
+for row in agent.get_runway_design():
+    for block in row:
+        player.output(block)
+```
+
+### *User Code* 
+```Python
+
+
+# Start of user code
+for row in runway_design:
+    for block in row:
+        agent.place(DOWN, block)
+
+        # Add code above to move the Agent to the right
+    return_agent()
+
+    # Add code above to move the Agent forward
+```
+
