@@ -24,23 +24,22 @@ if () {
 namespace agent {
     /**
     * Mark the block as accepted for the scientists.
-    */    
+    */
     //% block
     export function accept(): void {
-        agent.set_slot(1);
+        agent.setSlot(1);
         agent.place(BACK);
     }
 
     /**
     * Mark the block as denyed for the scientists.
-    */   
+    */
     //% block
     export function deny(): void {
-        agent.set_slot(2);
+        agent.setSlot(2);
         agent.place(BACK);
     }
 }
-
 ```
 
 ## Rocket Repairs @showdialog
@@ -106,4 +105,3 @@ agent.move(UP, 1)
 agent.accept()
 agent.deny()
 ```
-
