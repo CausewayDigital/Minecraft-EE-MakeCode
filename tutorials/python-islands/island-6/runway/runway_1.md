@@ -28,17 +28,17 @@ namespace agent {
     * Gets a list containing the runway design
     */
     //% block
-    export function get_runway_design(): int8[][] {
-        return [[9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
-        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
-        [9, 9, 9, 1, 9, 9, 9, 1, 9, 9, 9],
-        [9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9],
-        [9, 9, 1, 1, 1, 9, 1, 1, 1, 9, 9],
-        [9, 9, 9, 1, 9, 9, 1, 9, 1, 9, 9],
-        [9, 9, 9, 1, 9, 9, 1, 1, 1, 9, 9],
-        [9, 9, 9, 1, 9, 9, 1, 9, 1, 9, 9],
-        [9, 9, 1, 1, 9, 9, 1, 1, 1, 9, 9]];
+    export function get_runway_design(): boolean[][] {
+        return [[false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, true, true, true, false, true, true, true, false, false],
+        [false, false, false, true, false, false, true, false, true, false, false],
+        [false, false, false, true, false, false, true, true, true, false, false],
+        [false, false, false, true, false, false, true, false, true, false, false],
+        [false, false, true, true, false, false, true, true, true, false, false]];
     }
 }
 
@@ -59,7 +59,6 @@ namespace player {
     }
 }
 ```
-
 
 ## Runway Designing @showdialog
 Build the launch area for the rocket
@@ -84,12 +83,14 @@ for small_list in large_list:
 ```
 
 ## Task 1
-Using a for loop:
-`||loops:for row in agent.get_runway_design()||`:
+Using the runway data
+`||agent:agent.get_runway_design||`
+a for loop
+`||loops:for row in list:||`
 and
 `||player:player.output(row)||`
 
-**Write a `||loops:for||` loop that would get, and output, every `row` in `runway_design`.**
+**Write a `||loops:for||` loop that would get, and output, every `row` in the runway_design.**
 
 ```python
 for row in agent.get_runway_design():
@@ -114,19 +115,21 @@ for row in agent.get_runway_design():
 
 With your code being able to get every block individually in each row, we can now program your Agent to move and place blocks.
 
-**Add an `||agent:agent.place||` to place `block` in the `DOWN` direction within the inner loop.**
+If the block is "True" then a block should be placed, otherwise it should not.
+
+**Add an `||logic:if||` statement, `||agent:agent.set_slot||` and `||agent:agent.place||` to place a block in the `DOWN` direction, from slot 1, within the inner loop if `block` is true.**
 
 ```python
 for row in agent.get_runway_design():
     for block in row:
-        player.output(block)
+        if block:
+            agent.set_slot(1)
+            agnet.place(block)
 ```
 
 ## Step 4 @showdialog
 
 Now that you have the Agent getting and placing blocks from the list, we can code the Agent to move across the runway.
-
-
 
 As we have two loops, we will need to add two `||agent:agent.move||` commands. 
 
@@ -138,28 +141,5 @@ You can also use the `||agent:agent.return_agent||` function to move your agent 
 
 ## Step 4
 
-
-
-**Add two `agent.move` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished**
-
-```python
-for row in agent.get_runway_design():
-    for block in row:
-        player.output(block)
-```
-
-### *User Code* 
-```Python
-
-
-# Start of user code
-for row in runway_design:
-    for block in row:
-        agent.place(DOWN, block)
-
-        # Add code above to move the Agent to the right
-    return_agent()
-
-    # Add code above to move the Agent forward
-```
+**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an and an `||agent:agent.return_agent|| command bellow the second `||agent:agent.move||` commmand.**
 
