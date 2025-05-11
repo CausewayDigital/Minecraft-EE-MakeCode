@@ -20,11 +20,11 @@ namespace agent {
         let z = position.getValue(Axis.Z);
 
         let orientation = agent.getOrientation();
-        
+
         agent.teleport(pos(948, y, z), orientation);
     }
 
-    //*
+    /** 
     * Gets a list containing the runway design
     */
     //% block
