@@ -24,23 +24,6 @@ namespace agent {
     }
 }
 
-namespace player {
-    /**
-    * Same as player.say command, with a few extra features.
-    */
-    //% block
-    export function output(input: string): void {
-        let main = "";
-
-        for (let i = 0; i < input.length; i++) {
-            main += input.charAt(i) + ",";
-        }
-
-        main = main.slice(0, -1);
-        player.say(main)
-    }
-}
-
 /**
  * Runway
  */
@@ -65,13 +48,15 @@ namespace runway {
 }
 ```
 
-```ghost
-for i in range(4):
-    pass
+```template
+const runway_design = runway.get_runway_design();
+for (const row of ) {
+    player.say()
+}
 ```
 
 ## Runway Designing @showdialog
-Build the launch area for the rocket
+Build the launch area for the rocket.
 
 The airport runway are nearly complete. The final step is finishing painting the runway markings, so planes know at which angle to land.   
 
@@ -88,19 +73,12 @@ for small_list in large_list:
 ```
 
 ## Task 1
-Using the runway data
-`||runway:runway.get_runway_design||`
-a for loop
-`||loops:for row in list:||`
-and
-`||player:player.output(row)||`
-
-**Write a `||loops:for||` loop that would get, and output, every `row` in the runway design.**
+**Complete the `||loops:for||` loop to get, and say, every `row` in the runway design.**
 
 ```python
 runway_design = runway.get_runway_design()
 for row in runway_design:
-    player.output(row)
+    player.say(row)
 ```
 
 ## Task 2
@@ -114,7 +92,7 @@ For this, we will repeat what we had done before, but instead of getting every `
 runway_design = runway.get_runway_design()
 for row in runway_design:
     for block in row:
-        player.output(block)
+        player.say(block)
 ```
 
 ## Task 3
@@ -148,4 +126,9 @@ You can also use the `||agent:agent.return_agent||` function to move your agent 
 
 ## Task 4
 
-**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an and an `||agent:agent.return_agent|| command bellow the second `||agent:agent.move||` commmand.**
+**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an `||agent:agent.return_agent||` command bellow the second `||agent:agent.move||` commmand.**
+
+```ghost
+for i in range(4):
+    pass
+```
