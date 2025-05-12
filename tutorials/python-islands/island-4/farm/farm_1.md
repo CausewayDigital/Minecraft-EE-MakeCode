@@ -12,7 +12,7 @@ namespace agent {
     * Returns the flower in the specified direction.
     */
     //% block
-    export function check_flower(direction: SixDirection): Block {
+    export function checkFlower(direction: SixDirection): Block {
         let block = agent.inspect(AgentInspection.Block, direction);
         if (block == POINTED_DRIPSTONE) {
             return POPPY;
@@ -23,11 +23,6 @@ namespace agent {
 }
 ```
 
-```template
-while(agent.getItemCount(1) < 4) {
-    player.say("I need more poppies!");
-}
-```
 
 ## Automated Flower Picking and Sorting @showdialog
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-4/farm/cover.jpg)
@@ -68,19 +63,7 @@ while agent.get_item_count(1) < 4:
 Now that you've got your agent moving, it needs to check what flower is below and decide if it should harvest(*destroy*) it or not.    
 To do this, you can use `||agent:agent.check_flower||`, this will return the type of flower below the agent. With this information, you can use it within an `||logic:if||` statement, to check if the flower is a `"POPPY"`. If it is a poppy you can use `||agent:agent.destroy||` to pick the flower `DOWN` below your agent.
 
-How to use `||agent:agent.check_flower||`:
-
-```python
-flower = check_flower(direction)
-```
-- direction: The direction of the flower the agent should check. The directions you can use are: FORWARD, BACK, LEFT, RIGHT, UP, DOWN.
-
-Here's how you use `||agent:agent.destroy||`:
-```python
-agent.destroy(direction)
-```
-- direction: The direction of the block that we want the agent to destroy. The directions you can use are: FORWARD, BACK, LEFT, RIGHT, UP, DOWN.
-
+Both `||agent:agent.check_flower||` and `||agent:agent.destroy||` take one parameter, direction. The directions you can use are: FORWARD, BACK, LEFT, RIGHT, UP, DOWN.
 ## Task 3
 **Add an `||logic:if||` statement within your while loop to check if the flower is a `"POPPY"`, if it is call the `||agent:agent.destroy||` function. Your code should be checking bellow your agent.**
 
