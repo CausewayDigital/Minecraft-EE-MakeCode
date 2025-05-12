@@ -6,14 +6,13 @@
 
 
 # Runway
-
 ```customts
 namespace agent {
     /**
     * Moves your agent back to the left-hand side of the runway.
     */
     //% block
-    export function return_agent(): void {
+    export function returnAgent(): void {
         let position = agent.getPosition();
 
         let y = position.getValue(Axis.Y);
@@ -22,23 +21,6 @@ namespace agent {
         let orientation = agent.getOrientation();
 
         agent.teleport(pos(948, y, z), orientation);
-    }
-
-    /** 
-    * Gets a list containing the runway design
-    */
-    //% block
-    export function get_runway_design(): boolean[][] {
-        return [[false, false, false, false, false, false, false, false, false, false, false],
-        [false, false, false, true, false, false, false, true, false, false, false],
-        [false, false, false, true, false, false, false, true, false, false, false],
-        [false, false, false, true, false, false, false, true, false, false, false],
-        [false, false, false, false, false, false, false, false, false, false, false],
-        [false, false, true, true, true, false, true, true, true, false, false],
-        [false, false, false, true, false, false, true, false, true, false, false],
-        [false, false, false, true, false, false, true, true, true, false, false],
-        [false, false, false, true, false, false, true, false, true, false, false],
-        [false, false, true, true, false, false, true, true, true, false, false]];
     }
 }
 
@@ -58,6 +40,34 @@ namespace player {
         player.say(main)
     }
 }
+
+/**
+ * Runway
+ */
+//% color=purple weight=100 icon="\uf018" block="Runway"
+namespace runway {
+    /** 
+    * Gets a list containing the runway design.
+    */
+    //% block
+    export function getRunwayDesign(): boolean[][] {
+        return [[false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, true, false, false, false, true, false, false, false],
+        [false, false, false, false, false, false, false, false, false, false, false],
+        [false, false, true, true, true, false, true, true, true, false, false],
+        [false, false, false, true, false, false, true, false, true, false, false],
+        [false, false, false, true, false, false, true, true, true, false, false],
+        [false, false, false, true, false, false, true, false, true, false, false],
+        [false, false, true, true, false, false, true, true, true, false, false]];
+    }
+}
+```
+
+```ghost
+for i in range(4):
+    pass
 ```
 
 ## Runway Designing @showdialog
@@ -70,48 +80,44 @@ The airport runway are nearly complete. The final step is finishing painting the
 
 Malinda, the Airport Manger has given your Agent the locations that she wants marked on the runway, in the form of a list. Before we get started, let's look at an example.
 
-Here is a list containing smaller lists inside...
-
+For us to access the small lists, we can use a `||loops:for||` loop. Rather than using `range` we ask for each `small_list` in `large_list`.
 ```python
 large_list = [ [1,2,3], [4,5,6], [7,8,9] ]
-```
-
-For us to access the small lists, we can use a `for` loop. Rather than using `range` we ask for each `small_list` in `large_list`.
-```python
 for small_list in large_list:
     player.output(smaller_list)
 ```
 
 ## Task 1
 Using the runway data
-`||agent:agent.get_runway_design||`
+`||runway:runway.get_runway_design||`
 a for loop
 `||loops:for row in list:||`
 and
 `||player:player.output(row)||`
 
-**Write a `||loops:for||` loop that would get, and output, every `row` in the runway_design.**
+**Write a `||loops:for||` loop that would get, and output, every `row` in the runway design.**
 
 ```python
-for row in agent.get_runway_design():
+runway_design = runway.get_runway_design()
+for row in runway_design:
     player.output(row)
 ```
 
-## Step 2
+## Task 2
 Now that you can see the individual rows, let's get each block in each row.
 
-For this, we will repeat what we had done before, but instead of getting every `row` in `runway_design`, we can get every `block` in each `row`.
-
+For this, we will repeat what we had done before, but instead of getting every `row` in the runway design data, we can get every `block` in each `row`.
 
 **Write another `||loops:for||` loop, inside the for loop you have already writen, to get each `block` in each `row`.**
 
 ```python
-for row in agent.get_runway_design():
+runway_design = runway.get_runway_design()
+for row in runway_design:
     for block in row:
         player.output(block)
 ```
 
-## Step 3
+## Task 3
 
 With your code being able to get every block individually in each row, we can now program your Agent to move and place blocks.
 
@@ -120,14 +126,15 @@ If the block is "True" then a block should be placed, otherwise it should not.
 **Add an `||logic:if||` statement, `||agent:agent.set_slot||` and `||agent:agent.place||` to place a block in the `DOWN` direction, from slot 1, within the inner loop if `block` is true.**
 
 ```python
-for row in agent.get_runway_design():
+runway_design = runway.get_runway_design()
+for row in runway_design:
     for block in row:
         if block:
             agent.set_slot(1)
             agnet.place(block)
 ```
 
-## Step 4 @showdialog
+## Task 4 @showdialog
 
 Now that you have the Agent getting and placing blocks from the list, we can code the Agent to move across the runway.
 
@@ -139,7 +146,6 @@ As we have two loops, we will need to add two `||agent:agent.move||` commands.
 
 You can also use the `||agent:agent.return_agent||` function to move your agent back to the left-hand side of the runway once each row is done.
 
-## Step 4
+## Task 4
 
 **Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an and an `||agent:agent.return_agent|| command bellow the second `||agent:agent.move||` commmand.**
-
