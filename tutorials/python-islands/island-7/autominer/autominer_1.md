@@ -1,5 +1,5 @@
 ### @flyoutOnly true
-### @diffs true
+### @diffs false
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
@@ -8,12 +8,7 @@
 
 ## Introduction @showdialog
 
-In this exercise, you will build a program in Python that follows the flowchart below. To complete the exercise, you should make use of the Minecraft Python API Reference Guide to help you figure out which Python commands to use.
-You may find it helpful to open the reference guide in a web browser alongside Minecraft Education. It can be found at:
-
-`https://aka.ms/pyguide`
-
-## Instructions @showdialog
+In this exercise, you will build a program in Python that follows the flowchart below.
 
 Have the agent create a mineshaft for you to work in. Following the program flowchart below, create a Python program that uses your agent to:
 Mine a tunnel 2 blocks tall in front of it.
