@@ -1,4 +1,3 @@
-
 ### @flyoutOnly true
 ### @diffs false
 ### @hideDone true
@@ -6,16 +5,6 @@
 ### @codeStop players set @s codeExecution 0
 
 # Autominer
-
-```customts
-namespace player {
-    export function testBlockBellow(block: Block): boolean {
-        let player_pos = player.position();
-        let pos_bellow = positions.add(player_pos, pos(0, 0, -1));
-        return blocks.testForBlock(block, pos_bellow);
-    }
-}
-```
 
 ## Introduction @showdialog
 
@@ -29,8 +18,40 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
 ## Part 1
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_1.png)
 
 Code the flowchart.
 
 ```python
+def on_move():
+```
+
+Create a function that is called when the player moves.
+
+## Part 2
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_2.png)
+
+Code the flowchart.
+
+```python
+```
+Get the coordinates of the block bellow the player.
+
+## Part 3
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_3.png)
+
+Code the flowchart.
+
+```python
+```
+If the block bellow the player is water, replace it with ice.
+
+
+```ghost
+def on_move():
+    pos_bellow = positions.add(player.position(), pos(0, 0, -1))
+    if blocks.test_for_block(WATER, pos_bellow):
+        blocks.place(ICE, pos_bellow)
+
+player.on_travelled(WALK, on_move)
 ```
