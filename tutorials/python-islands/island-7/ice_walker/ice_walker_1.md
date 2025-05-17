@@ -49,7 +49,7 @@ If the block bellow the player is water, replace it with ice.
 
 ```ghost
 def on_move():
-    pos_bellow = positions.add(player.position(), pos(0, 0, -1))
+    pos_bellow = positions.add(player.position(), pos(0, -1, 0))
     if blocks.test_for_block(WATER, pos_bellow):
         blocks.place(ICE, pos_bellow)
 
