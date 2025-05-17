@@ -55,3 +55,14 @@ def on_move():
 
 player.on_travelled(WALK, on_move)
 ```
+
+```ghost
+def on_move():
+    pos_bellow = positions.add(player.position(), pos(0, -1, 0))
+    for i in range(-1, 1):
+        for j in range(-1, 1):
+            if blocks.test_for_block(WATER, positions.add(pos_bellow, pos(i, 0, j))):
+                blocks.place(ICE, positions.add(pos_bellow, pos(i, 0, j)))
+
+player.on_travelled(WALK, on_move)
+```
