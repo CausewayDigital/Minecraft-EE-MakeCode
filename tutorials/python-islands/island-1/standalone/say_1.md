@@ -3,7 +3,7 @@
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
-### @codeStop players set @s f1-var-complete 1
+### @codeStop players set @s f1-say-complete 1
 
 
 # Island-1-Say
