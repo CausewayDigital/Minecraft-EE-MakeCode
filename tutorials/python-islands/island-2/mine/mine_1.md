@@ -69,7 +69,7 @@ player.say(agent.check_ground_stable())
 
 ## Alerting
 
-The final special function the miner has given your agent is ``||agent:agent.alert()||``
+The 2nd special function the miner has given your agent is ``||agent:agent.alert()||``
 
 You should run this piece of code if you find any unstable ground.
 
