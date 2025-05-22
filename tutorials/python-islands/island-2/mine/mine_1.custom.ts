@@ -23,7 +23,7 @@ namespace agent {
             player.say("Unstable ground alert!!!")
             agent.destroy(DOWN)
         }else{
-            player.say("This seems to be a false alarm, this ground seems pretty stable...")
+            player.say("This seems to be a false alarm, the ground below the agent seems pretty stable... Try moving to a different location")
         }
     }
 }
