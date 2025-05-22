@@ -26,6 +26,8 @@ Part of the gravel has collapsed!
 
 ## Start an investigate @showdialog
 
+![Miner](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/miner.jpg)
+
 "It looks like a pretty large drop down there. I think, **we should investigate!** We will need to **make some ladders** though.
 
 Can you go, find some **string** and **wood** to make ladders with?
