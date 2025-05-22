@@ -93,7 +93,7 @@ Now that you know how to use ``||agent:agent.is_nest()||``, we can use it with a
 
 If there is a nest, we want to leave it alone and run ``||agent:agent.next()||`` to go to the next area.
 
-**Create an ``||logic:if||`` statment that moves to the next area is ``||agent:agent.is_nest()||`` returns `True`**
+**Create an ``||logic:if||`` statement that moves to the next area is ``||agent:agent.is_nest()||`` returns `True`**
 §
 ```spy
 if(agent.is_next()){
@@ -105,7 +105,7 @@ if(agent.is_next()){
 
 Next, we want to add an ``||logic:else||``, to let us harvest other blocks and then go to the next area.
 
-**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statment you created. Rember to go to the next area after harvesting**
+**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statement you created. Rember to go to the next area after harvesting**
 ```diffspy
 if(agent.is_nest()){
     agent.next_location()

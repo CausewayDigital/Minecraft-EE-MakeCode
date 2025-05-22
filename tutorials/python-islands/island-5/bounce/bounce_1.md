@@ -57,9 +57,9 @@ def on_player_bounced():
 
 ## Step 3
 
-We only want to only give the helping boost when we've bounced on slime block, to do this builders have given you a special function callwed ``||blocks:block.is_under()||`` which takes two inputs, first a block type, such as `SLIME_BLOCK` and the second being the location under we want to check.
+We only want to give the helping boost when we've bounced on slime block. To do this, the builders have given you a special function called ``||blocks:blocks.is_under()||`` which takes two inputs, first a block type, such as `SLIME_BLOCK` and the second being the location under we want to check.
 
-**After the `loc` you added in the last step add in a new variable called `block_under` and set it to ``||blocks:block.is_under()||`` passing in the two variables `SLIME_BLOCK` and our variable `loc`**.
+**After the `loc` you added in the last step add in a new variable called `block_under` and set it to ``||blocks:blocks.is_under()||`` passing in the two variables `SLIME_BLOCK` and our variable `loc`**.
 
 ```python
 def on_player_bounced():
@@ -69,7 +69,7 @@ def on_player_bounced():
 
 ## Step 4
 
-Now we want to is an ``||logic:if||`` statment to check if the variable `block_under` we set in the last step is `True`.
+Now we want to use a ``||logic:if||`` statement to check if the variable `block_under` we set in the last step is `True`.
 
 ** Create an ``||logic:if||`` for when `block_under` is `True`**
 
@@ -83,7 +83,7 @@ def on_player_bounced():
 
 ## Step 5
 
-If the``||logic:if||`` statment is `True` we first need to need to know our `target`, to do thiswe can variable for the `target` of who will be affected by our levitate effect.
+If the ``||logic:if||`` statement is `True` we first need to need to know our `target`, to do thiswe can variable for the `target` of who will be affected by our levitate effect.
 
 For this we can use ``||mobs:mobs.target(NEAREST_PLAYER)||`` to find the nearest play, (you) to apply the effect onto.
 

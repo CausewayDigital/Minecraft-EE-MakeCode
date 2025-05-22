@@ -109,7 +109,7 @@ Now we have a basic `decode` function created, we need to make sure it can handl
 
 To do this we'll extend the ``||logic:if||``  you create with ``||logic:elif||``.
 
-Use the following table create a set of ``||logic:if/else||`` statments to return the correct number.
+Use the following table create a set of ``||logic:if/else||`` statements to return the correct number.
 
 | info   | return |
 |--------|--------|
