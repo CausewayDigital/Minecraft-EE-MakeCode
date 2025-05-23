@@ -17,7 +17,7 @@ namespace blocks {
         for (let y = 0; y < 10; y++) {
             const yPos = pos.getValue(Axis.Y) - y
             const checkPos = world(pos.getValue(Axis.X), yPos, pos.getValue(Axis.Z))
-            if (blocks.place(block, checkPos)){
+            if (blocks.testForBlock(block, checkPos)){
                 return true
             }
         }
@@ -131,7 +131,7 @@ def on_player_bounced():
 player.on_travelled(BOUNCE, on_player_bounced)
 ```
 
-## place the beacon!
+## Place the beacon!
 
 Nice! Now that you have the code complete. Test it out and see if you can get onto the antenna to place the beacon!
 
