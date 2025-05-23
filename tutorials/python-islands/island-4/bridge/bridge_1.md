@@ -4,6 +4,10 @@
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
 
+```customts
+agent.teleport(world(935,150,627), WEST)
+```
+
 # Bridge
 ```template
 
@@ -37,23 +41,30 @@ The code above will run **as long as** the condition is met, just like `if` stat
 ![Bridging the gap](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-4/bridge/blind.jpg)
 
 
-**Mine Manager** - "*So could you and your Agent build a bridge through the fog and investigate what might be over there?*"
+**Mine Manager** - "*Could you and your Agent build a bridge through the fog and investigate what might be over there?*"
 
-To begin, you'll need to get your agent to run a while loop, to see if it has reached another landmass (island). To do this you can have your Agent check if the block in front of it is `AIR` and if so, the move forward (inside the **While Loop**). When your Agent gets to another landmass, the block in front will no longer be `AIR`, so you can stop.
+To begin, you'll need to get your agent to run a while loop, to see if it has reached another landmass (island).    
+To do this, you can have your Agent check if the block in front of it is `AIR` and if so, the we can move forward (inside the **While Loop**).    
+When your Agent gets to another landmass, the block in front will no longer be `AIR`, so you can stop.
 
 ## Step 1
-To do this you can use `||agent:agent.inspect||` and `||agent:agent.move||` and a `||loops:while||` loop:
+To do this you can use `||agent:agent.inspect||` as part of the `||loops:while||` loop:
 
-Add the `||agent:agent.inspect||` to the `||loops:while||` loop below so that the agent checks the block in the direction `FORWARD` is air.
+Finish the `||loops:while||` loop by adding  `||agent:agent.inspect||`, so that the agent checks if the block in the direction `FORWARD` is air.
 
-*remember you can stop the code in the code window*
+```python-ignore
+while (agent.inspect(AgentInspection.BLOCK, FORWARD) == AIR):
+    agent.move()
+```
+
+## Step 2
+
+Next, we need to move the agent forward each time. Update the `||agent:agent.move||` line to go `FORWARD` 1 block at a time.
 
 ```python
 while (agent.inspect(AgentInspection.BLOCK, FORWARD) == AIR):
-    agent.move(FORWARD, 1)
+    agent.move(FORWARD 1)
 ```
-
-`agent.inspect(AgentInspection.BLOCK, FORWARD) == AIR` checks if the block in front is air.
 
 
 ## Bridging the gap @showdialog
@@ -63,7 +74,7 @@ while (agent.inspect(AgentInspection.BLOCK, FORWARD) == AIR):
 **Mine Manager** - "*I've given your agent some **stone** (in slot 1), to build a bridge over to the island. Can you place the stone blocks below the agent, to form a bridge until it reaches the island in the distance and no longer has air in front of it?*"
 
 
-## Step 2
+## Step 3
 Now that you have your agent moving for as long as the loop is running, we need to place blocks down to bridge over to the other island.    
 
 To do this, we can use `||agent:agent.set_slot||` and `||agent:agent.place||` to place down blocks.
