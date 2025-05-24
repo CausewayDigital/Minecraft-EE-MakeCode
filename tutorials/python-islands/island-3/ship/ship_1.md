@@ -52,32 +52,3 @@ for (let count = 0; count < 6; count++){
     agent.place(DOWN)
 }
 ```
-
-## Note
-To proceed to the next step, you must have completed the previous task!
-
-## Building the gang plank
-
-![Gangplank location](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/ship/gangplank.jpg)
-
-Now the hatches are covered. The captain has brought the airship in as close as he can to the dock.
-
-You will need to build a gangplank. Your agent has now got some planks in slot 1 of its inventory.
-
-**Create a ``||loops:for loop||`` program to build the gangplank out to reach the dock. You will have to guess how far away the island is!**
-
-```diffspy
-for (let count = 0; count < 6; count++){
-    agent.move(FORWARD, 1)
-    agent.place(DOWN)
-}
-----------------------------
-for (let count = 0; count < 8; count++){
-    agent.move(FORWARD, 1)
-    agent.place(DOWN)
-}
-```
-
-## Gang Plank built!
-
-Once complete, close this window and explore the town.
