@@ -8,17 +8,17 @@ namespace telescope {
     */
     //% block"Build Tower"
     export function start_building() {
-        agent.teleport(world(1018,159,79), WEST)
+        agent.teleport(world(1018,159,79), NORTH)
         build_tower()  // user function
         loops.pause(2000)
         let timer = 0
         while (timer < 30) {
             if (blocks.testForBlock(EMERALD_BLOCK, world(1027,154,60))){
                 // Tower A
-                agent.teleport(world(1009,159,70), WEST)
+                agent.teleport(world(1009,159,70), NORTH)
                 build_tower()
                 // Tower B
-                agent.teleport(world(1027,159,70), WEST)
+                agent.teleport(world(1027,159,70), NORTH)
                 build_tower()
                 break
             }

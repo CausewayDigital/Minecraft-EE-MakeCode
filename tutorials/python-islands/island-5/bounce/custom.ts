@@ -8,7 +8,7 @@ namespace blocks {
         for (let y = 0; y < 10; y++) {
             const yPos = pos.getValue(Axis.Y) - y
             const checkPos = world(pos.getValue(Axis.X), yPos, pos.getValue(Axis.Z))
-            if (blocks.place(block, checkPos)){
+            if (blocks.testForBlock(block, checkPos)){
                 return true
             }
         }

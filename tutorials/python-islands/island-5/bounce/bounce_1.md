@@ -17,7 +17,7 @@ namespace blocks {
         for (let y = 0; y < 10; y++) {
             const yPos = pos.getValue(Axis.Y) - y
             const checkPos = world(pos.getValue(Axis.X), yPos, pos.getValue(Axis.Z))
-            if (blocks.place(block, checkPos)){
+            if (blocks.testForBlock(block, checkPos)){
                 return true
             }
         }
@@ -48,7 +48,7 @@ def on_player_bounced():
 
 ## Step 2
 
-Now we have a function we need to know where the place was when the function was triggerd, to do this we'll add a *variable* called `loc` and assign it ``||player:player.position()||``.
+Now we have a function we need to know where the place was when the function was triggered, to do this we'll add a *variable* called `loc` and assign it ``||player:player.position()||``.
 
 ```python
 def on_player_bounced():
@@ -57,9 +57,9 @@ def on_player_bounced():
 
 ## Step 3
 
-We only want to only give the helping boost when we've bounced on slime block, to do this builders have given you a special function callwed ``||blocks:block.is_under()||`` which takes two inputs, first a block type, such as `SLIME_BLOCK` and the second being the location under we want to check.
+We only want to give the helping boost when we've bounced on slime block. To do this, the builders have given you a special function called ``||blocks:blocks.is_under()||`` which takes two inputs, first a block type, such as `SLIME_BLOCK` and the second being the location under we want to check.
 
-**After the `loc` you added in the last step add in a new variable called `block_under` and set it to ``||blocks:block.is_under()||`` passing in the two variables `SLIME_BLOCK` and our variable `loc`**.
+**After the `loc` you added in the last step add in a new variable called `block_under` and set it to ``||blocks:blocks.is_under()||`` passing in the two variables `SLIME_BLOCK` and our variable `loc`**.
 
 ```python
 def on_player_bounced():
@@ -69,7 +69,7 @@ def on_player_bounced():
 
 ## Step 4
 
-Now we want to is an ``||logic:if||`` statment to check if the variable `block_under` we set in the last step is `True`.
+Now we want to use a ``||logic:if||`` statement to check if the variable `block_under` we set in the last step is `True`.
 
 ** Create an ``||logic:if||`` for when `block_under` is `True`**
 
@@ -83,7 +83,7 @@ def on_player_bounced():
 
 ## Step 5
 
-If the``||logic:if||`` statment is `True` we first need to need to know our `target`, to do thiswe can variable for the `target` of who will be affected by our levitate effect.
+If the ``||logic:if||`` statement is `True` we first need to need to know our `target`, to do this, we can variable for the `target` of who will be affected by our levitate effect.
 
 For this we can use ``||mobs:mobs.target(NEAREST_PLAYER)||`` to find the nearest play, (you) to apply the effect onto.
 
@@ -101,7 +101,7 @@ def on_player_bounced():
 
 Now we know know our `target` we can use ``||mobs:mobs.apply_effect()||`` to apply the effect.
 
-To this we want to pass it in 4 paramters, first the affect we want to use, which is `LEVITATION`. Second is the target, which will be `target` variable we set in the last step. Third is the duration the effect lasts for of `1` second, and finally is amplifier which is how strong we want the effect to be.
+To this we want to pass it in 4 parameters, first the affect we want to use, which is `LEVITATION`. Second is the target, which will be `target` variable we set in the last step. Third is the duration the effect lasts for of `1` second, and finally is amplifier which is how strong we want the effect to be.
 
 **Add ``||mobs:mobs.apply_effect()||`` to run if it's `True`**
 
@@ -116,9 +116,9 @@ def on_player_bounced():
 
 ## Step 7
 
-The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This this two prameters the mode of travel which is `BOUNCE` for us to get up onto the telescope, and the second being the name of the function we want to trigger.
+The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This this two parameters the mode of travel which is `BOUNCE` for us to get up onto the telescope, and the second being the name of the function we want to trigger.
 
-**At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the prameters of `BOUNCE` and the name of our function `on_player_bounced` that we made**
+**At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the parameters of `BOUNCE` and the name of our function `on_player_bounced` that we made**
 
 ```python
 def on_player_bounced():
@@ -131,11 +131,11 @@ def on_player_bounced():
 player.on_travelled(BOUNCE, on_player_bounced)
 ```
 
-## place the beacon!
+## Place the beacon!
 
 Nice! Now that you have the code complete. Test it out and see if you can get onto the antenna to place the beacon!
 
-*Note - You can modify the duratiob and amplifier for the `LEVITATION` effect if you are finding the jumping is a little difficult.*
+*Note - You can modify the duration and amplifier for the `LEVITATION` effect if you are finding the jumping is a little difficult.*
 
 ![Bounce path](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-5/bounce/bounce_path.jpg)
 

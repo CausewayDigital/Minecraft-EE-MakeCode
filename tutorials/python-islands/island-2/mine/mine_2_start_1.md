@@ -18,7 +18,7 @@
 
 "Now that we have ladders, I have gone and placed them for you. Why not head down and explore?"
 
-![Ladders](ladders.jpg)
+![Ladders](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/ladders.jpg)
 
 ## Close the editor
 Close this window by pressing ESC or clicking the X at the top right of the Code Builder.

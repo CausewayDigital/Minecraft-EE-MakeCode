@@ -6,14 +6,7 @@
 
 # Mine
 
-```template
-agent
-```
 
-```ghost
-agent.mark_diamond
-agent.mark_bin
-```
 
 ```customts
 namespace agent {
@@ -22,10 +15,10 @@ namespace agent {
     */
     //% block="agent check shelf %direction"
     //% direction.defl=FORWARD
-    export function check_ore(direction: SixDirection): string {
-        if (agent.inspect(AgentInspection.Block, direction) == DEEPSLATE_COPPER_ORE) {
+    export function check_ore(direction: SixDirection): Block {
+        if (agent.inspect(AgentInspection.Block, direction) == RED_NETHER_BRICK) {
             return DIAMOND_ORE
-        } else if (agent.inspect(AgentInspection.Block, direction) == DEEPSLATE_COAL_ORE) {
+        } else if (agent.inspect(AgentInspection.Block, direction) == NETHER_BRICK) {
             return DIRT
         } else {
             return agent.inspect(AgentInspection.Block, direction)
@@ -35,25 +28,29 @@ namespace agent {
     /**
     * Marks a diamond block
     */
-    export function mark_diamond(): void {
+    //% block="agent mark diamond"
+    export function markDiamond(): void {
         if (check_ore(FORWARD) != AIR) {
-            agent.set_slot(2)
+            agent.setSlot(2)
             agent.place(UP)
         } else {
             player.say("Unable to detect a block!")
         }
+        loops.pause(300)
     }
 
     /**
     * Marks a block for disposal
     */
-    export function mark_bin(): void {
+    //% block="agent mark bin"
+    export function markBin(): void {
         if (check_ore(FORWARD) != AIR) {
-            agent.set_slot(1)
+            agent.setSlot(1)
             agent.place(UP)
         } else {
             player.say("Unable to detect block")
         }
+        loops.pause(300)
     }
 }
 ```
@@ -72,5 +69,16 @@ To do this, we can use a while loop and check if a variable that we use to keep 
 Below is an example of a while loop, move onto step 2 when you're ready
 
 ```python
-agent
+found_diamond = 0
+```
+
+
+```ghost
+found_diamond = 0
+while found_diamond < 3:
+    if agent.check_ore(FORWARD) == DIAMOND_ORE:
+        agent.markDiamond()
+        found_diamond = found_diamond + 1
+    else:
+        agent.markBin()
 ```

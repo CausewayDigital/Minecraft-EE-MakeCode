@@ -32,7 +32,7 @@ namespace agent {
             player.say("Unstable ground alert!!!")
             agent.destroy(DOWN)
         }else{
-            player.say("This seems to be a false alarm, this ground seems pretty stable...")
+            player.say("This seems to be a false alarm, the ground below the agent seems pretty stable... Try moving to a different location")
         }
     }
 }
@@ -51,7 +51,7 @@ With an area of unstable ground having opened up, use your agent to test each bl
 
 You have been informed by the miner that an area of ground has opened up and sank down. He is concerned that the ground below could be unstable and has asked if you can use your agent (which can float), to check each block individually to see if it is safe.
 
-![Unstable ground](cover1.jpg)
+![Unstable ground](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/cover1.jpg)
 
 ## Testing the ground
 
@@ -69,7 +69,7 @@ player.say(agent.check_ground_stable())
 
 ## Alerting
 
-The final special function the miner has given your agent is ``||agent:agent.alert()||``
+The 2nd special function the miner has given your agent is ``||agent:agent.alert()||``
 
 You should run this piece of code if you find any unstable ground.
 

@@ -18,14 +18,14 @@ namespace positions {
     }
 }
 
-agent.set_slot(1)
+agent.setSlot(1)
 ```
 
 ```ghost
 function on_travelled_walk(){
     let loc = player.position()
     loc = positions.correct_location(loc)
-    agent.teleport(loc, WEST)
+    agent.teleport(loc, NORTH)
     agent.place(DOWN)
 }
 
@@ -79,13 +79,13 @@ def on_travelled_walk():
 ## Step 4
 The next step is to teleport your Agent to the corrected position. To teleport your Agent you can use ``||agent:agent.teleport()||``.
 
-**Add the code to teleport your Agent to our `loc` variable facing `WEST`.**
+**Add the code to teleport your Agent to our `loc` variable facing `NORTH`.**
 
 ```python
 def on_travelled_walk():
     loc = player.position()
     loc = positions.correct_location(loc)
-    agent.teleport(loc, WEST)
+    agent.teleport(loc, NORTH)
 ```
 
 ## Step 5
@@ -99,7 +99,7 @@ The Power Station staff have already given your Agent some wire. All you need to
 def on_travelled_walk():
     loc = player.position()
     loc = positions.correct_location(loc)
-    agent.teleport(loc, west)
+    agent.teleport(loc, NORTH)
     agent.place(DOWN)
 ```
 
@@ -112,7 +112,7 @@ The final step is to make sure the game triggers our code when we travel, to do 
 def on_travelled_walk():
     loc = player.position()
     loc = positions.correct_location(loc)
-    agent.teleport(loc, west)
+    agent.teleport(loc, NORTH)
     agent.place(DOWN)
 
 player.on_travelled(WALK, on_travelled_walk)

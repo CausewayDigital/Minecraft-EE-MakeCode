@@ -19,11 +19,11 @@ if (agent.inspect(AgentInspection.Block, FORWARD) == IRON_BLOCK){
 
 Use your agent to explore the old mineshafts in search of iron.
 
-![Old mineshafts](mine_2.gif)
+![Old mineshafts](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/mine_2.gif)
 
 ## Finding Iron @showdialog
 
-![Dark mineshaft](dark_mine.jpg)
+![Dark mineshaft](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/dark_mine.jpg)
 
 There seems to be a collection of old mineshafts, going off from the main tunnel. Rumour has it that these have unexplored deposits of iron.
 

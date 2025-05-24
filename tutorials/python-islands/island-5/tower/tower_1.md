@@ -4,7 +4,7 @@
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
 
-# Tower
+# Tower 
 
 ```customts
 /**
@@ -17,17 +17,17 @@ namespace telescope {
     */
     //% block"Build Tower"
     export function start_building() {
-        agent.teleport(world(1018,159,79), WEST)
+        agent.teleport(world(1018,159,79), NORTH)
         build_tower()  // user function
         loops.pause(2000)
         let timer = 0
         while (timer < 30) {
             if (blocks.testForBlock(EMERALD_BLOCK, world(1027,154,60))){
                 // Tower A
-                agent.teleport(world(1009,159,70), WEST)
+                agent.teleport(world(1009,159,70), NORTH)
                 build_tower()
                 // Tower B
-                agent.teleport(world(1027,159,70), WEST)
+                agent.teleport(world(1027,159,70), NORTH)
                 build_tower()
                 break
             }
@@ -84,10 +84,10 @@ As you go through these exercises below, the builders will test and run your fun
 
 The builders have asked you to create a `function` called `"build_tower()"`.
 
-do do this we can do we can do ``||functions:def build_tower()||``.
+do do this we can do we can do ``||functions:def build_tower()||:``
 
 - `def`: Tells Python you want to create a new function.
-- `build_tower()`: The name of the new function. You can run the code inside of it by putting `build_tower()` in your code.
+- `build_tower():`: The name of the new function. You can run the code inside of it by putting `build_tower():` in your code.
 
 ```python
 def build_tower():
@@ -126,11 +126,11 @@ def build_tower():
 
 ## Step 4
 
-Now each time your Agent moves up, you can build a new layer of the tower. To do this we use the ``||agent:draw_square()||`` function. This allows you to build a square at the point your Agent is standing.
+Now each time your Agent moves up, you can build a new layer of the tower. To do this we use the ``||agent:agent:draw_square()||`` function. This allows you to build a square at the point your Agent is standing.
 
-``||agent:draw_square()||`` takes a single input that's the width of the square. For example, 5 for a 5x5 layer.
+``||agent:agent:draw_square()||`` takes a single input that's the width of the square. For example, 5 for a 5x5 layer.
 
-**Add to your code to run the `draw_square()` function with a width of `3`.**
+**Add to your code to run the `agent.draw_square()` function with a width of `3`.**
 
 ```python
 def build_tower():

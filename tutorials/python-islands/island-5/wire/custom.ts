@@ -9,4 +9,4 @@ namespace positions {
     }
 }
 
-agent.set_slot(1)
+agent.setSlot(1)

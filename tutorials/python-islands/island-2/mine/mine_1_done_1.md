@@ -17,14 +17,16 @@
 
 Part of the gravel has collapsed!
 
-![Miner](miner.jpg)
+![Miner](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/miner.jpg)
 
 "Phew, isn't that lucky I didn't check the area myself, I could have fallen down there!"
 
 
-![Collapsed](collapse.jpg)
+![Collapsed](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/collapse.jpg)
 
 ## Start an investigate @showdialog
+
+![Miner](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/mine/miner.jpg)
 
 "It looks like a pretty large drop down there. I think, **we should investigate!** We will need to **make some ladders** though.
 
