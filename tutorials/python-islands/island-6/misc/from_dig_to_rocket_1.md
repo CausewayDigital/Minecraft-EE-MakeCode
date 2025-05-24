@@ -17,7 +17,7 @@
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-6/misc/From_Dig_To_Rocket.png)
 
-With the artifacts dug up, deliver them to Jordan on the rocket launch area, at the Space Centre!
+With the artefacts dug up, deliver them to Jordan on the rocket launch area, at the Space Centre!
 
 
 ```spy

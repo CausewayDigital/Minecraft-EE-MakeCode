@@ -86,7 +86,7 @@ Now that you can see the individual rows, let's get each block in each row.
 
 For this, we will repeat what we had done before, but instead of getting every `row` in the runway design data, we can get every `block` in each `row`.
 
-**Write another `||loops:for||` loop, inside the for loop you have already writen, to get each `block` in each `row`.**
+**Write another `||loops:for||` loop, inside the for loop you have already written, to get each `block` in each `row`.**
 
 ```python
 runway_design = runway.get_runway_design()
@@ -126,7 +126,7 @@ You can also use the `||agent:agent.return_agent||` function to move your agent 
 
 ## Task 4
 
-**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an `||agent:agent.return_agent||` command bellow the second `||agent:agent.move||` commmand.**
+**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an `||agent:agent.return_agent||` command bellow the second `||agent:agent.move||` command.**
 
 ```ghost
 for i in range(4):

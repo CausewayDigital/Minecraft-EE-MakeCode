@@ -99,7 +99,7 @@ def on_player_bounced():
 
 ## Step 6
 
-Now we know know our `target` we can use ``||mobs:mobs.apply_effect()||`` to apply the effect.
+Now we know our `target` we can use ``||mobs:mobs.apply_effect()||`` to apply the effect.
 
 To this we want to pass it in 4 parameters, first the affect we want to use, which is `LEVITATION`. Second is the target, which will be `target` variable we set in the last step. Third is the duration the effect lasts for of `1` second, and finally is amplifier which is how strong we want the effect to be.
 
@@ -116,7 +116,7 @@ def on_player_bounced():
 
 ## Step 7
 
-The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This this two parameters the mode of travel which is `BOUNCE` for us to get up onto the telescope, and the second being the name of the function we want to trigger.
+The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This two parameters the mode of travel which is `BOUNCE` for us to get up onto the telescope, and the second being the name of the function we want to trigger.
 
 **At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the parameters of `BOUNCE` and the name of our function `on_player_bounced` that we made**
 

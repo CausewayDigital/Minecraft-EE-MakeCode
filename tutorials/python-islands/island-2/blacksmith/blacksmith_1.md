@@ -70,7 +70,7 @@ Now you have collected the iron ore that is needed. The final step is making sur
 
 ## Checking ore purity
 
-To help with this task, the blacksmith has equiped your agent with a special function that can check iron purity called ``||blacksmith:blacksmith.purity()||``.
+To help with this task, the blacksmith has equipped your agent with a special function that can check iron purity called ``||blacksmith:blacksmith.purity()||``.
 
 This function takes in a direction such as `FORWARD` in which the agent should check.
 
@@ -82,7 +82,7 @@ As we want the purest of iron from our ores, we will use an ``||logic:if||`` sta
 
 Python includes more than just checking if one item equals another item (using `==`). It also allows you to check for greater than or less than.
 
-**Create an ``||logic:if||``  to check if the pruity of the ore is  `less than or equal` (using  <=  ) to `3`**
+**Create an ``||logic:if||``  to check if the purity of the ore is  `less than or equal` (using  <=  ) to `3`**
 
 ```python
 if(blacksmith.purity(FORWARD) <= 3):

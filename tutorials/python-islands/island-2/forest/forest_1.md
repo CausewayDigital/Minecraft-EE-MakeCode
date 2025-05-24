@@ -105,7 +105,7 @@ if(agent.is_next()){
 
 Next, we want to add an ``||logic:else||``, to let us harvest other blocks and then go to the next area.
 
-**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statement you created. Rember to go to the next area after harvesting**
+**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statement you created. Remember to go to the next area after harvesting**
 ```diffspy
 if(agent.is_nest()){
     agent.next_location()

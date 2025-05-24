@@ -4,6 +4,13 @@ A collection of Microsoft MakeCode tutorials created by Causeway Digital
 ## Creating a Release
 When a commit that updates the tutorial's `.md` file or `pxt.json` Github will automatically create a release, incrementing the *patch* number.
 
+## Spellcheck CLI
+You can use https://github.com/tbroadley/spellchecker-cli with the following command in Python Island to do spell checking
+
+```bash
+spellchecker --files 'tutorials/python-islands/**/*.md' -d scripts/dictionary.cjs -l en-GB
+```
+
 ## Scripts
 
 ### Generate PXT

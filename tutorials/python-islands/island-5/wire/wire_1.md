@@ -44,7 +44,7 @@ Could you program your Agent to follow you along the bridge and place down the w
 
 ## Step 1
 
-To begin, you'll need to create a function that will run every time you move. To do this we first need to make a function that minecraft will call when we move, we'll call this `on_travelled_walk()`.
+To begin, you'll need to create a function that will run every time you move. To do this we first need to make a function that Minecraft will call when we move, we'll call this `on_travelled_walk()`.
 
 **Can you start by creating a function called `on_travelled_walk()`**
 
@@ -104,9 +104,9 @@ def on_travelled_walk():
 ```
 
 ## Step 5
-The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This this two prameters the mode of travel which is `WALK` for us to lay the wire, and the second being the name of the function we want to trigger.
+The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This two parameters the mode of travel which is `WALK` for us to lay the wire, and the second being the name of the function we want to trigger.
 
-**At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the prameters of `WALK` and the name of our function `on_travelled_walk` that we made**
+**At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the parameters of `WALK` and the name of our function `on_travelled_walk` that we made**
 
 ```python
 def on_travelled_walk():

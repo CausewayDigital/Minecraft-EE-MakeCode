@@ -4,7 +4,7 @@
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
 
-# Install the telescope beakon
+# Install the telescope beacon
 
 ```template
 // Nothing here to code!

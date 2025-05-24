@@ -105,7 +105,7 @@ function decode(info: string){
 
 ## Step 3
 
-Now we have a basic `decode` function created, we need to make sure it can handle all of the inputs the computer might want us deocde.
+Now we have a basic `decode` function created, we need to make sure it can handle all of the inputs the computer might want us decode.
 
 To do this we'll extend the ``||logic:if||``  you create with ``||logic:elif||``.
 

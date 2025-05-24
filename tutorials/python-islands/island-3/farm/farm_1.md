@@ -78,7 +78,7 @@ if(block == WHEAT){
 
 With the ``||logic:if||`` statement finished, let's make the ``||logic:elif||`` statement!
 
-**Add an ``||logic:elif||`` statement to plant a seed using ``||agent:agent.place()||`` if the the block is `AIR`**
+**Add an ``||logic:elif||`` statement to plant a seed using ``||agent:agent.place()||`` if the block is `AIR`**
 
 ```spy
 const block = agent.inspect(AgentInspection.Block, DOWN)
