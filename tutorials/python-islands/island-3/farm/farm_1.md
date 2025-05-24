@@ -68,7 +68,7 @@ With the code ready for checking when the block is wheat, we can harvest the whe
 ```spy
 const block = agent.inspect(AgentInspection.Block, DOWN)
 if(block == WHEAT){
-    agent.destory(DOWN)
+    agent.destroy(DOWN)
     agent.place(DOWN)
     player.say("Wheat!")
 }
@@ -83,7 +83,7 @@ With the ``||logic:if||`` statement finished, let's make the ``||logic:elif||`` 
 ```spy
 const block = agent.inspect(AgentInspection.Block, DOWN)
 if(block == WHEAT){
-    agent.destory(DOWN)
+    agent.destroy(DOWN)
     agent.place(DOWN)
     player.say("Wheat!")
 }else if (block == AIR) {
@@ -101,7 +101,7 @@ Great! Now with all that together, let's add our for loop to repeat it all, more
 ```diffpython
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
     if block == WHEAT:
-        agent.destory(DOWN)
+        agent.destroy(DOWN)
         agent.place(DOWN)
         player.say("Wheat!")
     elif block == AIR:
@@ -112,7 +112,7 @@ for count in range(0, 8):
     agent.move(FORWARD, 1)
     block = agent.inspect(AgentInspection.BLOCK, DOWN)
     if block == WHEAT:
-        agent.destory(DOWN)
+        agent.destroy(DOWN)
         agent.place(DOWN)
         player.say("Wheat!")
     elif block == AIR:

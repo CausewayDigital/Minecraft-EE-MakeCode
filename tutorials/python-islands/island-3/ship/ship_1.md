@@ -38,11 +38,11 @@ The above code will run the `player.say("hello")` command 5 times.
 
 ![Captain](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-3/ship/captain.jpg)
 
-**Captain Pappert** - *We are just coming into dock now, but first, you wouldn't mind helping me cover over the hatches? They are down on the main deck of the ship.*
+**Captain Papert** - *We are just coming into dock now, but first, you wouldn't mind helping me cover over the hatches? They are down on the main deck of the ship.*
 
 ## Use your agent to cover the deck
 
-Captain Pappert has given your Agent some **carpet** (in slot 1). Can you use a ``||loops:for loop||`` to place the carpet over the hatches with ``||agent:agent.place()||``?
+Captain Papert has given your Agent some **carpet** (in slot 1). Can you use a ``||loops:for loop||`` to place the carpet over the hatches with ``||agent:agent.place()||``?
 
 *Once you have completed a row, use your **whistle** (or ``||agent:agent.move()||``) to move your agent along, then run your code again.*
 
