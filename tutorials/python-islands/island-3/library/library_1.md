@@ -6,6 +6,14 @@
 
 # Library
 
+```template
+if (agent.check_book_on_shelf(FORWARD) === ){
+    player.say("Found the book!")
+} else {
+    player.say("")
+}
+```
+
 ```customts
 /**
  * Functions for working in the Library
@@ -16,7 +24,7 @@ namespace agent {
     */
     //% block="agent check shelf %direction"
     //% direction.defl=FORWARD
-    export function found_book(direction: SixDirection): boolean {
+    export function check_book_on_shelf(direction: SixDirection): boolean {
         let block = agent.inspect(AgentInspection.Block, direction)
         if (block == DEAD_BRAIN_CORAL_BLOCK) {
             return true
@@ -31,7 +39,7 @@ namespace agent {
     //% direction.defl=FORWARD
     export function mark_book(direction: SixDirection){
         if(direction === FORWARD){
-            agent.place("back", 1)
+            agent.place(BACK)
         }else{
             player.say("Seems like the agent can only mark facing forward of the bookshelf")
         }
@@ -41,18 +49,10 @@ namespace agent {
 
 ```ghost
 for (let count = 0;count < 5;count++){
-    if (agent.found_book(FORWARD)){
+    if (agent.check_book_on_shelf(FORWARD)){
         agent.mark_book(FORWARD)
     }
     agent.move(UP, 1)
-}
-```
-
-```template-ignore
-if (agent.found_book(FORWARD) === ){
-    player.say("Found the book!")
-} else {
-    player.say("")
 }
 ```
 
@@ -65,12 +65,12 @@ Locate the spellbook in the library that is needed by the Wizard.
 ## Scanning shelves
 The library has lots of shelves of books. They all look the same... However, will we find the right book?
 
-*"I can help with that! I have added a special function to your agent called ``||agent:agent.found_book(DIRECTION)||``. It can be used in an **if statement** to confirm if the bookshelf you are checking has the needed book on it. It returns True if the book is found or False if not." - Willow - Librarian*
+*"I can help with that! I have added a special function to your agent called ``||agent:agent.check_book_on_shelf(DIRECTION)||``. It can be used in an **if statement** to confirm if the bookshelf you are checking has the needed book on it. It returns True if the book is found or False if not." - Willow - Librarian*
 
 **Find your agent and finish off the code provided to check the bookshelf in front of it.**
 
 ```spy
-if (agent.found_book(FORWARD) == true){
+if (agent.check_book_on_shelf(FORWARD) == true){
     player.say("Found the book!")
 } else {
     player.say("No book here!")
@@ -84,14 +84,14 @@ So that isn't the right book then... But there are plenty more bookshelves to ch
 **Count the number of bookshelves in the columns, then create a for loop using the code from the previous activity, that will check all the books in that column.**
 
 ```diffspy
-if (agent.found_book(FORWARD) == true){
+if (agent.check_book_on_shelf(FORWARD) == true){
     player.say("Found the book!")
 } else {
     player.say("No book here!")
 }
 ---------------------------------------
 for (let count = 0; count < 5; count++){
-    if (agent.found_book(FORWARD) == true){
+    if (agent.check_book_on_shelf(FORWARD) == true){
         player.say("Found the book!")
     } else {
         player.say("No book here!")
@@ -104,12 +104,14 @@ for (let count = 0; count < 5; count++){
 
 Once you have found the book, you need to mark that shelf so the librarian can get you the book.
 
-The librarian has added another function to the agent, ``||agent:agent.mark_book(DIRECTION)||``, which should be run on the shelf your agent has found the book on.
+The librarian has added another function to the agent, ``||agent:agent.mark_book(DIRECTION)||``, which should be run on the shelf your agent has found the book on.   
+
+**Add this to your if statement so it is run when the book is found.**
 
 
 ```diffspy
 for (let count = 0; count < 5; count++){
-    if (agent.found_book(FORWARD) == true){
+    if (agent.check_book_on_shelf(FORWARD) == true){
         player.say("Found the book!")
     } else {
         player.say("No book here!")
@@ -118,7 +120,7 @@ for (let count = 0; count < 5; count++){
 }
 ---------------------------------------
 for (let count = 0; count < 5; count++){
-    if (agent.found_book(FORWARD) == true){
+    if (agent.check_book_on_shelf(FORWARD) == true){
         player.say("Found the book!")
         agent.mark_book(FORWARD)
     } else {

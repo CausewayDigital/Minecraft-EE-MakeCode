@@ -7,7 +7,7 @@ namespace agent {
     */
     //% block="agent check shelf %direction"
     //% direction.defl=FORWARD
-    export function found_book(direction: SixDirection): boolean {
+    export function check_book_on_shelf(direction: SixDirection): boolean {
         let block = agent.inspect(AgentInspection.Block, direction)
         if (block === DEAD_BRAIN_CORAL_BLOCK) {
             return true
