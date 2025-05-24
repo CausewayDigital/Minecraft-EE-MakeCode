@@ -82,12 +82,13 @@ As you go through these exercises below, the builders will test and run your fun
 
 ## Step 1
 
-The builders have asked you to create a `function` called `"build_tower()"`.
+The builders have asked you to create a `function` called `"build_tower()"`
 
-do this we can do we can do ``||functions:def build_tower()||:``
+To do this, we can do we can add   
+`def build_tower():`
 
-- `def`: Tells Python you want to create a new function.
-- `build_tower():`: The name of the new function. You can run the code inside of it by putting `build_tower():` in your code.
+- `def` :  Tells Python you want to create a new function.
+- `build_tower():`  :  The name of the new function. When you want to run this code, just add `build_tower()` in your code.
 
 ```python
 def build_tower():
