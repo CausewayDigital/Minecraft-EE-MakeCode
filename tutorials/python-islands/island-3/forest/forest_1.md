@@ -6,6 +6,15 @@
 
 # Forest
 
+```template
+# Removes the block in front of the agent. Add the rest yourself!
+agent.destroy(FORWARD)
+
+
+
+# Add your code above
+```
+
 ```ghost
 agent.move(FORWARD, 1)
 agent.destroy(FORWARD)
@@ -28,7 +37,7 @@ Don't worry though, supports and scaffolding have been put in place to hold the 
 
 To start, we'll need to remove the base of the tree. This is as simple as removing the bottom 4 blocks with your agent using ``||agent:agent.destroy||``, and moving using ``||agent:agent.move||`` to the next block!
 
-**Using ``||agent:agent.destroy||`` and ``||agent:agent.move||`` remove the 4 logs at the bottom of the tree!**
+**Using ``||agent:agent.destroy||`` and ``||agent:agent.move||`` remove the 4 logs on the bottom layer of the tree!**
 
 ```spy
 agent.destroy(FORWARD)
