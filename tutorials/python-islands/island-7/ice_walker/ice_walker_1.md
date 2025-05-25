@@ -35,7 +35,7 @@ Code the flowchart.
 
 ```python
 ```
-Get the coordinates of the block bellow the player.
+Get the coordinates of the block below the player.
 
 ## Part 3
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_3.png)
@@ -44,25 +44,25 @@ Code the flowchart.
 
 ```python
 ```
-If the block bellow the player is water, replace it with ice.
+If the block below the player is water, replace it with ice.
 
 
 ```ghost
 def on_move():
-    pos_bellow = positions.add(player.position(), pos(0, -1, 0))
-    if blocks.test_for_block(WATER, pos_bellow):
-        blocks.place(ICE, pos_bellow)
+    pos_below = positions.add(player.position(), pos(0, -1, 0))
+    if blocks.test_for_block(WATER, pos_below):
+        blocks.place(ICE, pos_below)
 
 player.on_travelled(WALK, on_move)
 ```
 
 ```ghost
 def on_move():
-    pos_bellow = positions.add(player.position(), pos(0, -1, 0))
+    pos_below = positions.add(player.position(), pos(0, -1, 0))
     for i in range(-1, 1):
         for j in range(-1, 1):
-            if blocks.test_for_block(WATER, positions.add(pos_bellow, pos(i, 0, j))):
-                blocks.place(ICE, positions.add(pos_bellow, pos(i, 0, j)))
+            if blocks.test_for_block(WATER, positions.add(pos_below, pos(i, 0, j))):
+                blocks.place(ICE, positions.add(pos_below, pos(i, 0, j)))
 
 player.on_travelled(WALK, on_move)
 ```

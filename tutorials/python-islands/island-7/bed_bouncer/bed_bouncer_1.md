@@ -13,7 +13,7 @@ Don't you love bouncing on a bed and making a mess? Following the program flowch
     - Apply Levitation
     - Apply Regeneration
 
-Follow the flowchart bellow:
+Follow the flowchart below:
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/Flowchart.png)
 

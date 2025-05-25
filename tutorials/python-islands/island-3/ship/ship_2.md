@@ -16,7 +16,7 @@ You will need to build a gangplank. Your agent has now got some planks in slot 1
 
 ## Building the Gang Plank
 
-**Create a ``||loops:for||`` loop program that moves your agent `FORWARD`, while placing blocks bellow, to build the gangplank out to reach the dock. You will have to guess how far away the island is!**
+**Create a ``||loops:for||`` loop program that moves your agent `FORWARD`, while placing blocks below, to build the gangplank out to reach the dock. You will have to guess how far away the island is!**
 
 ```python
 for i in range(8):

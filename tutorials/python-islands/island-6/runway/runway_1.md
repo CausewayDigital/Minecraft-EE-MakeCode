@@ -126,7 +126,7 @@ You can also use the `||agent:agent.return_agent||` function to move your agent 
 
 ## Task 4
 
-**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an `||agent:agent.return_agent||` command bellow the second `||agent:agent.move||` command.**
+**Add two `||agent:agent.move||` commands. One to move the Agent `RIGHT` after placing a block, and another to move the Agent `FORWARD` after the second loop has finished. Then add an `||agent:agent.return_agent||` command below the second `||agent:agent.move||` command.**
 
 ```ghost
 for i in range(4):

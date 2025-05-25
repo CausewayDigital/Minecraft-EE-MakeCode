@@ -52,7 +52,7 @@ Code the flowchart.
 
 ```
 ```
-If the block bellow the agent is lava, water, or air, place a stone block bellow the agent.
+If the block below the agent is lava, water, or air, place a stone block below the agent.
 
 
 ```ghost

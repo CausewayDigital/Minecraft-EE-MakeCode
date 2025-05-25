@@ -24,7 +24,7 @@ namespace agent {
     }
 
     /**
-     * Alert ground bellow agent is unstable
+     * Alert ground below agent is unstable
      */
     //% block
     export function alert(){
@@ -62,7 +62,7 @@ This function will provide back:
 - **True**  : If the ground below your agent is stable.
 - **False** : If the ground below your agent is unstable.
 
-**Using ``||player:player.say()||`` check if the ground bellow your agent is safe.**
+**Using ``||player:player.say()||`` check if the ground below your agent is safe.**
 ```spy
 player.say(agent.check_ground_unstable())
 ```

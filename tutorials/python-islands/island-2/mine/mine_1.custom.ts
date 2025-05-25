@@ -15,7 +15,7 @@ namespace agent {
     }
 
     /**
-     * Alert ground bellow agent is unstable
+     * Alert ground below agent is unstable
      */
     //% block
     export function alert(){
