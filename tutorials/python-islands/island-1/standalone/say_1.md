@@ -25,7 +25,7 @@ Try the program below by pressing the Run button.
 What else might you want to say, try tweaking the text sections within the " " and see what happens.
 
 
-## Why do you need quotation marks? @showdialog
+## Why do you need quotation marks? 
 As you can see we put quotation marks " " around the text within the say command.   
 
 But why are these needed?...   
@@ -33,15 +33,7 @@ But why are these needed?...
 This is because, in Python, text (also known as a String) is marked as being contained within quotation marks.
 
 
-## Why do you need quotation marks?
-Try removing the second quotation mark. You will see that your code editor underlines the issue and you can't run your code.
-
-Once you put back the quotation mark the red line will disappear and you will be able to run your code again.
-```python
-player.say("Hello world!")
-```
-
-## What are some other types of data? @showdialog
+## What are some other types of data?
 
 Strings (text) are just one type of data within Python. There are a few other interesting **Datatypes**.   
 - Integers: Whole numbers, for example, 1, 5, -2
@@ -51,7 +43,7 @@ Strings (text) are just one type of data within Python. There are a few other in
 The `say()` command supports outputting each of these, without the need for quotation marks.
 
 ## Other types of data
-Try removing everything within the brackets of `player:player.say()`, including the quotation marks, and putting a different datatype within the brackets.
+Try removing everything within the brackets of `||player:player.say||`, including the quotation marks, and putting a different datatype within the brackets.
 
 For example, an integer (5), a float (1.4), or a boolean (True)
 
