@@ -16,7 +16,7 @@ namespace agent {
     */
     //% block
     export function approve(): void {
-        agent.set_slot(1)
+        agent.setSlot(1)
         agent.place(UP)
     }
 
@@ -25,7 +25,7 @@ namespace agent {
     */
     //% block
     export function reject(): void {
-        agent.set_slot(2)
+        agent.setSlot(2)
         agent.place(UP)
     }
     
