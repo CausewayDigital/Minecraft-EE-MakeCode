@@ -73,7 +73,7 @@ TJ has given your agent a few special functions for your agent to use in this fo
 
 - ``||agent:agent.harvest()||``: Carefully harvests the wood in front of your agent and then drops it to the ground.
 
-- ``||agent:agent.agent.next_location()||``: TJ will move your agent for you, to the next branch.
+- ``||agent:agent.next_location()||``: TJ will move your agent for you, to the next branch.
 
 ## Step 1
 
@@ -81,7 +81,7 @@ TJ has moved the agent to directly in front of a branch. Your first job to check
 
 You can use the ``||agent:agent.is_nest()||`` function for this. It will return a `True` if there is a nest, or a `False` if there is just normal wood.
 
-**Using ``||player:player.say()||`` check if there's a nest infront of the agent.**
+**Using ``||player:player.say()||`` to display the result, check if there's a nest in front of the agent.**
 
 ```spy
 player.say(agent.is_nest())
@@ -93,19 +93,20 @@ Now that you know how to use ``||agent:agent.is_nest()||``, we can use it with a
 
 If there is a nest, we want to leave it alone and run ``||agent:agent.next()||`` to go to the next area.
 
-**Create an ``||logic:if||`` statement that moves to the next area is ``||agent:agent.is_nest()||`` returns `True`**
+**Create an ``||logic:if||`` statement that moves to the next area if ``||agent:agent.is_nest()||`` returns `True`**
 §
 ```spy
-if(agent.is_next()){
+if(agent.is_nest()){
     agent.next_location()
 }
 ```
 
 ## Step 3
 
-Next, we want to add an ``||logic:else||``, to let us harvest other blocks and then go to the next area.
+Next, we want to add an ``||logic:else:||`` so we are able to harvest other blocks and then go to the next area.
 
-**Add a ``||agent:agent.harvest()||`` in an ``||logic:else||`` statement you created. Remember to go to the next area after harvesting**
+**Add a ``||agent:agent.harvest()||`` in an ``||logic:else:||`` statement you created.**    
+**Remember to go to the next location after harvesting as well!**
 ```diffspy
 if(agent.is_nest()){
     agent.next_location()

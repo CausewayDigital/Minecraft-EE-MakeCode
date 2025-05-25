@@ -8,17 +8,23 @@
 
 ```customts
 /**
-* Funcitons accept and deny
+* Functions approve and reject
 */
 namespace agent {
+    /**
+    * Mark the seed below as wheat
+    */
     //% block
-    export function accept(): void {
+    export function approve(): void {
         agent.set_slot(1)
         agent.place(UP)
     }
 
+    /**
+    * Mark the seed below as carrot
+    */
     //% block
-    export function deny(): void {
+    export function reject(): void {
         agent.set_slot(2)
         agent.place(UP)
     }
@@ -33,27 +39,27 @@ Peter had some of his wheat and carrot seeds mixed up while planting them. As yo
 
 Peter has two special functions you can use to mark the seeds:
 
-- `agent.accept()`: Marks a wheat seed below.
+- `agent.approve()`: Approves the seed below (as a wheat seed)
 
-- `agent.deny()`: Marks a carrot seed below.
-
+- `agent.reject()`: Rejects the seed below (as a carrot seed)
 ## Move Your Agent
 
-Move your agent forward 3 blocks to the first seed marked by the white marker.
+**Move your agent forward 3 blocks to the first seed marked by the white marker.**   
+   
+**Do not run your code just yet!**
 
 ```python
-agent.move(DIRECTION, BLOCKS)
+agent.move(FORWARD, 3)
 ```
- 
-- `DIRECTION`: The direction you want your agent to inspect. The directions are UP, DOWN, LEFT, RIGHT, FORWARD and BACK.
-- `BLOCKS`: The number of blocks you want you agent to move in the direction specified.
 
 ## Inspect Blocks With Your Agent
-Now that your agent is above some seeds. Let's inspect what seeds they are! Your agent can inspect blocks using `||agent:agent.inspect||`:
+Now that your agent is above some seeds. Let's inspect what seeds they are. Your agent can inspect blocks using `||agent:agent.inspect||`:
 
-Make the agent inspect down, and say the value stored in `block`!
+**Make the agent inspect down, store the result in a new variable called `block`.**
+**Then `say` the value stored in the `block` variable.**
 
 ```python
+agent.move(FORWARD, 3)
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
 player.say(block)
 ```
@@ -79,23 +85,23 @@ if (name == "bob"):
 ```
 
 ## Using Inspect with If
-Add the code that you want to run bellow the if statement indented once to the right.
+Add the code that you want to run below the if statement, indented once to the right.
 
 `||logic:if (condition):||`
         # Do something
 
-Create an `||logic:if||` statement to check if the block is *equal to* `WHEAT`. If it is, run `||agent:agent.accept||`.
+**Create an `||logic:if||` statement to check if the block is *equal to* `WHEAT`. If it is, run `||agent:agent.approve()||`.**
 
 ```python
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
 player.say(block)
 if block == WHEAT:
-    agent.accept()
+    agent.approve()
 ```
 
 
 ## Else Statement Reminder @showdialog
-Great! Now with all that together, we can use an `else` statement to deny any blocks that are not wheat.
+Great! Now with all that together, we can use an `else` statement to reject any blocks that are not wheat.
 Here's a reminder of what an `else` statement looks like...
 ```python
 if (condition):
@@ -120,13 +126,13 @@ else:
 `||logic:else:||`
         # Do something else
 
-Add an else statement to your code that runs the `||agent:deny||` function.
+Add an else statement to your code that runs the `||agent:reject||` function.
 
 ```python
 if block == WHEAT:
-    agent.accept()
+    agent.approve()
 else:
-    agent.deny()
+    agent.reject()
 ```
 
 ## Repeat for the Rest

@@ -15,7 +15,7 @@ namespace agent {
     * Checks if the ground below the agent is stable
     */
     //% block="agent check ground stable"
-    export function check_ground_stable(): boolean{
+    export function check_ground_unstable(): boolean{
         const agent_pos = agent.getPosition()
         if (positions.equals(agent_pos, world(88, 146, 167))){
             return true
@@ -28,7 +28,7 @@ namespace agent {
      */
     //% block
     export function alert(){
-        if(agent.check_ground_stable()){
+        if(agent.check_ground_unstable()){
             player.say("Unstable ground alert!!!")
             agent.destroy(DOWN)
         }else{
@@ -40,7 +40,7 @@ namespace agent {
 
 ```ghost
 player.say("")
-agent.check_ground_stable()
+agent.check_ground_unstable()
 agent.alert()
 agent.move(FORWARD, 1)
 ```
@@ -55,7 +55,7 @@ You have been informed by the miner that an area of ground has opened up and san
 
 ## Testing the ground
 
-The miner has provided your agent with a special function to check the ground below it is safe, ``||agent:agent.check_ground_stable()||``
+The miner has provided your agent with a special function to check the ground below it is safe, ``||agent:agent.check_ground_unstable()||``
 
 This function will provide back:
 
@@ -64,7 +64,7 @@ This function will provide back:
 
 **Using ``||player:player.say()||`` check if the ground bellow your agent is safe.**
 ```spy
-player.say(agent.check_ground_stable())
+player.say(agent.check_ground_unstable())
 ```
 
 ## Alerting
@@ -76,7 +76,7 @@ You should run this piece of code if you find any unstable ground.
 **Using what you learnt in the previous sections on if statements, create a program that runs alert() if the unstable ground is detected**
 
 ```spy
-if (agent.check_ground_stable()){
+if (agent.check_ground_unstable()){
     agent.alert()
 }
 ```
@@ -86,12 +86,12 @@ Now add in ``||agent:agent.move()||`` to block by block, move your agent around 
 
 **Update you code to move your agent **FORWARD** each time your code runs**
 ```diffspy
-if (agent.check_ground_stable()){
+if (agent.check_ground_unstable()){
     agent.alert()
 }
 ---------------------------------
 agent.move(FORWARD, 1)
-if (agent.check_ground_stable()){
+if (agent.check_ground_unstable()){
     agent.alert()
 }
 ```
