@@ -30,9 +30,10 @@ Head to the next step and we'll start telling your agent to move.
 
 ## Moving your agent
 
-Move your agent with `||agent:agent.move(DIRECTION, BLOCKS)||`
+Move your agent with `||agent:agent.move(DIRECTION, DISTANCE)||`
 
-**Try changing the `DIRECTION`. What happens if you change FORWARD to another direction, perhaps BACK or LEFT? What happens if you increase the `BLOCKS` to 2 or 3?**
+**Try changing the `DIRECTION` placeholder to *FORWARD*, or perhaps another direction like *BACK* or *LEFT*?**   
+**What happens if you increase the `DISTANCE` to 2 or 3?**
 
 ```python
 agent.move(FORWARD, 1)
@@ -45,13 +46,6 @@ Now you know how to move your agent up, down, left, right, forward and back, you
 ![Target 1](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/target_1.jpg)
 
 ## Get to Target 1
-Can you move your agent, using `||agent:agent.move(DIRECTION, BLOCKS)||`, to stand on the pressure pad on the golden block?
+Can you move your agent, using `||agent:agent.move(DIRECTION, DISTANCE)||`, to stand on the pressure pad on the golden block?
 
-**Using `||agent:agent.move(DIRECTION, BLOCKS)||`, move your agent to the Golden block.**
-
-```python
-agent.move(FORWARD, 3)
-agent.move(UP, 1)
-agent.move(RIGHT, 5)
-
-```
+**Using `||agent:agent.move(DIRECTION, DISTANCE)||`, move your agent to the Golden block.**
