@@ -108,28 +108,6 @@ The librarian has added another function to the agent, ``||agent:agent.mark_book
 
 **Add this to your if statement so it is run when the book is found.**
 
-
-```diffspy
-for (let count = 0; count < 5; count++){
-    if (agent.check_book_on_shelf(FORWARD) == true){
-        player.say("Found the book!")
-    } else {
-        player.say("No book here!")
-    }
-    agent.move(UP, 1)
-}
----------------------------------------
-for (let count = 0; count < 5; count++){
-    if (agent.check_book_on_shelf(FORWARD) == true){
-        player.say("Found the book!")
-        agent.mark_book(FORWARD)
-    } else {
-        player.say("No book here!")
-    }
-    agent.move(UP, 1)
-}
-```
-
 ## Getting the book
 
 Once you have marked the shelf, walk back over to the librarian and ask her to get the book for you. Be careful though to make sure it is the correct shelf, as the librarian is very busy.

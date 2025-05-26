@@ -107,18 +107,6 @@ Next, we want to add an ``||logic:else:||`` so we are able to harvest other bloc
 
 **Add a ``||agent:agent.harvest()||`` in an ``||logic:else:||`` statement you created.**    
 **Remember to go to the next location after harvesting as well!**
-```diffspy
-if(agent.is_nest()){
-    agent.next_location()
-}
---------------------
-if(agent.is_nest()){
-    agent.next_location()
-} else {
-    agent.harvest()
-    agent.next_location()
-}
-```
 
 ## Step 4
 

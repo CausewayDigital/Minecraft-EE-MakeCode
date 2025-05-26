@@ -112,13 +112,5 @@ To accept an ore, the Blacksmith has given us a command called ``||blacksmith:bl
 
 **Add an `else` statement that executes an ``||blacksmith:blacksmith.accept||`` command below your if statement**
 
-```python
-if(blacksmith.purity(FORWARD) <= 3):
-    player.say("Purity less than or equal to 3!")
-    blacksmith.deny()
-else:
-    blacksmith.accept()
-```
-
 ## Check all the ore!
 Now with your code complete, run it over and over again until all the iron has been checked!

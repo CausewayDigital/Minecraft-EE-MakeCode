@@ -133,12 +133,5 @@ Now each time your Agent moves up, you can build a new layer of the tower. To do
 
 **Add to your code to run the `agent.draw_square()` function with a width of `3`.**
 
-```python
-def build_tower():
-    for height in range(0, 15):
-        agent.move(UP, 1)
-        agent.draw_square(3)
-```
-
 ## Run your code
 When you're done, run your code and, the builders will use your Agent to build the towers.

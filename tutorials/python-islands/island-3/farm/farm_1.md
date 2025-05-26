@@ -98,28 +98,6 @@ Great! Now with all that together, let's add our for loop to repeat it all, more
 
 **Create a ``||loops: for loop||`` to run the code you already have for the range of `0` to `8`. As well make sure the agent moves `FORWARD` with ``||agent:agent.move()||``**
 
-```diffpython
-block = agent.inspect(AgentInspection.BLOCK, DOWN)
-    if block == WHEAT:
-        agent.destroy(DOWN)
-        agent.place(DOWN)
-        player.say("Wheat!")
-    elif block == AIR:
-        agent.place(DOWN)
-        player.say("Air!")
-----------------------
-for count in range(0, 8):
-    agent.move(FORWARD, 1)
-    block = agent.inspect(AgentInspection.BLOCK, DOWN)
-    if block == WHEAT:
-        agent.destroy(DOWN)
-        agent.place(DOWN)
-        player.say("Wheat!")
-    elif block == AIR:
-        agent.place(DOWN)
-        player.say("Air!")
-```
-
 ## Start Harvesting!
 
 Now with all your code together, run it and **call your agent back to the diamond blocks using your whistle**. Happy farming!

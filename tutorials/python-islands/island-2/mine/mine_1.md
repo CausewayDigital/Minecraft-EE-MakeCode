@@ -85,16 +85,6 @@ if (agent.check_ground_unstable()){
 Now add in ``||agent:agent.move()||`` to block by block, move your agent around the gravel area.
 
 **Update you code to move your agent **FORWARD** each time your code runs**
-```diffspy
-if (agent.check_ground_unstable()){
-    agent.alert()
-}
----------------------------------
-agent.move(FORWARD, 1)
-if (agent.check_ground_unstable()){
-    agent.alert()
-}
-```
 
 ## Scan the whole gravel pit
 Once your code is complete, try using it to check each gravel block to find if any are unstable.

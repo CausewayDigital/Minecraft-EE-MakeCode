@@ -82,15 +82,3 @@ With the main code out of the way and completed time to put it all together and 
 Most of the code is here but, it's not ready yet...
 
 **Create another ``||loops:for||`` loop to run the tunnel checking code `3` times with the code you already have, and then make the agent move forward at the end!**
-
-```python
-for tunnel in range(0,3):
-    for dig in range(0,3):
-        agent.destroy(DOWN)
-        agent.move(DOWN, 1)
-    block = agent.inspect(AgentInspection.BLOCK, DOWN)
-    if block == GOLD_ORE:
-        agent.destroy(DOWN)
-    agent.move(UP, 3)
-agent.move(FORWARD, 1)
-```

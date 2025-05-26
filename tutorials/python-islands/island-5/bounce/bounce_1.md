@@ -120,17 +120,6 @@ The final step is to make sure the game triggers our code when we travel, to do 
 
 **At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the parameters of `BOUNCE` and the name of our function `on_player_bounced` that we made**
 
-```python
-def on_player_bounced():
-    loc = player.position()
-    block_under = blocks.is_under(SLIME_BLOCK, loc)
-    if block_under == True:
-        target = mobs.target(NEAREST_PLAYER)
-        mobs.apply_effect(LEVITATION, target, 1, 10)
-
-player.on_travelled(BOUNCE, on_player_bounced)
-```
-
 ## Place the beacon!
 
 Nice! Now that you have the code complete. Test it out and see if you can get onto the antenna to place the beacon!

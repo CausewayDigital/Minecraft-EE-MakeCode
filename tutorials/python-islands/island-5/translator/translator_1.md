@@ -125,11 +125,7 @@ function decode(info: string){
         return 1
     }else if (info === "b"){
         return 2
-    }else if (info === "c"){
-        return 3
-    }else if (info === "d"){
-        return 4
-    }
+    }  // ... and so on
 }
 ```
 
