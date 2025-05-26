@@ -113,6 +113,11 @@ agent_pos = agent.get_position()
 coordinates.append(agent_pos)
 ```
 
+```ghost
+if agent.is_fossil_bellow():
+    scientist.check([])
+```
+
 ## Check for fossils
 You need to mark the fossils for the scientists.
 
