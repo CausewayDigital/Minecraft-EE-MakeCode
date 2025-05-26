@@ -18,18 +18,39 @@ namespace positions {
     }
 }
 
-agent.setSlot(1)
+namespace agent {
+    /**
+     * Allows your agent to place down wire.
+     */
+    //% block="agent place wire %direction"
+    //% direction.defl=DOWN
+    export function placeWire(direction: SixDirection) {
+        agent.setSlot(1)
+        if (direction !== DOWN) {
+            return
+        }
+        const agentLoc = agent.getPosition()
+        const y = agentLoc.getValue(Axis.Y)-1
+        const blockTest = blocks.testForBlock(AIR, world(agentLoc.getValue(Axis.X), y, agentLoc.getValue(Axis.Z)))
+        if (blockTest){
+            agent.place(DOWN)
+        }
+    }
+}
 ```
 
 ```ghost
-function on_travelled_walk(){
-    let loc = player.position()
-    loc = positions.correct_location(loc)
-    agent.teleport(loc, NORTH)
-    agent.place(DOWN)
+function test() {
+    return
 }
 
-player.on_travelled(WALK, on_travelled_walk)
+player.onTravelled(WALK, function () {
+    let loc = player.position()
+    loc = positions.correctLocation(loc)
+    agent.teleport(loc, NORTH)
+    agent.placeWire(DOWN)
+})
+
 ```
 
 ## Wire to the Power Station @showdialog
@@ -91,32 +112,22 @@ def on_travelled_walk():
 ## Step 5
 The last step is to have your Agent place down the wire to make the connection.
 
-The Power Station staff have already given your Agent some wire. All you need to do is use ``||agent:agent.place()||`` to place it `DOWN`.
+The Power Station staff have already given your Agent some wire and a function that allows your agent to place the wire. All you need to do is use ``||agent:agent.place_wire()||`` to place it `DOWN`.
 
-**Add an ``||agent:agent.place||`` below so it places `DOWN`.**
+**Add an ``||agent:agent.place_wire||`` below so it places `DOWN`.**
 
 ```python
 def on_travelled_walk():
     loc = player.position()
     loc = positions.correct_location(loc)
     agent.teleport(loc, NORTH)
-    agent.place(DOWN)
+    agent.place_wire(DOWN)
 ```
 
 ## Step 5
 The final step is to make sure the game triggers our code when we travel, to do this we can use ``||player:player.on_travelled()||``. This two parameters the mode of travel which is `WALK` for us to lay the wire, and the second being the name of the function we want to trigger.
 
 **At the end of your code outside of the function we created add in ``||player:player.on_travelled()||`` with the parameters of `WALK` and the name of our function `on_travelled_walk` that we made**
-
-```python
-def on_travelled_walk():
-    loc = player.position()
-    loc = positions.correct_location(loc)
-    agent.teleport(loc, NORTH)
-    agent.place(DOWN)
-
-player.on_travelled(WALK, on_travelled_walk)
-```
 
 ## Start placing wire!
 
