@@ -38,7 +38,7 @@ agent.till(DOWN)
 
 ## Planting seeds
 Now that the ground has been tilled, you should see the marker change to a white colour.  
-Next, you need to plant the seeds using `||agent:agent.place()||`.
+Next, you need to plant the seeds using `||agent:agent.place(DIRECTION)||`.
 
 
 ```python
