@@ -21,3 +21,7 @@ It is up in the tree.
 ## Target 2
 
 Using `||agent:agent.move(DIRECTION, DISTANCE)||`, move your agent to the Golden block in the tree.
+
+```python
+agent.move(FORWARD, 1)
+```
