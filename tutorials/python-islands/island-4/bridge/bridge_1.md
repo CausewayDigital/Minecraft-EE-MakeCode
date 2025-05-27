@@ -20,11 +20,11 @@ player.say("I've reached the end")
 
 ## Getting started with the `while` loop @showdialog
 
-In Island 3, you were introduced to **For Loops**. On this island, you're going to get to grips with the other type of loop, the **While Loop**. You use this if you don't know how many times you are going to loop for.
+In Island 3, you were introduced to `||loops:for||` loops. On this island, you're going to get to grips with the other type of loop, the `||loops:while||` loop. You use this if you don't know how many times you are going to loop for.
 
 
 
-Here's an example of a **while loop**
+Here's an example of a `||loops:while||` loop
 
 ```python
 
@@ -34,7 +34,7 @@ while condition_1 == condition_2:
 
 ```
 
-The code above will run **as long as** the condition is met, just like `if` statements, we use conditions for `while` loops. We use these conditions to check if we should stop looping.
+The code above will run **as long as** the condition is met, just like `||logic:if||` statements, we use conditions for `||loops:while||` loops. We use these conditions to check if we should stop looping.
 
 ## Bridging the gap @showdialog
 
@@ -44,7 +44,7 @@ The code above will run **as long as** the condition is met, just like `if` stat
 **Mine Manager** - "*Could you and your Agent build a bridge through the fog and investigate what might be over there?*"
 
 To begin, you'll need to get your agent to run a while loop, to see if it has reached another landmass (island).    
-To do this, you can have your Agent check if the block in front of it is `AIR` and if so, the we can move forward (inside the **While Loop**).    
+To do this, you can have your Agent check if the block in front of it is `AIR` and if so, the we can move forward (inside the `||loops:while||` loop).    
 When your Agent gets to another landmass, the block in front will no longer be `AIR`, so you can stop.
 
 ## Step 1
