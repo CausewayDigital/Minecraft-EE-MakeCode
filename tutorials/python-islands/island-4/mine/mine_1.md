@@ -35,7 +35,7 @@ namespace agent {
     */
     //% block="agent mark diamond"
     export function markDiamond(): void {
-        if (check_ore(FORWARD) != AIR) {
+        if (checkOre(FORWARD) != AIR) {
             agent.setSlot(2)
             agent.place(UP)
         } else {
