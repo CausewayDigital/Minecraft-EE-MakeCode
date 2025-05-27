@@ -1,0 +1,16 @@
+agent.destroy(FORWARD)
+agent.move(FORWARD, 1)
+agent.destroy(FORWARD)
+agent.destroy(RIGHT)
+agent.move(FORWARD, 1)
+agent.destroy(RIGHT)
+agent.move(BACK, 1)
+
+for i in range(12):
+    agent.destroy(UP)
+    agent.move(UP, 1)
+    agent.destroy(FORWARD)
+    agent.destroy(RIGHT)
+    agent.move(FORWARD, 1)
+    agent.destroy(RIGHT)
+    agent.move(BACK, 1)
