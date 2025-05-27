@@ -29,7 +29,7 @@ namespace scientist {
     //% block
     export function check(final: any[]): void {
         if ([world(1019, 139, 110), world(1018, 139, 111), world(1017, 139, 109)].sort() == final.sort()) {
-            player.say("Task Complete")
+            blocks.place(DIAMOND_BLOCK, world(991, 144, 122))
         } else {
             player.say("\nHmmm...\nAll of the coordinates don't lead to fossils... Try again.")
         }
