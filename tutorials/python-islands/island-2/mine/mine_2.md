@@ -45,3 +45,8 @@ Finally, don't forget to use your **whistle** with this task!
 **Write a program that, if your agent detects `IRON_ORE`, it breaks it. Be careful though not to break any other blocks!**
 
 Once you have finished the program, hit the run button above. To complete this task, you must search all five mineshafts to find which shafts contain iron ore blocks at the end of them.
+
+```python
+if agent.inspect(AgentInspection.Block, FORWARD) == IRON_ORE:
+    player.say("This is iron ore")
+```
