@@ -94,7 +94,7 @@ Now that you know how to use ``||agent:agent.is_nest()||``, we can use it with a
 If there is a nest, we want to leave it alone and run ``||agent:agent.next()||`` to go to the next area.
 
 **Create an ``||logic:if||`` statement that moves to the next area if ``||agent:agent.is_nest()||`` returns `True`**
-§
+
 ```spy
 if(agent.is_nest()){
     agent.next_location()

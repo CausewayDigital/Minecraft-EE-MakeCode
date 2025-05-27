@@ -6,15 +6,6 @@
 
 # Mine - 2
 
-```ghost
-agent.destroy(FORWARD)
-if (agent.inspect(AgentInspection.Block, FORWARD) == IRON_BLOCK){
-    agent.destroy(FORWARD)
-} else {
-    player.say("Agent didn't find iron!")
-}
-```
-
 ## Exploring the mineshaft @showdialog
 
 Use your agent to explore the old mineshafts in search of iron.
@@ -49,4 +40,12 @@ Once you have finished the program, hit the run button above. To complete this t
 ```python
 if agent.inspect(AgentInspection.Block, FORWARD) == IRON_ORE:
     player.say("This is iron ore")
+```
+```ghost
+agent.destroy(FORWARD)
+if (agent.inspect(AgentInspection.Block, FORWARD) == IRON_BLOCK){
+    agent.destroy(FORWARD)
+} else {
+    player.say("Agent didn't find iron!")
+}
 ```
