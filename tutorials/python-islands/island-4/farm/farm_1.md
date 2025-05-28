@@ -29,7 +29,7 @@ namespace agent {
 
 **Gardener** - "*Welcome to the Botanical Gardens! We need your help picking some poppies, to make into the red dye you need. Can you and your agent help pick those poppies for me?*"   
 
-Using a **While Loop**, your agent will keep collecting poppies **while you don't have enough**. Once you have enough poppies (4), your agent will stop.   
+Using a `||loops:while||` loop, your agent will keep collecting poppies **while you don't have enough**. Once you have enough poppies (4), your agent will stop.   
 
 ## Task 1
 **Setup a `||loops:while||` loop and set it's condition to use `||agent:agent.get_item_count||` with the slot number as the only parameter (1). Repeat this loop while there are less than 4 poppies in slot 1.**
