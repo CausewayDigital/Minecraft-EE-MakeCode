@@ -13,7 +13,7 @@ namespace positions {
     */
     //% block"Correct Location %pos"
     export function correctLocation(pos: Position) {
-        const y = pos.getValue(Axis.Y)-1
+        const y = pos.getValue(Axis.Y)+1
         return world(pos.getValue(Axis.X), y, pos.getValue(Axis.Z))
     }
 }
