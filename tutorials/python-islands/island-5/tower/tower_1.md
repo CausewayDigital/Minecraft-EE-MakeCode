@@ -76,7 +76,7 @@ The local builders have the new telescope ready but need supports built to hold 
 
 ## Introduction
 
-For this task, we will use `functions`. `Functions` are mini-programs of code, that can be called/ran as many times as you want in your main program. For example, `player.say()` is a function that you call/run to output text into the chat.
+For this task, we will use `functions`. `Functions` are mini-programs of code, that can be called/ran as many times as you want in your main program. For example, `||player:player.say()||` is a function that you call/run to output text into the chat.
 
 As you go through these exercises below, the builders will test and run your function for you.
 
@@ -127,9 +127,9 @@ def build_tower():
 
 ## Step 4
 
-Now each time your Agent moves up, you can build a new layer of the tower. To do this we use the ``||agent:agent:draw_square()||`` function. This allows you to build a square at the point your Agent is standing.
+Now each time your Agent moves up, you can build a new layer of the tower. To do this we use the ``||agent:agent.draw_square()||`` function. This allows you to build a square at the point your Agent is standing.
 
-``||agent:agent:draw_square()||`` takes a single input that's the width of the square. For example, 5 for a 5x5 layer.
+``||agent:agent.draw_square()||`` takes a single input that's the width of the square. For example, 5 for a 5x5 layer.
 
 **Add to your code to run the `agent.draw_square()` function with a width of `3`.**
 
