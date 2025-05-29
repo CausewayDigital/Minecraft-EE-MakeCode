@@ -91,7 +91,7 @@ namespace scientist {
                 player.say("Match")
             }
             player.say("Great! Matches perfectly...")
-            blocks.place(DIAMOND_BLOCK, pos(1054, 154, 139))
+            blocks.place(DIAMOND_BLOCK, world(1054, 154, 139))
         } else if (answer.sort() == proof.sort()) {
             player.say("Hmmm, does not seem to be in the right order. Try again...")
         } else {
