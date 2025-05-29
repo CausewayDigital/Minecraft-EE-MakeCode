@@ -17,15 +17,15 @@ namespace scientist {
     */
     //% block
     export function getHydration(plant: any): string {
-        if (plant == "red_flower") {
+        if (plant == ORANGE_TULIP) {
             return "hydration 8"
         }
         
-        if (plant == "sapling") {
+        if (plant == OAK_SAPLING) {
             return "hydration : 3"
         }
         
-        if (plant == "deadbush") {
+        if (plant == 32) {
             return "hydration : 0"
         }
         
@@ -37,15 +37,15 @@ namespace scientist {
     */
     //% block
     export function getNutrition(plant: any): string {
-        if (plant == "red_flower") {
+        if (plant == ORANGE_TULIP) {
             return "nutrition 4"
         }
         
-        if (plant == "sapling") {
+        if (plant == OAK_SAPLING) {
             return "nutrition : 5"
         }
         
-        if (plant == "deadbush") {
+        if (plant == 32) {
             return "nutrition : 7"
         }
         
@@ -57,15 +57,15 @@ namespace scientist {
     */
     //% block
     export function getStrength(plant: any): string {
-        if (plant == "red_flower") {
+        if (plant == ORANGE_TULIP) {
             return "strength 3"
         }
         
-        if (plant == "sapling") {
+        if (plant == OAK_SAPLING) {
             return "strength : 5"
         }
         
-        if (plant == "deadbush") {
+        if (plant == 32) {
             return "strength : 6"
         }
         
@@ -78,25 +78,27 @@ namespace scientist {
     //% block
     export function submit(answer: any[]) {
         let block = answer[0]
-        if ([POPPY, OAK_SAPLING, 32].indexOf(block) < 0) {
+        if ([ORANGE_TULIP, OAK_SAPLING, 32].indexOf(block) < 0) {
             player.say("Hmmm, we aren't currently studying that...")
             player.say("Are you sure you are looking at the correct block?")
             return
         }
         
-        let proof = [block, getHydration(block), getNutrition(block), getStrength(block)]
-        if (proof == answer) {
+        let proof: any[] = [block, getHydration(block), getNutrition(block), getStrength(block)]
+
+        if (answer[0] == proof[0] && answer[1] == proof[1] && answer[2] == proof[2] && answer[3] == proof[3]) {
             for (let e of answer) {
-                player.say("{e} - Match")
+                player.say("Match")
             }
             player.say("Great! Matches perfectly...")
-            //  world.set("1054 154 139", "barrier")
+            blocks.place(DIAMOND_BLOCK, pos(1054, 154, 139))
         } else if (answer.sort() == proof.sort()) {
             player.say("Hmmm, does not seem to be in the right order. Try again...")
         } else {
             player.say("Hmmm, information does not match up. Try again...")
         }  
     }
+    
 }
 ```
 
