@@ -18,7 +18,7 @@ namespace telescope {
     //% block"Decode telescope bit signal"
     export function decode_signals(): void {
         // This is a bodge: makecode doesn't support Record<> for objects so `object[key]` doesn't work in the ts compiler
-        const index_key = [WHITE_CONCRETE_POWDER, MAGENTA_CONCRETE_POWDER, LIGHT_BLUE_CONCRETE_POWDER, YELLOW_CONCRETE_POWDER]
+        const index_key = [ORANGE_CONCRETE_POWDER, MAGENTA_CONCRETE_POWDER, LIGHT_BLUE_CONCRETE_POWDER, YELLOW_CONCRETE_POWDER]
         const index_value = ["a", "b", "c", "d"]
         // List of expected bits from user's decode() function
         const list_of_numbers: number[] = [1, 2, 4, 3, 2, 1]
@@ -83,54 +83,55 @@ To be able to transfer the data into your `function`, you need to create a `para
 
 ** To begin lets create a function called `decode`  with a single parameter called `info`**
 
-```spy
-function decode(info: string){
+```python
+def decode(info):
     pass
-    // Something will go here in step 2
-}
 ```
 
 ## Step 2
 Great! Now we have data being passed into the function using the `info` parameter. `info` will contain a letter, and the computer requires a matching number from that letter.
 
-To start with let's return `1` when `info` is `"a"`. For this, you can use an ``||logic:if||`` statement.
+To start with let's return `1` when `info` is `"a"`. For this, you can use an `||logic:if||` statement.
 
-```spy
-function decode(info: string){
-    if (info === "a"){
+After the `||logic:if||` statement, within the function, add an `||logic:else||` statement to provide a default value of `0` if the info parameter is not recognised.
+
+```python
+def decode(info):
+    if info == "a":
         return 1
-    }
-}
+    else:
+        return 0
 ```
 
 ## Step 3
 
 Now we have a basic `decode` function created, we need to make sure it can handle all of the inputs the computer might want us decode.
 
-To do this we'll extend the ``||logic:if||``  you create with ``||logic:elif||``.
+To do this we'll extend the `||logic:if||`  you create with `||logic:elif||`.
 
-Use the following table create a set of ``||logic:if/else||`` statements to return the correct number.
+Use the following table create a set of `||logic:if/else||` statements to return the correct number.
 
-| info   | return |
-|--------|--------|
-| `a`    | `1`    |
-| `b`    | `2`    |
-| `c`    | `3`    |
-| `d`    | `4`    |
+| info     | return |
+|----------|--------|
+| `a`      | `1`    |
+| `b`      | `2`    |
+| `c`      | `3`    |
+| `d`      | `4`    |
+| `other`  | `0`    |
 
-
-```spy
-function decode(info: string){
-    if (info === "a"){
+```python
+def decode(info):
+    if info == "a":
         return 1
-    }else if (info === "b"){
+    elif info == "b":
         return 2
-    }  // ... and so on
-}
+    # ... and so on
+    else:
+        return 0
 ```
 
 ## Run your code!
 
 When you're ready, run your code and see if it works!
 
-*Note: You will need to hit the **Reset Bit Input** button above your Agent is before you start your code!*
+*Note: You will need to hit the **Reset Bit Input** button above your Agent before you start your code!*
