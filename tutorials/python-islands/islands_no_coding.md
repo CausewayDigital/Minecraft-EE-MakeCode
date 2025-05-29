@@ -10,6 +10,7 @@
 
 ## Introduction step @unplugged
 
+![No coding](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/no_coding.jpg)
 # Coding is not required to complete your current activity.
 
 ## Step 1
@@ -21,8 +22,4 @@ Please close this window to return to the world.
 
 ```ghost
 loops.onStart()
-```
-
-```package
-seymour=github:CausewayDigital/Minecraft-EE-MakeCode
 ```
