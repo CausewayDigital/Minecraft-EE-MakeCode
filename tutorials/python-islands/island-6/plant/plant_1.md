@@ -111,11 +111,11 @@ The scientists at the Space Research Centre need to select the correct plants to
 ## Inspect the Block Bellow
 **Use `||agent:agent.inspect||` to inspect the block in the down direction and store it in a variable called `block`.**
 
-**Then output the block using `||player:player.say||`.**
+**Then output the block name using `||blocks:blocks.name_of_block(ID)||` and `||player:player.say||`.**
 
 ```python
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
-player.say(block)
+player.say(blocks.name_of_block(block))
 ```
 
 ## Lists @showdialog
@@ -154,6 +154,8 @@ strength = scientist.get_strength(block)
 
 ## Information About a Plant
 **Create a list containing `block`, `hydration`, `nutrition`, and `strength` in that order and use the `||scientist:scientist.submit||` function to check it against the scientists' results.**
+
+After your code gets the correct information about the first plant, use it to check the other two. Your agent will be moved automatically.
 
 ```python
 plant_info = [...]
