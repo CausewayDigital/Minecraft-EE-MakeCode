@@ -20,7 +20,7 @@ namespace agent {
 
         let orientation = agent.getOrientation();
 
-        agent.teleport(world(948, y, z), orientation);
+        agent.teleport(world(948, y, z), SOUTH);
     }
 }
 
@@ -109,7 +109,7 @@ for row in runway_design:
     for block in row:
         if block:
             agent.set_slot(1)
-            agnet.place(block)
+            agent.place(DOWN)
 ```
 
 ## Task 4 @showdialog
