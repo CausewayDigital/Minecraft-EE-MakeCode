@@ -20,7 +20,7 @@ namespace agent {
 
         let orientation = agent.getOrientation();
 
-        agent.teleport(pos(948, y, z), orientation);
+        agent.teleport(world(948, y, z), orientation);
     }
 }
 
