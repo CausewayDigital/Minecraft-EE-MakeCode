@@ -145,7 +145,7 @@ They all take a block as a parameter (which you might get by using `||agent:agen
 
 ```python
 block = agent.inspect(AgentInspection.BLOCK, DOWN)
-player.say(block)
+player.say(blocks.name_of_block(block))
 
 hydration = scientist.get_hydration(block)
 nutrition = scientist.get_nutrition(block)
