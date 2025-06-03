@@ -26,8 +26,8 @@ agent.move(DIRECTION, BLOCKS)
 
 
 ## Picking up an Apple @showdialog
-![Agent position before picking apple](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/forest/agent_before_pick.png)  
-Make sure your agent is next to an apple. (Similar to the image above)
+Make sure your agent is next to an apple. (Similar to the image below)
+![Agent position before picking apple](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/forest/agent_before_pick.png)
 
 ## Picking up an Apple
 With your agent in front of an apple, you can use the `||agent:agent.destroy||` command to break a block in a certain direction.
