@@ -12,7 +12,7 @@ agent
 
 ## Mining Coal on the Cliff @showdialog
 Mine the coal from the cliff edge!
-Use your agent to mine the coal on the edge of the cliff! Nicole and Marvin flew you down to this coal vein to mine as the miners cannot get to it. Can you mine the ore?
+Nicole and Marvin flew you down to this coal vein as the miners cannot get to it. Can you use your agent to mine the ore?
 ![Cover image of coal for mine task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/mine/cover.png)
 
 ## Move Your Agent
@@ -23,8 +23,8 @@ Write the code to move the agent in front of a piece of coal ore.
 agent.move(DIRECTION, BLOCKS)
 ```
 ## Mine Some Coal @showdialog
+Make sure your agent is in front of the coal ore. (Similar to the image below)
 ![Agent in front of the coal](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/mine/agent_coal.png)
-Make sure your agent is in front of the coal ore. (Similar to the image above)
 
 
 ## Mine Some Coal
