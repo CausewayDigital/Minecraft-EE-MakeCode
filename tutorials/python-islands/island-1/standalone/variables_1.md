@@ -33,11 +33,11 @@ You can also change the contents of a `Variable` you have already created, with 
 
 `||variables:my_variable = "Hello"||`
 
-The line below will overwrite "Hello" with "World" instead
+The line below will replace "Hello" with "World" instead
 
 `||variables:my_variable = "World"||`
 
-Try changing `||my_variable||` between where you create it and where you use the command `||player:player.say(STRING)||`.
+Try changing `||my_variable||` by adding a new line between where you create it and where you use the command `||player:player.say(STRING)||`.
 
 ```python
 
