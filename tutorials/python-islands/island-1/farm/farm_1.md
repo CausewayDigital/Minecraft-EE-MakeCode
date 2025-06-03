@@ -27,7 +27,7 @@ agent.move(LEFT, 3)
 
 
 ## Tilling the required spots 
-Tilling prepares normal dirt so you can grow seeds. Once you have your agent directly on top of a dirt block (using `||agent:agent.move(FORWARD)||`), you should till it.
+Tilling prepares normal dirt so you can grow seeds. Once you have your agent floating above a dirt block (using `||agent:agent.move(FORWARD)||`), you should till it.
 To till dirt using your agent, use `||agent:agent.till(DIRECTION)||`. 
 
 
