@@ -11,11 +11,12 @@
 ## Task Complete @showdialog
 ### Agent Licence
 
-![NPC](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/npc_small.jpg)
-
 Great job! I am happy to award an **Agent Licence** to you.
 
 You might find this useful if you want to help out other folks on the island, as it proves you know how to use your Agent.
+
+![NPC](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-1/lake/npc_small.jpg)
+
 
 ## Whistle @showdialog
 
