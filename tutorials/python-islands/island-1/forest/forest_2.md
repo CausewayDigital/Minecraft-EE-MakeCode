@@ -16,7 +16,7 @@ After investigating, you realise that Nicole is stuck at the top of the tree, wi
 Go down the ladder and find your agent, then when you're ready to let's go and pick our first apple! 
 
 ## Get to an Apple
-To pick the apples, you need to position your agent in front of them. Remember your agent can go UP, DOWN, LEFT, RIGHT, FORWARD and BACK.
+To pick an apple, you first need to position your agent next to one of them. Remember your agent can go UP, DOWN, LEFT, RIGHT, FORWARD and BACK.
 Move your agent using `||agent:agent.move||` (and your whistle) to the first apple you want to pick!
 
 
