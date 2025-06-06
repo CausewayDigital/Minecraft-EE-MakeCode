@@ -64,11 +64,4 @@ For example:
 `||variables:age = 5||`
 
 
-Once you have finished, change your code so it outputs "Task complete" to complete the task.
-
-```python
-my_variable = "Test"
-my_variable = "Task complete"
-
-player.say(my_variable)
-```
+**Task Complete!**
