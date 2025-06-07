@@ -53,7 +53,7 @@ agent.move(FORWARD, 3)
 ```
 
 ## Inspect Blocks With Your Agent
-Now that your agent is above some seeds. Let's inspect what seeds they are. Your agent can inspect blocks using `||agent:agent.inspect||`:
+Now that your agent is above some seeds. Let's inspect what seeds they are. Your agent can inspect blocks using `||agent:agent.inspect(AgentInspection.BLOCK, DIRECTION)||`:
 
 **Make the agent inspect down, store the result in a new variable called `block`.**
 **Then `say` the value stored in the `block` variable.**
