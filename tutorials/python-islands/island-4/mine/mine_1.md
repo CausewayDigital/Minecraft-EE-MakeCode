@@ -83,7 +83,9 @@ while found_diamond < 3:
 
 ## Task 1
 
-**Add an `||logic:if||` statement inside the loop to check if the block in front of your agent is `DIAMOND_ORE`, if it is increment the found_diamond counter and `||player:player.say||` "`diamond found`".**
+Your agent has been given a special function for checking these ores called `||agent:agent.check_ore||` which returns the ore in the specified direction.
+
+**Add an `||logic:if||` statement, using `||agent:agent.check_ore||`, inside the loop to check if the block in front of your agent is `DIAMOND_ORE`, if it is increment the found_diamond counter and `||player:player.say||` "`diamond found`".**
 
 ```python
 found_diamond = 0
