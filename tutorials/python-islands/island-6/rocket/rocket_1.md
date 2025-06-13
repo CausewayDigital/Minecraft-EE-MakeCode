@@ -90,7 +90,7 @@ else:
 ## Step 3
 To wrap all of your code up, we're going to use a `for loop` to check each block above your Agent. The scientist has told you that the rocket is 26 blocks high.
 
-**Wrap your 'if else' statement in a `||loops:for||` loop where at the end of your loop you use `||agent:agent.move||` to move your agent 'UP' 1 block. Your code should loop until the agent gets to the top of the rocket (26 times).** 
+**Wrap your 'if else' statement, and block inspection, in a `||loops:for||` loop where at the end of your loop you use `||agent:agent.move||` to move your agent 'UP' 1 block. Your code should loop until the agent gets to the top of the rocket (26 times).** 
 
 ```python
 for i in range(26):
