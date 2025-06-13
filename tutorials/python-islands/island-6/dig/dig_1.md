@@ -82,7 +82,7 @@ coordinates = []
 ## Create Some For Loops
 We can use two for loops to cover a 2D space, so that we can check for fossils.
 
-for var in range(start, itterations):
+for var in range(start, stop):
 
 **Add two `||loops:for||` loops, one inside the other, that both itterate from 0 to 3.**
 
