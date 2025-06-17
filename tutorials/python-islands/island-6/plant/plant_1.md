@@ -108,7 +108,7 @@ The scientists at the Space Research Centre need to select the correct plants to
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-6/plant/cover.png)
 
-## Inspect the Block Bellow
+## Inspect the Block below
 **Use `||agent:agent.inspect||` to inspect the block in the down direction and store it in a variable called `block`.**
 
 **Then output the block name using `||blocks:blocks.name_of_block(ID)||` and `||player:player.say||`.**
@@ -125,7 +125,7 @@ In Python we can create a list called `my_list` like this:
 my_list = ["A", "B", "C", "D"]
 ```
 
-All of the items within the list are within square brackets and are seperated with commas.
+All of the items within the list are within square brackets and are separated with commas.
 
 You can also put variables in the list.
 

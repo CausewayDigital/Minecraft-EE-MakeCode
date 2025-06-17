@@ -2,7 +2,7 @@ coordinates = []
 
 for row in range(0, 4):
     for col in range(0, 4):
-        if agent.is_fossil_bellow():
+        if agent.is_fossil_below():
             coordinates.append(agent.get_position())
         player.say(row)
         player.say(col)

@@ -4,7 +4,7 @@ agent.move(DOWN, 1)
 agent.move(LEFT, 3)
 agent.destroy(UP)
 
-# Moves and gets the second apple, from where the agent is after running the code above (bellow the first apple)
+# Moves and gets the second apple, from where the agent is after running the code above (below the first apple)
 agent.move(LEFT, 2)
 agent.move(FORWARD, 1)
 agent.move(UP, 1)

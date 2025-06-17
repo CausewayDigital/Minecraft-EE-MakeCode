@@ -9,10 +9,10 @@
 ```customts
 namespace agent {
     /**
-    * Your agent checks if there is a fosil bellow.
+    * Your agent checks if there is a fossil below.
     */
     //% block
-    export function isFossilBellow(): boolean {
+    export function isFossilbelow(): boolean {
         let block = agent.inspect(AgentInspection.Block, DOWN)
         return block == DEAD_FIRE_CORAL_BLOCK
     }
@@ -84,7 +84,7 @@ We can use two for loops to cover a 2D space, so that we can check for fossils.
 
 for var in range(start, stop):
 
-**Add two `||loops:for||` loops, one inside the other, that both itterate from 0 to 3.**
+**Add two `||loops:for||` loops, one inside the other, that both iterate from 0 to 3.**
 
 **The outer loop should use the variable `row` and the inner loop should use the variable `col`, for column**
 
@@ -119,9 +119,9 @@ agent.move(RIGHT, 3)
 ```
 
 ## Appending to lists @showdialog
-To add something to the end of a list you need to use the `||arrays:append||` opperator.
+To add something to the end of a list you need to use the `||arrays:append||` operator.
 
-For example if you wanted to add your agent's coordinate's to the coordinates list you would do this:
+For example if you wanted to add your agent's coordinates to the coordinates list you would do this:
 
 ```python
 agent_pos = agent.get_position()
@@ -129,19 +129,19 @@ coordinates.append(agent_pos)
 ```
 
 ```ghost
-if agent.is_fossil_bellow():
+if agent.is_fossil_below():
     scientist.check([])
 ```
 
 ## Check for fossils
 You need to mark the fossils for the scientists.
 
-**Before you move your agent in the inner loop check for a fossil bellow your agent. To do this use `||agent:agent.is_fossil_bellow||`. If there is a fossil, add your agent's coordinates to the list.**
+**Before you move your agent in the inner loop check for a fossil below your agent. To do this use `||agent:agent.is_fossil_below||`. If there is a fossil, add your agent's coordinates to the list.**
 
 **At the end of your code `||scientist:scientist.check(coordinates)||` to check your list and finish the task.**
 
 ```python
-if agent.is_fossil_bellow():
+if agent.is_fossil_below():
     coordinates.append(agent.get_position())
 ```
 
@@ -152,7 +152,7 @@ for row in range(0, 4):
     for col in range(0,4):
         player.say(row)
         player.say(col)
-        if agent.is_fossil_bellow():
+        if agent.is_fossil_below():
             coordinates.append(agent.get_position())
         agent.move(FORWARD, 1)
     agent.move(BACK, 3)
