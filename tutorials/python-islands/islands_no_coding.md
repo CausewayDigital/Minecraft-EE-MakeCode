@@ -8,7 +8,7 @@
 
 # No Code Required
 
-## Introduction step @unplugged
+## Coding not required @unplugged
 
 ![No coding](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/no_coding.jpg)
 # Coding is not required to complete your current activity.
