@@ -132,11 +132,11 @@ You can also put variables in the list.
 ## The Scientists' Functions @showdialog
 The scientist has a few functions that you can use to get information about certain plants:
 
-`||scientist:scientist.get_hydration||`
+`||scientist:scientist.get_hydration(block)||`
 
-`||scientist:scientist.get_nutrition||`
+`||scientist:scientist.get_nutrition(block)||`
 
-`||scientist:scientist.get_strength||`
+`||scientist:scientist.get_strength(block)||`
 
 They all take a block as a parameter (which you might get by using `||agent:agent.inspect||`).
 
