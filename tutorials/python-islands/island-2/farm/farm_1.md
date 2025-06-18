@@ -34,7 +34,7 @@ namespace agent {
 
 ## Carrot and Wheat Checking @showdialog
 Help remove the carrots from the wheat farm!
-Peter had some of his wheat and carrot seeds mixed up while planting them. As your agent can detect **any** block, it can be programmed to check the seeds. Let's get started!
+Peter had some of his wheat and carrot seeds mixed up while planting them. Since your agent can detect **any** block, it can be programmed to check the seeds. Let's get started!
 ![Cover image of Peter](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-2/farm/PeterCover.png)
 
 Peter has two special functions you can use to mark the seeds:
