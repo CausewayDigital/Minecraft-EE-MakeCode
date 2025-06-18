@@ -55,7 +55,7 @@ You have been informed by the miner that an area of ground has opened up and san
 
 ## Testing the ground
 
-The miner has provided your agent with a special function to check the ground below it is safe, ``||agent:agent.check_ground_unstable()||``
+The miner has provided your agent with a special function to check if the ground below is safe, ``||agent:agent.check_ground_unstable()||``
 
 This function will provide back:
 
@@ -73,7 +73,7 @@ The 2nd special function the miner has given your agent is ``||agent:agent.alert
 
 You should run this piece of code if you find any unstable ground.
 
-**Using what you learnt in the previous sections on if statements, create a program that runs alert() if the unstable ground is detected**
+**Using what you learnt in the previous sections on "if" statements, create a program that runs "alert()" if the unstable ground is detected**
 
 ```spy
 if (agent.check_ground_unstable()){
@@ -82,7 +82,7 @@ if (agent.check_ground_unstable()){
 ```
 
 ## Scanning the gravel pit
-Now add in ``||agent:agent.move()||`` to block by block, move your agent around the gravel area.
+Now add in ``||agent:agent.move()||`` to move your agent around the gravel area, block by block.
 
 **Update you code to move your agent **FORWARD** each time your code runs**
 
