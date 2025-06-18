@@ -18,7 +18,7 @@ Use your agent to explore the old mineshafts in search of iron.
 
 There seems to be a collection of old mineshafts, going off from the main tunnel. Rumour has it that these have unexplored deposits of iron.
 
-Unfortunately, though, it's too dark to what is at the end of the shafts. Perhaps you should guide your agent down the shafts to check if there is iron?
+Unfortunately, though, it's too dark to see what is at the end of the shafts. Perhaps you should guide your agent down the shafts to check if there is iron?
 
 ## Programming your agent
 
