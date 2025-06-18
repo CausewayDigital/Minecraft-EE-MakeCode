@@ -12,7 +12,7 @@ namespace agent {
     * Your agent checks if there is a fossil below.
     */
     //% block
-    export function isFossilbelow(): boolean {
+    export function isFossilBelow(): boolean {
         let block = agent.inspect(AgentInspection.Block, DOWN)
         return block == DEAD_FIRE_CORAL_BLOCK
     }
