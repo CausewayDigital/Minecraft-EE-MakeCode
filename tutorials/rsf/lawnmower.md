@@ -9,21 +9,13 @@
 Tell your friend what to do
 ```template
 lawnmower.start();
-for (let i=0; i <= 14; i++) {
-    lawnmower.goUntil(lawnmower.until.endOfLawn);
-    lawnmower.returnToHouse();
-    lawnmower.turn(TurnDirection.Left);
-    lawnmower.goUntil(lawnmower.until.nextBlock);
-    lawnmower.turn(TurnDirection.Right);
-}
-lawnmower.stop()
-
 ```
 
 ```customts
 //% color=green weight=100 icon="\uf085"
 namespace lawnmower {
     let lawnmowerIsOn: boolean = false;
+    let reachedEnd: boolean = false;
     
     export enum until {
         //% block="SELECT"
@@ -38,36 +30,40 @@ namespace lawnmower {
     export function start() {
         lawnmowerIsOn = true;
         blocks.place(DIAMOND_BLOCK, world(0, 0, 0));
+        player.say("Tim: I've started the lawnmower")
     }
 
     //% block="Stop lawnmower"
     export function stop() {
         lawnmowerIsOn = false;
         blocks.place(AIR, world(0, 0, 0));
+        player.say("Tim: I've stopped the lawnmower")
     }
 
     //% block="Drive forward until $untilType"
     export function goUntil(untilType: until) {
         // When the agent gets to the end it stops moving
         const agentPos = agent.getPosition();
-        if (positions.equals(agentPos, world(-131, 0, -195))) {
+        if (positions.equals(agentPos, world(-131, 0, -195)) && reachedEnd) {
             return;
         }
 
         switch (untilType) {
             case until.n_a: {
-                player.say("Tim - When am I supposed to stop driving forwards?");
-                return;
+                player.say("Tim: When am I supposed to stop driving forwards?");
+                break;
             }
             case until.nextBlock: {
                 if (checkInBounds()) {
                     agent.move(FORWARD, 1);
                 } else {
-                    player.say("Tim - I can't go there");
+                    player.say("Tim: I can't go there");
                 }
+                break
             }
             case until.endOfLawn: {
                 while (moveForward()) { }
+                break
             }
         }
     }
@@ -75,7 +71,7 @@ namespace lawnmower {
     export function returnToHouse() {
         agent.turnLeft()
         agent.turnLeft()
-        goUntil(until.endOfLawn)
+        while (lawnmower.moveForward(true)) { }
         agent.turnRight()
         agent.turnRight()
         player.say("Tim: I am back at the house.")
@@ -85,14 +81,18 @@ namespace lawnmower {
     export function turn(direction: TurnDirection) {
         // When the agent gets to the end it stops moving
         const agentPos = agent.getPosition()
-        if (positions.equals(agentPos, world(-131, 0, -195))) {
+        if (positions.equals(agentPos, world(-131, 0, -195)) && reachedEnd) {
             return
         }
         switch (direction) {
-            case (TurnDirection.Left): {
+            case TurnDirection.Left: {
+                if (positions.equals(agentPos, world(-131, 0, -195))) {
+                    reachedEnd = true;
+                    break;
+                }
                 agent.turnLeft();
                 break;
-            } case (TurnDirection.Right): {
+            } case TurnDirection.Right: {
                 agent.turnRight();
                 break;
             }
@@ -195,7 +195,7 @@ namespace lawnmower {
         let x = blockInFront.getValue(Axis.X)
         let z = blockInFront.getValue(Axis.Z)
 
-        if (x >= -145 && x <= -131 && z >= -195 && z <= -166 && !(x >= -144 && x <= -139 && z >= -174 && z <= -166) && !(x === -132 && z === -168) && !(x === -137 && z === -168)) {
+        if (x >= -145 && x <= -131 && z >= -195 && z <= -166 && !(x >= -145 && x <= -139 && z >= -174 && z <= -166) && !(x === -132 && z === -168) && !(x === -137 && z === -168)) {
             return true;
         } else {
             return false;
@@ -219,7 +219,7 @@ To use codeblocks simply drag what you want to happen from the list of options o
 
 
 ## Start and Stop the Lawnmower
-You will see that within the "`||on start||`" block there is already a "`||lawnmower:Start lawnmower||`" command. When Tim is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just bellow the "`||lawnmower:Start lawnmower||`" command block.
+You will see that within the "`||on start||`" block is there already a "`||lawnmower:Start lawnmower||`" command. When Tim is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just bellow the "`||lawnmower:Start lawnmower||`" command block.
 
 ```block
 lawnmower.start();
@@ -252,7 +252,7 @@ Use the "`||lawnmower:Turn||`" and "`||lawnmower:Drive forward until||`" command
 ```block
 lawnmower.returnToHouse()
 lawnmower.turn(TurnDirection.Left)
-lawnmower.goUntil(until.nextBlock)
+lawnmower.goUntil(lawnmower.until.nextBlock)
 lawnmower.turn(TurnDirection.Right)
 ```
 
