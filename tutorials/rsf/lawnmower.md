@@ -1,412 +1,289 @@
-\### @flyoutOnly true
-
-\### @diffs true
-
-\### @hideDone true
-
-\### @codeStart players set @s codeExecution 1
-
-\### @codeStop players set @s codeExecution 0
+### @flyoutOnly true
+### @diffs true
+### @hideDone true
+### @codeStart players set @s codeExecution 1
+### @codeStop players set @s codeExecution 0
 
 
-
-
-
-\# Lawnmower
-
+# Lawnmower
 Tell your friend what to do
-
 ```template
-
-lawnmower.start()
-
-
-
-while (true) {
-
-&nbsp;   if (lawnmower.isHouseInFront()) {
-
-
-
-&nbsp;   } else if (lawnmower.isAtEndOfGarden()) {
-
-
-
-&nbsp;   } else if (lawnmower.goalPostInFront()) {
-
-
-
-&nbsp;   } else {
-
-
-
-&nbsp;   }
-
+lawnmower.start();
+for (let i=0; i <= 14; i++) {
+    lawnmower.goUntil(lawnmower.until.endOfLawn);
+    lawnmower.returnToHouse();
+    lawnmower.turn(TurnDirection.Left);
+    lawnmower.goUntil(lawnmower.until.nextBlock);
+    lawnmower.turn(TurnDirection.Right);
 }
+lawnmower.stop()
 
 ```
-
-
 
 ```customts
-
-//% color=green weight=100 icon="\\uf085"
-
+//% color=green weight=100 icon="\uf085"
 namespace lawnmower {
-
-
-
-&nbsp;   //% block="Start Lawnmower"
-
-&nbsp;   export function start() {
-
-&nbsp;   }
-
-
-
-&nbsp;   //% block="Move Lawnmower Forwards"
-
-&nbsp;   export function move\_forward() {
-
-&nbsp;       if (checkInBounds()) {
-
-&nbsp;           agent.move(FORWARD, 1)
-
-&nbsp;       } else {
-
-&nbsp;           player.say("You take the lawnmower out of the garden!")
-
-&nbsp;       }
-
-&nbsp;   }
-
-
-
-&nbsp;   export function getBlockInFrontCoord(): Position {
-
-&nbsp;       let agentPos = agent.getPosition()
-
-&nbsp;       let facingDirection = agent.getOrientation()
-
-
-
-&nbsp;       switch (facingDirection) {
-
-&nbsp;           case 0: {
-
-&nbsp;               return positions.add(agentPos, pos(0, 0, 1));
-
-&nbsp;               break;
-
-&nbsp;           }
-
-&nbsp;           case 90: {
-
-&nbsp;               return positions.add(agentPos, pos(-1, 0, 0));
-
-&nbsp;               break;
-
-&nbsp;           }
-
-&nbsp;           case -90: {
-
-&nbsp;               return positions.add(agentPos, pos(1, 0, 0));
-
-&nbsp;               break;
-
-&nbsp;           }
-
-&nbsp;           default: {
-
-&nbsp;               return positions.add(agentPos, pos(0, 0, -1));
-
-&nbsp;           }
-
-&nbsp;       }
-
-&nbsp;   }
-
-
-
-&nbsp;   //% block="Is In Front of House"
-
-&nbsp;   export function isHouseInFront() {
-
-&nbsp;       let blockInFront = lawnmower.getBlockInFrontCoord()
-
-&nbsp;       let z = blockInFront.getValue(Axis.Z)
-
-
-
-&nbsp;       if (z < -195) {
-
-&nbsp;           return true;
-
-&nbsp;       } else {
-
-&nbsp;           return false;
-
-&nbsp;       }
-
-&nbsp;   }
-
-
-
-&nbsp;   //% block="Is Goal Post in the Way"
-
-&nbsp;   export function goalPostInFront(): boolean {
-
-&nbsp;       let blockInFront = lawnmower.getBlockInFrontCoord()
-
-
-
-&nbsp;       let x = blockInFront.getValue(Axis.X)
-
-&nbsp;       let z = blockInFront.getValue(Axis.Z)
-
-
-
-&nbsp;       if ((x === -132 \&\& z === -168) || (x === -137 \&\& z === -168)) {
-
-&nbsp;           return true;
-
-&nbsp;       } else {
-
-&nbsp;           return false;
-
-&nbsp;       }
-
-&nbsp;   }
-
-
-
-&nbsp;   //% block="Is At End of Garden"
-
-&nbsp;   export function isAtEndOfGarden(): boolean {
-
-&nbsp;       let blockInFront = lawnmower.getBlockInFrontCoord()
-
-
-
-&nbsp;       let x = blockInFront.getValue(Axis.X)
-
-&nbsp;       let z = blockInFront.getValue(Axis.Z)
-
-
-
-&nbsp;       if ((x <= -139 \&\& z > -175) || z > -166) { 
-
-&nbsp;           return true;
-
-&nbsp;       } else {
-
-&nbsp;           return false
-
-&nbsp;       }
-
-&nbsp;   }
-
-
-
-&nbsp;   export function checkInBounds() {
-
-&nbsp;       let blockInFront = lawnmower.getBlockInFrontCoord()
-
-
-
-&nbsp;       let x = blockInFront.getValue(Axis.X)
-
-&nbsp;       let z = blockInFront.getValue(Axis.Z)
-
-
-
-&nbsp;       if (x >= -145 \&\& x <= -131 \&\& z >= -195 \&\& z <= -166 \&\& !(x >= -144 \&\& x <= -139 \&\& z >= -174 \&\& z <= -166) \&\& !(x === -132 \&\& z === -168) \&\& !(x === -137 \&\& z === -168)) {
-
-&nbsp;           return true;
-
-&nbsp;       } else {
-
-&nbsp;           return false;
-
-&nbsp;       }
-
-
-
-&nbsp;   }
-
-
-
-&nbsp;   //% block="Turn Lawnmower $direction"
-
-&nbsp;   export function turn(direction: TurnDirection) {
-
-&nbsp;       switch (direction) {
-
-&nbsp;           case (TurnDirection.Left): {
-
-&nbsp;               agent.turnLeft();
-
-&nbsp;               break;
-
-&nbsp;           } case (TurnDirection.Right): {
-
-&nbsp;               agent.turnRight();
-
-&nbsp;               break;
-
-&nbsp;           }
-
-&nbsp;       }
-
-&nbsp;   }
-
+    let lawnmowerIsOn: boolean = false;
+    
+    export enum until {
+        //% block="SELECT"
+        n_a,
+        //% block="next block"
+        nextBlock,
+        //% block="end of lawn"
+        endOfLawn,
+    }
+
+    //% block="Start lawnmower"
+    export function start() {
+        lawnmowerIsOn = true;
+        blocks.place(DIAMOND_BLOCK, world(0, 0, 0));
+    }
+
+    //% block="Stop lawnmower"
+    export function stop() {
+        lawnmowerIsOn = false;
+        blocks.place(AIR, world(0, 0, 0));
+    }
+
+    //% block="Drive forward until $untilType"
+    export function goUntil(untilType: until) {
+        // When the agent gets to the end it stops moving
+        const agentPos = agent.getPosition();
+        if (positions.equals(agentPos, world(-131, 0, -195))) {
+            return;
+        }
+
+        switch (untilType) {
+            case until.n_a: {
+                player.say("Tim - When am I supposed to stop driving forwards?");
+                return;
+            }
+            case until.nextBlock: {
+                if (checkInBounds()) {
+                    agent.move(FORWARD, 1);
+                } else {
+                    player.say("Tim - I can't go there");
+                }
+            }
+            case until.endOfLawn: {
+                while (moveForward()) { }
+            }
+        }
+    }
+    //% block="Return to house"
+    export function returnToHouse() {
+        agent.turnLeft()
+        agent.turnLeft()
+        goUntil(until.endOfLawn)
+        agent.turnRight()
+        agent.turnRight()
+        player.say("Tim: I am back at the house.")
+    }
+
+    //% block="Turn $direction"
+    export function turn(direction: TurnDirection) {
+        // When the agent gets to the end it stops moving
+        const agentPos = agent.getPosition()
+        if (positions.equals(agentPos, world(-131, 0, -195))) {
+            return
+        }
+        switch (direction) {
+            case (TurnDirection.Left): {
+                agent.turnLeft();
+                break;
+            } case (TurnDirection.Right): {
+                agent.turnRight();
+                break;
+            }
+        }
+    }
+
+    export function moveForward(returning: boolean = false): boolean {
+        if (checkInBounds()) {
+            agent.move(FORWARD, 1)
+            return true;
+        } else if (goalPostInFront()) {
+            // makes sure lawnmower comes back the same way it went
+            if (returning) {
+                agent.turnLeft()
+                agent.move(FORWARD, 1)
+                agent.turnRight()
+                agent.move(FORWARD, 2)
+                agent.turnRight()
+                agent.move(FORWARD, 1)
+                agent.turnLeft()
+            } else {
+                agent.turnRight()
+                agent.move(FORWARD, 1)
+                agent.turnLeft()
+                agent.move(FORWARD, 2)
+                agent.turnLeft()
+                agent.move(FORWARD, 1)
+                agent.turnRight()
+            }
+            return true;
+        } else {
+            player.say("Tim: I've reached the end of the lawn.")
+            return false;
+        }
+    }
+
+    export function getBlockInFrontCoord(): Position {
+        let agentPos = agent.getPosition()
+        let facingDirection = agent.getOrientation()
+
+        switch (facingDirection) {
+            case 0: {
+                return positions.add(agentPos, pos(0, 0, 1));
+                break;
+            }
+            case 90: {
+                return positions.add(agentPos, pos(-1, 0, 0));
+                break;
+            }
+            case -90: {
+                return positions.add(agentPos, pos(1, 0, 0));
+                break;
+            }
+            default: {
+                return positions.add(agentPos, pos(0, 0, -1));
+            }
+        }
+    }
+
+    export function isHouseInFront() {
+        let blockInFront = lawnmower.getBlockInFrontCoord()
+        let z = blockInFront.getValue(Axis.Z)
+
+        if (z < -195) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    export function goalPostInFront(): boolean {
+        let blockInFront = lawnmower.getBlockInFrontCoord()
+
+        let x = blockInFront.getValue(Axis.X)
+        let z = blockInFront.getValue(Axis.Z)
+
+        if ((x === -132 && z === -168) || (x === -137 && z === -168)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    export function isAtEndOfGarden(): boolean {
+        let blockInFront = lawnmower.getBlockInFrontCoord()
+
+        let x = blockInFront.getValue(Axis.X)
+        let z = blockInFront.getValue(Axis.Z)
+
+        if ((x <= -139 && z > -175) || z > -166) {
+            return true;
+        } else {
+            return false
+        }
+    }
+
+    export function checkInBounds(): boolean {
+        let blockInFront = lawnmower.getBlockInFrontCoord()
+
+        let x = blockInFront.getValue(Axis.X)
+        let z = blockInFront.getValue(Axis.Z)
+
+        if (x >= -145 && x <= -131 && z >= -195 && z <= -166 && !(x >= -144 && x <= -139 && z >= -174 && z <= -166) && !(x === -132 && z === -168) && !(x === -137 && z === -168)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
 }
-
 ```
 
+## Introduction @showdialog
 
-
-\## Introduction @showdialog
-
-
-
-Let's tell your friend where to go with the lawnmower. To do this we will use codeblocks. 
-
-
-
-So your friend knows where they need to go, you must tell them what to do if they meet certain objects such as the end of the garden or a goal post.
-
-
-
-\## Getting to the House
-
-When your friend gets to the house he needs to `||lawnmower:turn||` right, `||lawnmower:move||` forwards, and `||lawnmower:turn||` right again. This will line him up on the next row along ready to cut some more grass.
-
-
+Let's tell your friend where to go with the lawnmower. To do this we will use `||codeblocks||`. Bellow is an example of a `||codeblock||`.
 
 ```block
-
-lawnmower.turn(TurnDirection.Right)
-
-lawnmower.move\_forward()
-
-lawnmower.turn(TurnDirection.Right)
-
+lawnmower.start();
 ```
 
+To use codeblocks simply drag what you want to happen from the list of options on the left into within the block that says "`||on start||`".
+
+**If you get stuck, try clicking the lightbulb symbol for a hint.**
 
 
-\## Getting to the end of the Garden
-
-When your friend gets to the end of the garden, the shed or the fence, they also need to move to cut the next row of grass. Although, this time, they will need to `||lawnmower:turn||` left, `||lawnmower:move||` forwards, and `||lawnmower:turn||` left instead.
-
-
+## Start and Stop the Lawnmower
+You will see that within the "`||on start||`" block there is already a "`||lawnmower:Start lawnmower||`" command. When Tim is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just bellow the "`||lawnmower:Start lawnmower||`" command block.
 
 ```block
-
-lawnmower.turn(TurnDirection.Left)
-
-lawnmower.move\_forward()
-
-lawnmower.turn(TurnDirection.Left)
-
+lawnmower.start();
+lawnmower.stop();
 ```
 
-
-
-\## Going Around a Goalpost
-
-When your fried gets to a goalpost they will need to go around it (the goalpost is 1 block). See if you can work out how they might do this. There is a hint if you get stuck or want to check.
-
-
+## Cut Some Grass
+After Tim has started the lawnmower he should go to the end of the lawn. Use the "`||lawnmower:Drive forward until||`" code block and select the correct option to tell Tim what to do.
 
 ```block
-
-lawnmower.turn(TurnDirection.Right)
-
-lawnmower.move\_forward()
-
-lawnmower.turn(TurnDirection.Left)
-
-lawnmower.move\_forward()
-
-lawnmower.move\_forward()
-
-lawnmower.turn(TurnDirection.Left)
-
-lawnmower.move\_forward()
-
-lawnmower.turn(TurnDirection.Right)
-
+lawnmower.start();
+lawnmower.goUntil(lawnmower.until.endOfLawn);
+lawnmower.stop();
 ```
 
-
-
-\## No Obstacles
-
-If there are no obstacles in front of your friend, they are not at either end of the garden or a goalpost in the way, then they should just move the lawnmower forwards.
-
-
+## Return for the Next Row
+After Tim has cut a row of grass he needs to return back to the house to cut the next row of grass. Use the "`||lawnmower:Return to house||`" block to tell him to do this once he has gotten to the end of the lawn.
 
 ```block
-
-lawnmower.move\_forward()
-
+lawnmower.goUntil(lawnmower.until.endOfLawn);
+lawnmower.returnToHouse()
+lawnmower.stop()
 ```
 
+## Move to the Next Row
+After Tim has cut a row of grass, and returned to the house, he needs to move onto the next row. To do this he needs to turn towards the next row, move forward, and turn back so he is facing the correct direction.
 
+Use the "`||lawnmower:Turn||`" and "`||lawnmower:Drive forward until||`" command blocks to tell Tim what to do.
+
+```block
+lawnmower.returnToHouse()
+lawnmower.turn(TurnDirection.Left)
+lawnmower.goUntil(until.nextBlock)
+lawnmower.turn(TurnDirection.Right)
+```
+
+## Repeat...
+Tell Tim to repeat this 15 times, once for each row of the lawn.
+
+You can do this by adding a "`||loops:for||`" loop from **0 to 14**. Then drag all the blocks except for "`||lawnmower:Start lawnmower||`" and "`||lawnmower:Stop lawnmower||`" inside the loops.
+
+```blocks
+lawnmower.start();
+for (let i=0; i <= 14; i++) {
+    lawnmower.goUntil(lawnmower.until.endOfLawn);
+    lawnmower.returnToHouse();
+    lawnmower.turn(TurnDirection.Left);
+    lawnmower.goUntil(lawnmower.until.nextBlock);
+    lawnmower.turn(TurnDirection.Right);
+}
+lawnmower.stop()
+```
+
+## Run
+Now run the code and watch Tim cut the grass.
 
 ```ghost
-
-lawnmower.start()
-
-
-
-while (true) {
-
-&nbsp;   if (lawnmower.isHouseInFront()) {
-
-&nbsp;       lawnmower.turn(TurnDirection.Right)
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.turn(TurnDirection.Right)
-
-&nbsp;   } else if (lawnmower.isAtEndOfGarden()) {
-
-&nbsp;       lawnmower.turn(TurnDirection.Left)
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.turn(TurnDirection.Left)
-
-&nbsp;   } if (lawnmower.goalPostInFront()) {
-
-&nbsp;       // Go around goalpost
-
-&nbsp;       lawnmower.turn(TurnDirection.Right)
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.turn(TurnDirection.Left)
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.turn(TurnDirection.Left)
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;       lawnmower.turn(TurnDirection.Right)
-
-&nbsp;   } else {
-
-&nbsp;       lawnmower.move\_forward()
-
-&nbsp;   }
-
+lawnmower.start();
+for (let i=0; i <= 14; i++) {
+    lawnmower.goUntil(lawnmower.until.endOfLawn);
+    lawnmower.returnToHouse();
+    lawnmower.turn(TurnDirection.Left);
+    lawnmower.goUntil(lawnmower.until.nextBlock);
+    lawnmower.turn(TurnDirection.Right);
 }
-
+lawnmower.stop()
 ```
-
