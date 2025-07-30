@@ -57,7 +57,7 @@ namespace lawnmower {
     }
 
     //% block="Shift left"
-    export function shift_left() {
+    export function shiftLeft() {
         let pos = agent.getPosition()
         if (pos.getValue(Axis.X) < -132) {
             agent.move(LEFT, 1)
@@ -232,9 +232,9 @@ To do this use the `||lawnmower:Shift left||` code block **3 times**.
 
 ```block
 lawnmower.returnToHouse()
-lawnmower.shift_left()
-lawnmower.shift_left()
-lawnmower.shift_left()
+lawnmower.shiftLeft()
+lawnmower.shiftLeft()
+lawnmower.shiftLeft()
 ```
 
 ## Repeat...
@@ -247,9 +247,9 @@ lawnmower.start();
 for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
-    lawnmower.shift_left()
-    lawnmower.shift_left()
-    lawnmower.shift_left()
+    lawnmower.shiftLeft()
+    lawnmower.shiftLeft()
+    lawnmower.shiftLeft()
 }
 lawnmower.stop()
 ```
@@ -262,9 +262,9 @@ lawnmower.start();
 for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
-    lawnmower.shift_left()
-    lawnmower.shift_left()
-    lawnmower.shift_left()
+    lawnmower.shiftLeft()
+    lawnmower.shiftLeft()
+    lawnmower.shiftLeft()
 }
 lawnmower.stop()
 ```
