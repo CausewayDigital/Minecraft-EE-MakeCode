@@ -55,6 +55,8 @@ namespace lawnmower {
             }
         }
     }
+
+    //% block="Shift left"
     export function shift_left() {
         let pos = agent.getPosition()
         if (pos.getValue(Axis.X) < -132) {
