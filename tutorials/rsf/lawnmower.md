@@ -56,7 +56,7 @@ namespace lawnmower {
     export function shiftLeft() {
         let pos = agent.getPosition()
         if (pos.getValue(Axis.X) < -132) {
-            agent.move(LEFT, 1)
+            agent.move(LEFT, 3)
             break_grass()
         }
     }
@@ -220,14 +220,12 @@ lawnmower.stop()
 ```
 
 ## Move to the Next Row
-After Rhys has cut a row of grass, and returned to the house, he needs to move onto the next row (3 blocks to the left).
+After Rhys has cut a row of grass, and returned to the house, he needs to move left onto the next row.
 
-To do this use the `||lawnmower:Shift left||` code block **3 times**. 
+To do this use the `||lawnmower:Shift left||` code block which will move him onto the next row. 
 
 ```block
 lawnmower.returnToHouse()
-lawnmower.shiftLeft()
-lawnmower.shiftLeft()
 lawnmower.shiftLeft()
 ```
 
@@ -242,8 +240,6 @@ for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
-    lawnmower.shiftLeft()
-    lawnmower.shiftLeft()
 }
 lawnmower.stop()
 ```
@@ -256,8 +252,6 @@ lawnmower.start();
 for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
-    lawnmower.shiftLeft()
-    lawnmower.shiftLeft()
     lawnmower.shiftLeft()
 }
 lawnmower.stop()
