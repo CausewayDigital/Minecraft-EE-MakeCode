@@ -27,14 +27,14 @@ namespace lawnmower {
     //% block="Start lawnmower"
     export function start() {
         lawnmowerIsOn = true;
-        blocks.place(DIAMOND_BLOCK, world(0, 0, 0));
+        blocks.place(DIAMOND_BLOCK, world(-142, -2, -175));
         player.say("Rhys: I've started the lawnmower")
     }
 
     //% block="Stop lawnmower"
     export function stop() {
         lawnmowerIsOn = false;
-        blocks.place(AIR, world(0, 0, 0));
+        blocks.place(AIR, world(-142, -2, -175));
         player.say("Rhys: I've stopped the lawnmower")
     }
 
