@@ -28,25 +28,21 @@ namespace lawnmower {
     export function start() {
         lawnmowerIsOn = true;
         blocks.place(DIAMOND_BLOCK, world(-142, -2, -175));
-        player.say("Rhys: I've started the lawnmower")
     }
 
     //% block="Stop lawnmower"
     export function stop() {
         lawnmowerIsOn = false;
         blocks.place(AIR, world(-142, -2, -175));
-        player.say("Rhys: I've stopped the lawnmower")
     }
 
     //% block="Drive forward until $untilType"
     export function goUntil(untilType: until) {
         if (!lawnmowerIsOn) {
-            player.say("Rhys: Should I switch the lawnmower on?")
         }
 
         switch (untilType) {
             case until.n_a: {
-                player.say("Rhys: When am I supposed to stop driving forwards?");
                 break;
             }
             case until.endOfLawn: {
@@ -87,7 +83,6 @@ namespace lawnmower {
         while (lawnmower.moveForward(true)) { }
         agent.turnRight()
         agent.turnRight()
-        player.say("Rhys: I am back at the house.")
     }
 
     //% block="Turn $direction"
@@ -118,7 +113,6 @@ namespace lawnmower {
             break_grass()
             return true;
         } else {
-            player.say("Rhys: I've reached the end of the lawn.")
             return false;
         }
     }
