@@ -245,7 +245,7 @@ lawnmower.stop()
 ```
 
 ## Run
-Now run the code and watch Tim cut the grass.
+Now run the code and watch Rhys cut the grass.
 
 ```ghost
 lawnmower.start();
