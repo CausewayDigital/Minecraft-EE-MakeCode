@@ -6,7 +6,7 @@
 
 
 # Lawnmower
-Tell your friend what to do
+Tell Rhys what to do
 ```template
 lawnmower.start();
 ```
@@ -182,7 +182,7 @@ namespace lawnmower {
 
 ## Introduction @showdialog
 
-Let's tell your friend where to go with the lawnmower. To do this we will use `||codeblocks||`. Bellow is an example of a `||codeblock||`.
+Let's tell Rhys where to go with the lawnmower. To do this we will use `||codeblocks||`. Bellow is an example of a `||codeblock||`.
 
 ```block
 lawnmower.start();
@@ -245,7 +245,7 @@ lawnmower.stop()
 ```
 
 ## Run
-Now run the code and watch Tim cut the grass.
+Now run the code and watch Rhys cut the grass.
 
 ```ghost
 lawnmower.start();
