@@ -230,13 +230,13 @@ lawnmower.shiftLeft()
 ```
 
 ## Repeat...
-Tell Rhys to repeat this **6 times**, once for each row of the lawn (the lawnmower does three blocks at a time).
+Tell Rhys to repeat this **5 times**, once for each row of the lawn (the lawnmower does three blocks at a time).
 
 You can do this by adding a "`||loops:repeat||`" loop Then drag all the blocks except for "`||lawnmower:Start lawnmower||`" and "`||lawnmower:Stop lawnmower||`" inside the loop.
 
 ```blocks
 lawnmower.start();
-for (let i=0; i < 1; i++) {
+for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
@@ -249,7 +249,7 @@ Now run the code and watch Rhys cut the grass.
 
 ```ghost
 lawnmower.start();
-for (let i=0; i < 1; i++) {
+for (let i=0; i < 5; i++) {
     lawnmower.goUntil(lawnmower.until.endOfLawn);
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
