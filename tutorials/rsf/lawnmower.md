@@ -78,11 +78,10 @@ namespace lawnmower {
 
     //% block="Return to house"
     export function returnToHouse() {
-        agent.turnLeft()
-        agent.turnLeft()
-        while (lawnmower.moveForward(true)) { }
-        agent.turnRight()
-        agent.turnRight()
+        let pos = agent.getPosition();
+        let x = pos.getValue(Axis.X);
+
+        agent.teleport(world(x, 0, -194), SOUTH);
     }
 
     //% block="Turn $direction"
