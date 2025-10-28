@@ -181,7 +181,7 @@ namespace lawnmower {
 
 ## Introduction @showdialog
 
-Let's tell Rhys where to go with the lawnmower. To do this we will use `||codeblocks||`. Bellow is an example of a `||codeblock||`.
+Let's tell Rhys where to go with the lawnmower. To do this we will use `||codeblocks||`. Below is an example of a `||codeblock||`.
 
 ```block
 lawnmower.start();
@@ -193,7 +193,7 @@ To use codeblocks simply drag what you want to happen from the list of options o
 
 
 ## Start and Stop the Lawnmower
-You will see that within the "`||on start||`" block is there already a "`||lawnmower:Start lawnmower||`" command. When Rhys is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just bellow the "`||lawnmower:Start lawnmower||`" command block.
+You will see that within the "`||on start||`" block is there already a "`||lawnmower:Start lawnmower||`" command. When Rhys is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just below the "`||lawnmower:Start lawnmower||`" command block.
 
 ```block
 lawnmower.start();
