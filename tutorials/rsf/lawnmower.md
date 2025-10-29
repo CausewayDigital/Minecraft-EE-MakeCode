@@ -36,20 +36,11 @@ namespace lawnmower {
         blocks.place(AIR, world(-142, -2, -175));
     }
 
-    //% block="Drive forward until $untilType"
-    export function goUntil(untilType: until) {
+    //% block="Drive forward until end of lawn"
+    export function goUntil() {
         if (!lawnmowerIsOn) {
         }
-
-        switch (untilType) {
-            case until.n_a: {
-                break;
-            }
-            case until.endOfLawn: {
-                while (moveForward()) { }
-                break
-            }
-        }
+        while (moveForward()) { }
     }
 
     //% block="Shift left"
@@ -193,7 +184,7 @@ To use codeblocks simply drag what you want to happen from the list of options o
 
 
 ## Start and Stop the Lawnmower
-You will see that within the "`||on start||`" block is there already a "`||lawnmower:Start lawnmower||`" command. When Rhys is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just below the "`||lawnmower:Start lawnmower||`" command block.
+You will see that within the "`||on start||`" block, there already a "`||lawnmower:Start lawnmower||`" command. When Rhys is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just below the "`||lawnmower:Start lawnmower||`".
 
 ```block
 lawnmower.start();
@@ -201,11 +192,11 @@ lawnmower.stop();
 ```
 
 ## Cut Some Grass
-After Rhys has started the lawnmower he should go to the end of the lawn. Use the "`||lawnmower:Drive forward until||`" code block and select the correct option to tell Rhys what to do.
+After Rhys has started the lawnmower he should go to the end of the lawn. Use the "`||lawnmower:Drive forward until end of lawn||`" code block.
 
 ```block
 lawnmower.start();
-lawnmower.goUntil(lawnmower.until.endOfLawn);
+lawnmower.goUntil();
 lawnmower.stop();
 ```
 
@@ -220,7 +211,6 @@ lawnmower.stop()
 
 ## Move to the Next Row
 After Rhys has cut a row of grass, and returned to the house, he needs to move left onto the next row.
-
 To do this use the `||lawnmower:Shift left||` code block which will move him onto the next row. 
 
 ```block
@@ -229,8 +219,7 @@ lawnmower.shiftLeft()
 ```
 
 ## Repeat...
-Tell Rhys to repeat this **5 times**, once for each row of the lawn (the lawnmower does three blocks at a time).
-
+Tell Rhys to repeat this **5 times**, each row of the lawn (the lawnmower cuts three blocks at a time).
 You can do this by adding a "`||loops:repeat||`" loop Then drag all the blocks except for "`||lawnmower:Start lawnmower||`" and "`||lawnmower:Stop lawnmower||`" inside the loop.
 
 ```blocks
