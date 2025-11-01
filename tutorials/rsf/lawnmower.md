@@ -204,7 +204,7 @@ lawnmower.stop();
 After Rhys has cut a row of grass he needs to return back to the house to cut the next row of grass. Use the "`||lawnmower:Return to house||`" block to tell him to do this once he has gotten to the end of the lawn.
 
 ```block
-lawnmower.goUntil(lawnmower.until.endOfLawn);
+lawnmower.goUntil();
 lawnmower.returnToHouse()
 lawnmower.stop()
 ```
