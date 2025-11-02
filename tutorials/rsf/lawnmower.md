@@ -225,7 +225,7 @@ You can do this by adding a "`||loops:repeat||`" loop Then drag all the blocks e
 ```blocks
 lawnmower.start();
 for (let i=0; i < 5; i++) {
-    lawnmower.goUntil(lawnmower.until.endOfLawn);
+    lawnmower.goUntil();
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
 }
@@ -238,7 +238,7 @@ Now run the code and watch Rhys cut the grass.
 ```ghost
 lawnmower.start();
 for (let i=0; i < 5; i++) {
-    lawnmower.goUntil(lawnmower.until.endOfLawn);
+    lawnmower.goUntil();
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
 }
