@@ -32,7 +32,7 @@ namespace agent {
     }
 
     /**
-    * Mark the block as denyed for the scientists.
+    * Mark the block as denied for the scientists.
     */
     //% block
     export function deny(): void {
