@@ -14,9 +14,9 @@ In this exercise, you will build a program in Python that follows the flowchart 
 
 ## Create the Spawner - 1
 
-Start by creating this first bit. Use the hint if you need help.
-
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_1.png)
+
+Start by creating this first bit. Use the hint if you need help.
 
 ```python
 for i in range(5):
@@ -25,9 +25,9 @@ for i in range(5):
 
 ## Create the Spawner - 2
 
-Now finish it off...
-
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_1.png)
+
+Now finish it off...
 
 ## Extension @showdialogue
 
