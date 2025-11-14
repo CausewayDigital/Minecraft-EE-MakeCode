@@ -18,7 +18,7 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
 ## Part 1
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_1.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/flowchart-landscape_1.png)
 
 Code the flowchart.
 
@@ -29,16 +29,7 @@ def on_move():
 Create a function that is called when the player moves.
 
 ## Part 2
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_2.png)
-
-Code the flowchart.
-
-```python
-```
-Get the coordinates of the block below the player.
-
-## Part 3
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Part_3.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/flowchart-landscape_2.png)
 
 Code the flowchart.
 
