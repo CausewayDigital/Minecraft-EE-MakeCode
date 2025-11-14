@@ -19,7 +19,7 @@ Follow the flowchart below:
 
 ## Part 1
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/Part_1.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_1.png)
 
 Code the flowchart.
 
@@ -29,7 +29,7 @@ Create a function that is called when the player `BOUNCE`'s.
 
 ## Part 2
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/Part_2.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_2.png)
 
 (for levitation use a duration of 2 and an amplifier of 1)
 
@@ -55,7 +55,7 @@ See above for some useful code.
 
 ## Part 3
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/Part_3.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_3.png)
 
 (for regeneration use a duration of 3 and an amplifier of 2)
 
@@ -64,4 +64,3 @@ Code the flowchart.
 ```python
 ```
 Within the if statement, apply `REGENERATION` to the player.
-
