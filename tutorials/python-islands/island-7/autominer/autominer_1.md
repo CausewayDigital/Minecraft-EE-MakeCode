@@ -18,7 +18,7 @@ Place a block below
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/Flowchart.png)
 
 ## Part 1
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/Part_1.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_1.png)
 
 Code the flowchart.
 
@@ -27,7 +27,7 @@ Code the flowchart.
 Give your agent 64 stone.
 
 ## Part 2
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/Part_2.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_2.png)
 
 Code the flowchart.
 
@@ -36,7 +36,7 @@ Code the flowchart.
 Create a for loop that iterates from 0 to 19.
 
 ## Part 3
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/Part_3.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_3.png)
 
 Code the flowchart.
 
@@ -46,7 +46,7 @@ Within the loop; destroy the block in front of the agent, move the agent forward
 
 
 ## Part 4
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/Part_4.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_4.png)
 
 Code the flowchart.
 
