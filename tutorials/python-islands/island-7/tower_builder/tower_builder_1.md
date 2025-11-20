@@ -23,7 +23,8 @@ As an explorer, you need to be able to trace your steps to return to your base. 
 
 Code the flowchart.
 
-```
+```python
+agent.set_item(STONE, 64, 1)
 ```
 - Give 64 stone to your agent
 - Give 1 glowstone to your agent
@@ -73,3 +74,21 @@ Code the flowchart.
 ```
 - Give 64 stone to your agent
 - Give 1 glowstone to your agent
+
+```ghost
+agent.set_item(STONE, 64, 1)
+agent.set_item(GLOWSTONE, 1, 2)
+
+for i in range(3):
+    agent.move(UP, 1)
+    for j in range(4):
+        agent.place(DOWN)
+        agent.move(FORWARD, 1)
+        agent.place(DOWN)
+        agent.turn(TurnDirection.RIGHT)
+        agent.move(FORWARD, 1)
+
+agent.turn(TurnDirection.RIGHT)
+agent.set_slot(2)
+agent.place(FORWARD)
+```
