@@ -18,7 +18,7 @@ Following the program flowchart below, create a Python program that:
 
 - Check if zombie has spawns and if true:
     - Plays thunder sound
-    - Whispers to all players 
+    - Whispers to all players
 
 ## Part 1
 
@@ -26,8 +26,12 @@ Following the program flowchart below, create a Python program that:
 
 Code the flowchart.
 
+```python
+def on_entity_spawned(mob, spawner):
+    pass
+events.on_entity_spawned(on_entity_spawned)
 ```
-```
+
 - Create a function that is called when a mob spawns
 
 ## Part 2
@@ -40,3 +44,16 @@ Code the flowchart.
 ```
 - If the mob is a zombie, play the thunder sound and send a message to the chat
 - Otherwise ignore the mob spawn
+
+```ghost
+def on_entity_spawned(mob, spawner):
+    if mob == ZOMBIE:
+        music.play_sound(Sound.THUNDER)
+        player.say("Zombie Spawned!")
+events.on_entity_spawned(on_entity_spawned)
+```
+
+```package
+events
+music=github:microsoft/makecode-minecraft-music#v0.0.8
+```
