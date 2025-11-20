@@ -6,6 +6,24 @@
 
 # Tower Builder
 
+```customts
+agent.teleport(world(-517, 139, 712), WEST)
+let agent_or = agent.getOrientation()
+if (agent_or == EAST) {
+    agent.turnLeft()
+    agent.turnLeft()
+}
+
+if (agent_or == SOUTH) {
+    agent.turnRight()
+}
+
+if (agent_or == EAST) {
+    agent.turnLeft()
+}
+
+```
+
 ## Introduction @showdialog
 
 In this exercise, you will build a program in Python that follows the flowchart below.
@@ -78,6 +96,7 @@ Code the flowchart.
 ```ghost
 agent.set_item(STONE, 64, 1)
 agent.set_item(GLOWSTONE, 1, 2)
+agent.set_slot(1)
 
 for i in range(3):
     agent.move(UP, 1)
@@ -85,10 +104,11 @@ for i in range(3):
         agent.place(DOWN)
         agent.move(FORWARD, 1)
         agent.place(DOWN)
-        agent.turn(TurnDirection.RIGHT)
         agent.move(FORWARD, 1)
+        agent.turn_right()
 
-agent.turn(TurnDirection.RIGHT)
 agent.set_slot(2)
+agent.move(RIGHT, 1)
 agent.place(FORWARD)
+
 ```
