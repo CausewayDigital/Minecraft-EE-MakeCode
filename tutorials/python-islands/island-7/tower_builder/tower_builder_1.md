@@ -21,7 +21,6 @@ if (agent_or == SOUTH) {
 if (agent_or == EAST) {
     agent.turnLeft()
 }
-
 ```
 
 ## Introduction @showdialog
@@ -44,8 +43,9 @@ Code the flowchart.
 ```python
 agent.set_item(STONE, 64, 1)
 ```
+
 - Give 64 stone to your agent
-- Give 1 glowstone to your agent
+- Give 64 glowstone to your agent
 
 ## Part 2
 
@@ -67,31 +67,34 @@ Code the flowchart.
 ```
 Within the loop:
 - Move the agent up
-- Set a variable sides to 0
 - Create a new loop
 
 ## Part 4
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_4.png)
 
-Code the flowchart.
+Code the flowchart (within the loop you just created).
 
 ```
 ```
 Within the new loop:
 - Place stone bellow the agent
 - Move the agent forward
+- Place stone bellow the agent
+- Move the agent forward
+- Turn the agent right
 
 ## Part 5
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_5.png)
 
-Code the flowchart.
+Code the flowchart (After all the loops).
 
 ```
 ```
-- Give 64 stone to your agent
-- Give 1 glowstone to your agent
+
+- Move your agent to the right
+- Place glowstone forwards
 
 ```ghost
 agent.set_item(STONE, 64, 1)
@@ -110,5 +113,4 @@ for i in range(3):
 agent.set_slot(2)
 agent.move(RIGHT, 1)
 agent.place(FORWARD)
-
 ```
