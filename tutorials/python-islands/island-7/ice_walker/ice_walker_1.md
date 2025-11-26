@@ -19,11 +19,11 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 - Loops continuously
 - Changes the blocks surrounding the player from LAKE_WATER to ICE
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/flowchart.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
 ## Part 1
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/flowchart.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
 You should also set the blocks around the player to ICE. (Not just the block bellow)
 
