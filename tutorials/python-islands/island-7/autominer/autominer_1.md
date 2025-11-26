@@ -64,7 +64,14 @@ for i in range(19):
     agent.move(FORWARD, 1)
     agent.destroy(UP)
 
-    block = agent.inspect(AgentInspection.BLOCK, DOWN)
-    if block in [LAVA, WATER, AIR]:
+    block = agent.inspect_block(DOWN)
+
+    block_list = [LAVA, WATER, AIR] 
+
+    if block in block_list:
         agent.place(DOWN)
+```
+
+```ghost
+block = agent.inspect_block(DOWN)
 ```
