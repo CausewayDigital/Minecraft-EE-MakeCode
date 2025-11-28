@@ -38,20 +38,20 @@ As an explorer, you need to be able to trace your steps to return to your base. 
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_1.png)
 
-Code the flowchart.
+Start by creating this first bit. Use the hint if you need help.
 
 ```python
 agent.set_item(STONE, 64, 1)
 ```
 
-- Give 64 stone to your agent
-- Give 64 glowstone to your agent
+- Give 64 stone to your agent in slot 1
+- Give 1 glowstone to your agent in slot 2
 
 ## Part 2
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_2.png)
 
-Code the flowchart.
+After giving your agent the necessary blocks, **create the loop** shown in the flowchart.
 
 ```
 ```
@@ -61,19 +61,19 @@ Code the flowchart.
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_3.png)
 
-Code the flowchart.
+Within the loop you just created add some code to match the flowchart.
 
 ```
 ```
 Within the loop:
-- Move the agent up
-- Create a new loop
+- Move the agent up 1 block
+- Create a new loop that loops 4 times
 
 ## Part 4
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_4.png)
 
-Code the flowchart (within the loop you just created).
+Within the inner-most loop add some code to acheive what is shown in the flowchart.
 
 ```
 ```
@@ -88,11 +88,11 @@ Within the new loop:
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_5.png)
 
-Code the flowchart (After all the loops).
+Add some code that runs after all the loops have completed to match the flowchart shown.
 
 ```
 ```
-
+At the end of the code:
 - Move your agent to the right
 - Place glowstone forwards
 
