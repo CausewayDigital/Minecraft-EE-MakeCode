@@ -18,6 +18,8 @@ In this exercise, you will build a program in Python that follows the flowchart 
 
 Start by creating this first bit. Use the hint if you need help.
 
+To start with you can spawn the mobs at your current position.
+
 ```python
 mobs.spawn(COW, player.position())
 ```
