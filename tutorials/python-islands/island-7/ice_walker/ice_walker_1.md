@@ -27,6 +27,8 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 
 You should also set the blocks around the player to ICE. (Not just the block bellow)
 
+**You should use positions relative to yourself using `||positions:pos_camera||`.**
+
 ```python
 def on_forever():
 ```
