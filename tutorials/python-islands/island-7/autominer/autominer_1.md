@@ -8,6 +8,8 @@
 
 ```customts
 const CAVE_LAVA = 10
+
+agent.teleport(world(-440, 145, 669), SOUTH)
 ```
 
 ## Introduction @showdialog
