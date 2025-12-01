@@ -6,41 +6,39 @@
 
 # Animal Pen
 
-## Introduction @showdialogue
+## Introduction @showdialog
 
 In this exercise, you will build a program in Python that follows the flowchart below:
 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart.png)
 
-## Create the Spawner - 1
+## Spawn the animals - 1
 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_1.png)
 
-Start by creating this first bit. Use the hint if you need help.
-
-To start with you can spawn the mobs at your current position.
+To start, spawn a cow at your position. Use the hint if you need help.
 
 ```python
 mobs.spawn(COW, player.position())
 ```
 - Spawn a cow
 
-## Create the Spawner - 2
+## Spawn the animals - 2
 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_2.png)
 
-Now finish it off...
+Now spawn the pig and sheep as well.   
 
 ```
 ```
 - Spawn a pig
 - Spawn a sheep
 
-## Extension @showdialogue
+## Extension @showdialog
 
 Here's some ideas to add to your Animal Spawner:
 
-- Spawn in random selection of animals into the pens.
+- Spawn in random selection of animals into the pens (use the world coordinates instead of pos).
 - Try to use a `||loops:for||` loop to spawn in all the animals to each location.
 - Try and create an animal pen with fences to keep the animals in.
 
