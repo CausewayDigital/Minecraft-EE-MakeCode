@@ -6,6 +6,10 @@
 
 # Autominer
 
+```customts
+const CAVE_LAVA = 10
+```
+
 ## Introduction @showdialog
 
 In this exercise, you will build a program in Python that follows the flowchart below.
@@ -50,9 +54,11 @@ Within the loop; destroy the block in front of the agent, move the agent forward
 
 Code the flowchart.
 
+**Note: Use `CAVE_LAVA` to detect the lava that you could find while mining.**
+
 ```
 ```
-If the block below the agent is lava, water, or air, place a stone block below the agent.
+If the block below the agent is `CAVE_LAVA`, `WATER`, or `AIR`, place a stone block below the agent.
 
 
 ```ghost
@@ -66,7 +72,7 @@ for i in range(19):
 
     block = agent.inspect_block(DOWN)
 
-    block_list = [LAVA, WATER, AIR] 
+    block_list = [CAVE_LAVA, WATER, AIR] 
 
     if block in block_list:
         agent.place(DOWN)
