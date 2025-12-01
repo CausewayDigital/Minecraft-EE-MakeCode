@@ -7,7 +7,7 @@
 # Autominer
 
 ```customts
-const CAVE_LAVA = 10
+const CAVE_LAVA = 11
 
 agent.teleport(world(-440, 145, 669), SOUTH)
 ```
