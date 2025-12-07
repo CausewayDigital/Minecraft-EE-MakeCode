@@ -39,7 +39,7 @@ Now spawn the pig and sheep as well.
 Here's some ideas to add to your Animal Spawner:
 
 - Spawn in random selection of animals into the pens (use the world coordinates instead of pos).
-- Try to use a `||loops:for||` loop to spawn in all the animals to each location.
+- Try to use a `||loops:for||` loop to spawn in multiple animals at each location.
 - Try and create an animal pen with fences to keep the animals in.
 
 ```ghost
