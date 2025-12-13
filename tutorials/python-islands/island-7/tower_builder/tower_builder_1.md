@@ -73,14 +73,14 @@ Within the loop:
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_4.png)
 
-Within the inner-most loop add some code to acheive what is shown in the flowchart.
+Within the inner-most loop add some code to achieve what is shown in the flowchart.
 
 ```
 ```
 Within the new loop:
-- Place stone bellow the agent
+- Place stone below the agent
 - Move the agent forward
-- Place stone bellow the agent
+- Place stone below the agent
 - Move the agent forward
 - Turn the agent right
 
