@@ -21,7 +21,7 @@ Follow the flowchart below:
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_1.png)
 
-Code the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 ```python
 ```
@@ -31,8 +31,7 @@ Create a function that is called when the player `BOUNCE`'s.
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_2.png)
 
-(for levitation use a duration of 2 and an amplifier of 1)    
-Code the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 ```python
 blocks.test_for_block(BED, player.position())
@@ -56,9 +55,7 @@ See above for some useful code.
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/bed_bouncer/images/flowchart-landscape_3.png)
 
-(for regeneration use a duration of 3 and an amplifier of 2)
-
-Code the flowchart. Stuck? Check the hint.
+Code the black part of the flowchart. Stuck? Check the hint.
 
 ```python
 ```
