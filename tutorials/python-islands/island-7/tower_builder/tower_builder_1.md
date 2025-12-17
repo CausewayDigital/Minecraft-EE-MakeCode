@@ -25,37 +25,62 @@ if (agent_or == EAST) {
 
 ## Introduction @showdialog
 
-In this exercise, you will build a program in Python that follows the flowchart below.
+
+As an explorer, you need to be able to trace your steps to return to your base. In this exercise, you will build a program in Python that creates a tower by following two separate flowcharts:
+
+- The first flowchart shows a function which creates a layer
+- The second flowchart uses this function to create a tower then glowstone is placed at the top of the tower
+
+### Layer Function
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-function.png)
+
+### Main Flowchart
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart.png)
 
-As an explorer, you need to be able to trace your steps to return to your base. Create a Python program that uses your agent to:
+## Function - Part 1
 
-- Build a 3x3x3 tower out of stone.
-- Places a glowstone block at the top of the tower.
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape-function_1.png)
 
-## Part 1
-
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_1.png)
-
-Start by creating this first bit. Use the hint if you need help.
+Start by creating a function with a loop within it.
 
 ```python
-agent.set_item(STONE, 64, 1)
+def create_layer():
+    for i in range(4):
+        pass
 ```
 
-- Give 64 stone to your agent in slot 1
-- Give 1 glowstone to your agent in slot 2
+- Create a function
+- Within the function, create a for loop that **loops 4 times**
 
-## Part 2
+## Function - Part 2
 
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_2.png)
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape-function_2.png)
 
-After giving your agent the necessary blocks, **create the loop** shown in the flowchart.
+Add to your function, within the loop, to make it match the flowchart.
 
 ```
 ```
-- Create a for loop that **loops 3 times**
+
+- Place a stone (slot 1) down
+- Move the agent forwards
+- Place a stone (slot 1) down
+- Move the agent forwards
+
+## Function - Part 3
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape-function_3.png)
+
+Add to your function, within the loop, to make it match the flowchart.
+
+```
+```
+
+- Place a stone (slot 1) down
+- Move the agent forwards
+- Place a stone (slot 1) down
+- Move the agent forwards
 
 ## Part 3
 
@@ -65,35 +90,54 @@ Within the loop you just created add some code to match the flowchart.
 
 ```
 ```
-Within the loop:
-- Move the agent up 1 block
-- Create a new loop that loops 4 times
 
-## Part 4
+To the end of the function, within the loop, turn the agent left.
+
+## Main Code - Part 1
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_1.png)
+
+Now bellow the function you have just created, code the piece of the flowchart shown in black.
+
+```
+```
+
+- Give the agent 64 stone (slot 1)
+- Give the agent 1 glowstone (slot 2)
+
+## Main Code - Part 2
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_2.png)
+
+Now create the loop shown in black.
+
+```
+```
+
+- Create a loop that loops 3 times (the height of your tower)
+
+## Main Code - Part 3
+
+![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_3.png)
+
+Complete the loop with the code shown in black.
+
+```
+```
+
+- Move your agent up one block
+- Run the function you previously created
+
+## Main Code - Part 4
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_4.png)
 
-Within the inner-most loop add some code to achieve what is shown in the flowchart.
+Code the part of the flowchart shown in black to place glowstone at the top of your tower.
 
 ```
 ```
-Within the new loop:
-- Place stone below the agent
-- Move the agent forward
-- Place stone below the agent
-- Move the agent forward
-- Turn the agent right
 
-## Part 5
-
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_5.png)
-
-Add some code that runs after all the loops have completed to match the flowchart shown.
-
-```
-```
-At the end of the code:
-- Move your agent to the right
+- Move your agent right
 - Place glowstone forwards
 
 ```ghost
