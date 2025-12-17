@@ -127,20 +127,23 @@ Code the part of the flowchart shown in black to place glowstone at the top of y
 - Place glowstone forwards
 
 ```ghost
+def create_layer():
+    agent.set_slot(1)
+    for sides in range(4):
+        agent.place(DOWN)
+        agent.move(FORWARD, 1)
+        agent.place(DOWN)
+        agent.move(FORWARD, 1)
+        agent.turn_left()
+
 agent.set_item(STONE, 64, 1)
 agent.set_item(GLOWSTONE, 1, 2)
-agent.set_slot(1)
 
 for i in range(3):
     agent.move(UP, 1)
-    for j in range(4):
-        agent.place(DOWN)
-        agent.move(FORWARD, 1)
-        agent.place(DOWN)
-        agent.move(FORWARD, 1)
-        agent.turn_right()
+    create_layer()
 
-agent.set_slot(2)
 agent.move(RIGHT, 1)
+agent.set_slot(2)
 agent.place(FORWARD)
 ```
