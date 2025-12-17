@@ -77,21 +77,7 @@ Add to your function, within the loop, to make it match the flowchart.
 ```
 ```
 
-- Place a stone (slot 1) down
-- Move the agent forwards
-- Place a stone (slot 1) down
-- Move the agent forwards
-
-## Part 3
-
-![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_3.png)
-
-Within the loop you just created add some code to match the flowchart.
-
-```
-```
-
-To the end of the function, within the loop, turn the agent left.
+- At the end of the loop, within the function, turn your agent left
 
 ## Main Code - Part 1
 
