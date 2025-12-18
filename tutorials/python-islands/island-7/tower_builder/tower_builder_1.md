@@ -83,7 +83,7 @@ Add to your function, within the loop, to make it match the flowchart.
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape_1.png)
 
-Now bellow the function you have just created, code the piece of the flowchart shown in black.
+Now below the function you have just created, code the piece of the flowchart shown in black.
 
 ```
 ```
