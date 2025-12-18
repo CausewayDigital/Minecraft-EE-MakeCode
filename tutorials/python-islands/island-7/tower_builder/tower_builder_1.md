@@ -77,7 +77,7 @@ Add to your function, within the loop, to make it match the flowchart.
 ```
 ```
 
-- At the end of the loop, within the function, turn your agent left
+- At the end of the loop, within the function, turn your agent right
 
 ## Main Code - Part 1
 
@@ -134,7 +134,7 @@ def create_layer():
         agent.move(FORWARD, 1)
         agent.place(DOWN)
         agent.move(FORWARD, 1)
-        agent.turn_left()
+        agent.turn_right()
 
 agent.set_item(STONE, 64, 1)
 agent.set_item(GLOWSTONE, 1, 2)
