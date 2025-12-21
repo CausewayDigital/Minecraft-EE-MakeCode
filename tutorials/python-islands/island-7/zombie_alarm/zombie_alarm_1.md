@@ -24,7 +24,7 @@ Following the program flowchart below, create a Python program that:
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/zombie_alarm/images/flowchart-landscape_1.png)
 
-Code the flowchart.
+Code the part of the flowchart shown in black.
 
 ```python
 def on_entity_spawned(mob, spawner):
@@ -38,10 +38,11 @@ events.on_entity_spawned(on_entity_spawned)
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/zombie_alarm/images/flowchart-landscape_2.png)
 
-Code the flowchart.
+Code the part of the flowchart shown in black.
 
 ```
 ```
+
 - If the mob is a zombie, play the thunder sound and send a message to the chat
 - Otherwise ignore the mob spawn
 
