@@ -56,8 +56,7 @@ def create_layer():
         pass
 ```
 
-- Create a function
-- Within the function, create a for loop that **loops 4 times**
+- Within the function named create_layer, create a for loop that **loops 4 times**
 
 ## Function - Part 2
 
