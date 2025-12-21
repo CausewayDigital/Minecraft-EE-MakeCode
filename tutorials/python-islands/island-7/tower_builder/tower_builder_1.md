@@ -24,7 +24,7 @@ if (agent_or == EAST) {
 ```
 
 ```template
-export func createLayer() {
+function create_layer(): void{
 
 }
 ```
