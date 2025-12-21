@@ -23,8 +23,13 @@ if (agent_or == EAST) {
 }
 ```
 
-## Introduction @showdialog
+```template
+export func createLayer() {
 
+}
+```
+
+## Introduction @showdialog
 
 As an explorer, you need to be able to trace your steps to return to your base. In this exercise, you will build a program in Python that creates a tower by following two separate flowcharts:
 
@@ -43,7 +48,7 @@ As an explorer, you need to be able to trace your steps to return to your base. 
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape-function_1.png)
 
-Start by creating a function with a loop within it.
+Complete the function provided to match the boxes in black.
 
 ```python
 def create_layer():
