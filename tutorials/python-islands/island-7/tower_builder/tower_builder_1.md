@@ -33,8 +33,8 @@ function create_layer(): void{
 
 As an explorer, you need to be able to trace your steps to return to your base. In this exercise, you will build a program in Python that creates a tower by following two separate flowcharts:
 
-- The first flowchart shows a function which creates a layer
-- The second flowchart uses this function to create a tower then glowstone is placed at the top of the tower
+- The first flowchart shows a function which creates a layer.
+- The second flowchart uses this function to create a tower then glowstone is placed at the top of the tower.
 
 ### Layer Function
 
@@ -48,7 +48,7 @@ As an explorer, you need to be able to trace your steps to return to your base. 
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/tower_builder/images/flowchart-landscape-function_1.png)
 
-Complete the function provided to match the boxes in black.
+Define the function provided to match the boxes in black.
 
 ```python
 def create_layer():
