@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.2.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0" version="29.2.9">
   <diagram name="Page-1" id="1dGT8eAOzUdc_qJn29Ct">
-    <mxGraphModel dx="780" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,16 +13,16 @@
         <mxCell id="OkspclNZKZ-xbV0ro4kv-3" edge="1" parent="1" source="OkspclNZKZ-xbV0ro4kv-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="OkspclNZKZ-xbV0ro4kv-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OkspclNZKZ-xbV0ro4kv-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 5 Cows" vertex="1">
+        <mxCell id="OkspclNZKZ-xbV0ro4kv-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 1 Cow" vertex="1">
           <mxGeometry height="40" width="56" x="386" y="180" as="geometry" />
         </mxCell>
         <mxCell id="OkspclNZKZ-xbV0ro4kv-5" edge="1" parent="1" source="OkspclNZKZ-xbV0ro4kv-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="OkspclNZKZ-xbV0ro4kv-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="OkspclNZKZ-xbV0ro4kv-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 5 Pigs" vertex="1">
-          <mxGeometry height="40" width="54" x="387" y="240" as="geometry" />
+        <mxCell id="OkspclNZKZ-xbV0ro4kv-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 1 Pig" vertex="1">
+          <mxGeometry height="40" width="53" x="387" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="OkspclNZKZ-xbV0ro4kv-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 5 Sheep" vertex="1">
+        <mxCell id="OkspclNZKZ-xbV0ro4kv-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Spawn 1 Sheep" vertex="1">
           <mxGeometry height="40" width="53" x="387" y="300" as="geometry" />
         </mxCell>
       </root>
