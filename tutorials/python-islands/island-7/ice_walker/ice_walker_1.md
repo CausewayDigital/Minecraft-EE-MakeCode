@@ -3,6 +3,7 @@
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
+### @explicitHints true
 
 # Ice Walker
 
@@ -22,7 +23,7 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
 
-## Part 1
+## Ice Walker
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
@@ -31,6 +32,13 @@ You should use positions relative to yourself using `||positions:pos||`.
 
 **Note: You need to create a box around your feet of ice (-1 and 1 coordinates). You will need to change the pair of coordinates in the replace method (more details in the hint).**
 
+### ~ tutorialhint
+**Tips**
+- Watch out! The replace method expects the new block (ICE), then the old block (LAKE_WATER).
+- Unsure about the coordinates to use? Check the below diagram.
+![Player coords](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/player_coords.jpg)
+
+**Starter code**
 ```python
 def on_forever():
     # Your code here
@@ -38,9 +46,6 @@ def on_forever():
 loops.forever(on_forever)
 ```
 
-- Watch out! The replace method expects the new block (ICE), then the old block (LAKE_WATER).
-- Unsure about the coordinates to use? Check the below diagram.
-![Player coords](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/player_coords.jpg)
 
 
 ```ghost
