@@ -26,7 +26,7 @@ Place a block below
 ## Part 1
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_1.png)
 
-Code the flowchart.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 ```python
 ```
@@ -35,7 +35,7 @@ Give your agent 64 stone.
 ## Part 2
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_2.png)
 
-Code the flowchart.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 ```
 ```
@@ -44,7 +44,7 @@ Create a for loop that iterates from 0 to 19.
 ## Part 3
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_3.png)
 
-Code the flowchart.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 ```
 ```
@@ -54,7 +54,7 @@ Within the loop; destroy the block in front of the agent, move the agent forward
 ## Part 4
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/autominer/images/flowchart-landscape_4.png)
 
-Code the flowchart.
+Code the black part of the flowchart. Stuck? Check the hint. Press *Next* to move onto the next step.
 
 **Note: Use `CAVE_LAVA` to detect the lava that you could find while mining.**
 
