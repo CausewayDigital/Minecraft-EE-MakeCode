@@ -13,11 +13,9 @@ In this exercise, you will build a program in Python that follows the flowchart 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart.png)
 
 ## Spawn the animals - 1
-
+   
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_1.png)
-
-To start, code the part of the flowchart in black by spawning a cow at your position. Use the hint if you need help.
-
+To start, code the part of the flowchart in black by spawning a cow at your position. Use the hint if you need help.   
 Once complete move onto the next part.
 
 ```python
@@ -28,7 +26,6 @@ mobs.spawn(COW, player.position())
 ## Spawn the animals - 2
 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_2.png)
-
 Now code the next part of the flowchart which is now shown in black. Use the hint if you need help.
 
 ```
