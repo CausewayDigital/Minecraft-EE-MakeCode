@@ -1,8 +1,8 @@
 ### @flyoutOnly true
-### @diffs true
 ### @hideDone true
 ### @codeStart players set @s codeExecution 1
 ### @codeStop players set @s codeExecution 0
+### @explicitHints true
 
 # Animal Pen
 
@@ -18,20 +18,25 @@ In this exercise, you will build a program in Python that follows the flowchart 
 To start, code the part of the flowchart in black by spawning a cow at your position. Use the hint if you need help.   
 Once complete move onto the next part.
 
+### ~ tutorialhint
+The example below spawns a cow at the player position.
 ```python
 mobs.spawn(COW, player.position())
 ```
-- Spawn a cow
+
 
 ## Spawn the animals - 2
 
 ![Flow chart of task](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/animal_pens/images/flowchart-landscape_2.png)
 Now code the next part of the flowchart which is now shown in black. Use the hint if you need help.
+   
+### ~ tutorialhint
+The example below spawns a cow at the player position.   
+You need to also spawn a pig and sheep.
+```python
+mobs.spawn(COW, player.position())
+```
 
-```
-```
-- Spawn a pig
-- Spawn a sheep
 
 ## Extension @showdialog
 
