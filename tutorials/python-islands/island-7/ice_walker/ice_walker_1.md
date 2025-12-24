@@ -26,7 +26,7 @@ In Minecraft, there are many vast lakes or oceans to traverse. Following the pro
 
 ![Cover image](https://raw.githubusercontent.com/CausewayDigital/Minecraft-EE-MakeCode/refs/heads/master/tutorials/python-islands/island-7/ice_walker/images/Flowchart.png)
 
-You should also set the blocks around the player to ICE. (Not just the block below)   
+You should also set the blocks around the player to ICE. (Not just the block below).
 You should use positions relative to yourself using `||positions:pos||`.
 
 **Note: You need to create a box around your feet of ice (-1 and 1 coordinates). You will need to change the pair of coordinates in the replace method (more details in the hint).**
@@ -46,7 +46,7 @@ loops.forever(on_forever)
 ```ghost
 def on_forever():
     blocks.replace(ICE,
-        blocks.block_by_id(9),
+        blocks.block_by_id(LAKE_WATER),
         pos_camera(-1, -1, -1),
         pos_camera(1, -1, 1))
 loops.forever(on_forever)
