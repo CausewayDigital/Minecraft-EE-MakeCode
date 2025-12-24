@@ -47,7 +47,7 @@ def on_jump():
 player.on_travelled(BOUNCE, on_jump)
 ```
 
-If the player is jumping on a bed, apply `LEVITATION` to the player.
+If the player is jumping on a bed, apply `LEVITATION` to the nearest player.
 
 See above for some useful code.
 
@@ -59,4 +59,4 @@ Code the black part of the flowchart. Stuck? Check the hint.
 
 ```python
 ```
-Within the if statement, apply `REGENERATION` to the player.
+After applying `LEVITATION`, apply `REGENERATION` to the nearest player.
