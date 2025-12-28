@@ -69,8 +69,6 @@ Add to your function, within the loop, to make it match the flowchart.
 
 - Place a stone (slot 1) down
 - Move the agent forwards
-- Place a stone (slot 1) down
-- Move the agent forwards
 
 ## Function - Part 3
 
@@ -81,7 +79,9 @@ Add to your function, within the loop, to make it match the flowchart.
 ```
 ```
 
-- At the end of the loop, within the function, turn your agent right
+- Place a stone (slot 1) down
+- Move the agent forwards
+- Turn your agent right
 
 ## Main Code - Part 1
 
