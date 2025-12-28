@@ -128,6 +128,7 @@ Code the part of the flowchart shown in black to place glowstone at the top of y
 ```
 
 - Move your agent right
+- Set active slot to 2
 - Place glowstone forwards
 
 ```ghost
