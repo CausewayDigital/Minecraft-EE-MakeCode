@@ -184,7 +184,7 @@ To use codeblocks simply drag what you want to happen from the list of options o
 
 
 ## Start and Stop the Lawnmower
-You will see that within the "`||on start||`" block, there already a "`||lawnmower:Start lawnmower||`" command. When Rhys is done he needs to stop the lawnmower. Tell him to do this by dragging the "`||lawnmower:Stop lawnmower||`" command block just below the "`||lawnmower:Start lawnmower||`".
+Within the "`||on start||`" block, there is a "`||lawnmower:Start lawnmower||`" block. When Rhys is done he needs to stop the lawnmower. to do this drag the "`||lawnmower:Stop lawnmower||`" command block below the "`||lawnmower:Start lawnmower||`".
 
 ```block
 lawnmower.start();
