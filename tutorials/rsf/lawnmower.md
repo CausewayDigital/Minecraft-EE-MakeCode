@@ -58,13 +58,18 @@ namespace lawnmower {
         let x = pos.getValue(Axis.X)
         let z = pos.getValue(Axis.Z)
 
-        blocks.place(AIR, world(x - 1, 1, z))
-        blocks.place(AIR, world(x, 1, z))
-        blocks.place(AIR, world(x + 1, 1, z))
+        for (let i = -2; i <= 0; i++) {
+            // 131247 is tall grass - TALLGRASS does't work
+            if (blocks.testForBlock(131247, world(x, 0, z + i))||blocks.testForBlock(AIR, world(x, 0, z + i))) {
+                blocks.place(AIR, world(x - 1, 1, z + i))
+                blocks.place(AIR, world(x, 1, z + i))
+                blocks.place(AIR, world(x + 1, 1, z + i))
 
-        blocks.place(AIR, world(x - 1, 0, z))
-        blocks.place(AIR, world(x, 0, z))
-        blocks.place(AIR, world(x + 1, 0, z))
+                blocks.place(AIR, world(x - 1, 0, z + i))
+                blocks.place(AIR, world(x, 0, z + i))
+                blocks.place(AIR, world(x + 1, 0, z + i))
+            }
+        }
     }
 
     //% block="Return to house"
@@ -99,7 +104,7 @@ namespace lawnmower {
 
     export function moveForward(returning: boolean = false): boolean {
         if (checkInBounds()) {
-            agent.move(FORWARD, 1)
+            agent.move(FORWARD, 3)
             break_grass()
             return true;
         } else {
