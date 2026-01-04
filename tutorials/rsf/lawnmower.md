@@ -179,6 +179,23 @@ namespace lawnmower {
 
     }
 }
+
+//% color="#0fbc11" icon="\uf01e"
+namespace loop {
+    /**
+     * Do something several times.
+     */
+    //% block="repeat $count times"
+    //% handlerStatement=1
+    export function customRepeat(count: number, handler: () => void) {
+        if (count < 5) {
+            player.say("It looks like we might to be able to cut all the grass in " + count + "strips.")
+        }
+        for (let i = 0; i < 5; i++) {
+            handler();
+        }
+    }
+}
 ```
 
 ## Introduction @showdialog
@@ -195,7 +212,7 @@ To use codeblocks simply drag what you want to happen from the list of options o
 
 
 ## Start and Stop the Lawnmower
-When Rhys is done he needs to stop the lawnmower. to do this drag the "`||lawnmower:Stop lawnmower||`" command block below the "`||lawnmower:Start lawnmower||`".
+Within the "`||on start||`" block, there is a "`||lawnmower:Start lawnmower||`" block. When Rhys is done he needs to stop the lawnmower. to do this drag the "`||lawnmower:Stop lawnmower||`" command block below the "`||lawnmower:Start lawnmower||`".
 
 ```block
 lawnmower.start();
@@ -235,11 +252,11 @@ You can do this by adding a "`||loops:repeat||`" loop Then drag all the blocks e
 
 ```blocks
 lawnmower.start();
-for (let i=0; i < 5; i++) {
+loop.customRepeat(5,  function() {
     lawnmower.goUntil();
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
-}
+})
 lawnmower.stop()
 ```
 
@@ -248,10 +265,10 @@ Now run the code and watch Rhys cut the grass.
 
 ```ghost
 lawnmower.start();
-for (let i=0; i < 5; i++) {
+loop.customRepeat(5,  function() {
     lawnmower.goUntil();
     lawnmower.returnToHouse();
     lawnmower.shiftLeft()
-}
+})
 lawnmower.stop()
 ```
