@@ -106,6 +106,12 @@ namespace lawnmower {
         if (checkInBounds()) {
             agent.move(FORWARD, 3)
             break_grass()
+            // change block to show agent still moving
+            if (blocks.testForBlock(DIAMOND_BLOCK, world(-131, -2, -195))) {
+                blocks.place(AIR, world(-131, -2, -195))
+            } else {
+                blocks.place(DIAMOND_BLOCK, world(-131, -2, -195))
+            }
             return true;
         } else {
             return false;
