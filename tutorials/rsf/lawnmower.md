@@ -189,7 +189,7 @@ namespace loop {
     //% handlerStatement=1
     export function customRepeat(count: number, handler: () => void) {
         if (count < 5) {
-            player.say("It looks like we might to be able to cut all the grass in " + count + "strips.")
+            player.say("It looks like we might to be able to cut all the grass in " + count + " strips.")
         } else {
             for (let i = 0; i < 5; i++) {
                 handler();
