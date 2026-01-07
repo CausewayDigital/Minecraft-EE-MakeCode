@@ -12,171 +12,51 @@ lawnmower.start();
 ```
 
 ```customts
-let lawnmowerIsOn: boolean = false;
+let next_block = world(-132, -2, -195); // -> -194, -193 ...
+
+function increment_block() {
+    next_block = positions.add(world(0, 0, 1), next_block)
+}
+function enter_exit_loop(entering: Boolean) {
+    if (entering) {
+        next_block = positions.add(world(-1, 0, 0), next_block)
+    } else {
+        next_block = positions.add(world(1, 0, 0), next_block)
+    }
+}
+
 //% color=green weight=100 icon="\uf085"
 namespace lawnmower {
-    let reachedEnd: boolean = false;
-
-    export enum until {
-        //% block="SELECT"
-        n_a,
-        //% block="end of lawn"
-        endOfLawn,
-    }
+    
 
     //% block="Start lawnmower"
     export function start() {
-        lawnmowerIsOn = true;
-        blocks.place(DIAMOND_BLOCK, world(-142, -2, -175));
+        blocks.place(PLANKS_ACACIA, next_block);
+        increment_block();
     }
 
     //% block="Stop lawnmower"
     export function stop() {
-        lawnmowerIsOn = false;
-        blocks.place(AIR, world(-142, -2, -175));
+        blocks.place(BAMBOO_PLANKS, next_block);
+        increment_block();
     }
 
     //% block="Drive forward until end of lawn"
     export function goUntil() {
-        if (!lawnmowerIsOn) {
-        }
-        while (moveForward()) { }
+        blocks.place(PLANKS_BIRCH, next_block);
+        increment_block();
     }
 
     //% block="Shift left"
     export function shiftLeft() {
-        let pos = agent.getPosition()
-        if (pos.getValue(Axis.X) < -132) {
-            agent.move(LEFT, 3)
-            break_grass()
-        }
-    }
-
-    export function break_grass() {
-        let pos = agent.getPosition()
-
-        let x = pos.getValue(Axis.X)
-        let z = pos.getValue(Axis.Z)
-
-        for (let i = -2; i <= 0; i++) {
-            // 131247 is tall grass - TALLGRASS does't work
-            if (blocks.testForBlock(131247, world(x, 0, z + i))||blocks.testForBlock(AIR, world(x, 0, z + i))) {
-                blocks.place(AIR, world(x - 1, 1, z + i))
-                blocks.place(AIR, world(x, 1, z + i))
-                blocks.place(AIR, world(x + 1, 1, z + i))
-
-                blocks.place(AIR, world(x - 1, 0, z + i))
-                blocks.place(AIR, world(x, 0, z + i))
-                blocks.place(AIR, world(x + 1, 0, z + i))
-            }
-        }
+        blocks.place(CHERRY_PLANKS, next_block);
+        increment_block();
     }
 
     //% block="Return to house"
     export function returnToHouse() {
-        let pos = agent.getPosition();
-        let x = pos.getValue(Axis.X);
-
-        agent.teleport(world(x, 0, -194), SOUTH);
-    }
-
-    //% block="Turn $direction"
-    export function turn(direction: TurnDirection) {
-        // When the agent gets to the end it stops moving
-        const agentPos = agent.getPosition()
-        if (positions.equals(agentPos, world(-131, 0, -195)) && reachedEnd) {
-            return
-        }
-        switch (direction) {
-            case TurnDirection.Left: {
-                if (positions.equals(agentPos, world(-131, 0, -195))) {
-                    reachedEnd = true;
-                    break;
-                }
-                agent.turnLeft();
-                break;
-            } case TurnDirection.Right: {
-                agent.turnRight();
-                break;
-            }
-        }
-    }
-
-    export function moveForward(returning: boolean = false): boolean {
-        if (checkInBounds()) {
-            agent.move(FORWARD, 3)
-            break_grass()
-            // change block to show agent still moving
-            if (blocks.testForBlock(DIAMOND_BLOCK, world(-131, -2, -195))) {
-                blocks.place(AIR, world(-131, -2, -195))
-            } else {
-                blocks.place(DIAMOND_BLOCK, world(-131, -2, -195))
-            }
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    export function getBlockInFrontCoord(): Position {
-        let agentPos = agent.getPosition()
-        let facingDirection = agent.getOrientation()
-
-        switch (facingDirection) {
-            case 0: {
-                return positions.add(agentPos, pos(0, 0, 1));
-                break;
-            }
-            case 90: {
-                return positions.add(agentPos, pos(-1, 0, 0));
-                break;
-            }
-            case -90: {
-                return positions.add(agentPos, pos(1, 0, 0));
-                break;
-            }
-            default: {
-                return positions.add(agentPos, pos(0, 0, -1));
-            }
-        }
-    }
-
-    export function isHouseInFront() {
-        let blockInFront = lawnmower.getBlockInFrontCoord()
-        let z = blockInFront.getValue(Axis.Z)
-
-        if (z < -194) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    export function isAtEndOfGarden(): boolean {
-        let blockInFront = lawnmower.getBlockInFrontCoord()
-
-        let x = blockInFront.getValue(Axis.X)
-        let z = blockInFront.getValue(Axis.Z)
-
-        if ((x <= -138 && z > -176) || z > -169) {
-            return true;
-        } else {
-            return false
-        }
-    }
-
-    export function checkInBounds(): boolean {
-        let blockInFront = lawnmower.getBlockInFrontCoord()
-
-        let x = blockInFront.getValue(Axis.X)
-        let z = blockInFront.getValue(Axis.Z)
-
-        if (x >= -144 && x <= -132 && z >= -194 && z <= -170 && !(x >= -145 && x <= -138 && z >= -175 && z <= -166)) {
-            return true;
-        } else {
-            return false;
-        }
-
+        blocks.place(CRIMSON_PLANKS, next_block);
+        increment_block();
     }
 }
 
@@ -189,12 +69,14 @@ namespace loop {
     //% handlerStatement=1
     export function customRepeat(count: number, handler: () => void) {
         if (count < 5) {
-            player.say("It looks like we might to be able to cut all the grass in " + count + " strips.")
+            blocks.place(PLANKS_DARK_OAK, next_block)
         } else {
-            for (let i = 0; i < 5; i++) {
-                handler();
-            }
+            blocks.place(PLANKS_JUNGLE, next_block)
         }
+        increment_block()
+        enter_exit_loop(true)
+        handler()
+        enter_exit_loop(false)
     }
 }
 ```
